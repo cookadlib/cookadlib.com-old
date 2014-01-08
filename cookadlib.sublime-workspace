@@ -1,0 +1,1142 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"smooth",
+				"smooth-scroll"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"blo",
+				"block"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"te",
+				"text-transform"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"hei",
+				"min-height"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"bac",
+				"background-repeat"
+			],
+			[
+				"ab",
+				"absolute"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"f",
+				"font-weight"
+			],
+			[
+				"c",
+				"color"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"pa",
+				"panel-heading"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"d",
+				"dropup-menu"
+			],
+			[
+				"border-c",
+				"border-color"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"panel",
+				"panel-collapse"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"nav",
+				"navbar"
+			],
+			[
+				"na",
+				"navbar-social"
+			],
+			[
+				"D",
+				"display"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"m",
+				"margin-bottom"
+			],
+			[
+				"ca",
+				"carousel-caption"
+			],
+			[
+				"background-",
+				"background-color"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"image",
+				"imagemin"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "build/views/home/index.ejs",
+			"settings":
+			{
+				"buffer_size": 2043,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "build/views/layout.ejs",
+			"settings":
+			{
+				"buffer_size": 6714,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/sublime-grunt-build/grunt.sublime-build",
+	"command_palette":
+	{
+		"height": 127.0,
+		"selected_items":
+		[
+			[
+				"handle",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"she",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"shel",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"sh",
+				"Set Syntax: Shell Script (Bash)"
+			]
+		],
+		"width": 647.0
+	},
+	"console":
+	{
+		"height": 233.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/karl/src/sites/cookadlib.com/build/bower_components/lesshat/build/lesshat.less",
+		"/Users/karl/src/sites/cookadlib.com/build/bower_components/lesshat/build/lesshat-prefixed.less",
+		"/Users/karl/src/sites/cookadlib.com/build/bower.json",
+		"/opt/boxen/repo/modules/wednesday/manifests/packages.pp",
+		"/opt/boxen/repo/modules/wednesday/manifests/applications.pp",
+		"/opt/boxen/repo/Puppetfile",
+		"/Users/karl/src/sites/wordpress.erdem.com/.gitmodules",
+		"/Users/karl/.ssh/config",
+		"/Users/karl/Downloads/heroku/advanced-custom-fields/readme.txt",
+		"/Users/karl/src/sites/thermal-api-client/app/js/wisp.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/router.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/prototypes.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/embed.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/controller.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/views/post-view.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/views/post-archive-view.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/views/gallery-view.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/views/gallery-nav-item-view.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/views/gallery-item-view.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/views/category-menu-view.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/views/category-menu-item-view.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/collections/gallery-collection.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/collections/posts-collection.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/collections/terms-collection.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/models/post-model.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/models/media-model.js",
+		"/Users/karl/src/sites/thermal-api-client/app/js/models/term-model.js",
+		"/opt/boxen/repo/modules/projects/manifests/wednesday-sample.pp",
+		"/Users/karl/src/sites/thermal-api-client/app/coffee/models/post-model.coffee",
+		"/Users/karl/src/sites/thermal-api-client/app/coffee/collections/posts-collection.coffee",
+		"/Users/karl/src/sites/thermal-api-client/app/coffee/embed.coffee",
+		"/Users/karl/src/sites/thermal-api-client/app/coffee/wisp.coffee",
+		"/Users/karl/src/sites/erdem/js/TodoMVC.js",
+		"/Users/karl/src/sites/erdem/bower.json",
+		"/Users/karl/src/sites/erdem/bower_components/todomvc-common/base.css",
+		"/Users/karl/src/sites/erdem/bower_components/todomvc-common/base.js",
+		"/Users/karl/src/sites/erdem/css/app.css",
+		"/Users/karl/src/sites/erdem/index.html",
+		"/Users/karl/src/sites/erdem/js/TodoMVC.Layout.js",
+		"/Users/karl/src/sites/erdem/js/TodoMVC.TodoList.js",
+		"/Users/karl/src/sites/erdem/js/TodoMVC.TodoList.Views.js",
+		"/Users/karl/src/sites/erdem/js/TodoMVC.Todos.js",
+		"/Users/karl/src/sites/erdem/js/Collections.js",
+		"/Users/karl/src/sites/erdem/js/Collections.Layout.js",
+		"/Users/karl/src/sites/erdem/js/Collections.TodoList.js",
+		"/Users/karl/src/sites/erdem/js/Collections.TodoList.Views.js",
+		"/Users/karl/src/sites/erdem/js/Collections.Todos.js",
+		"/Users/karl/src/sites/thermal-api-client/app/coffee/collections/gallery-collection.coffee",
+		"/Users/karl/src/sites/wednesday-sample/dbv/config.php",
+		"/Users/karl/src/vagrant/puppet/hieradata/common.yaml",
+		"/Users/karl/src/sites/wisp.wednesday-sample/build/public/index.html",
+		"/Users/karl/src/sites/test/thermal-api-client/app/coffee/embed.coffee",
+		"/Users/karl/src/sites/test/thermal-api-client/app/coffee/prototypes.coffee",
+		"/Users/karl/src/sites/test/thermal-api-client/app/coffee/wisp.coffee",
+		"/Users/karl/src/sites/test/thermal-api-client/app/coffee/router.coffee",
+		"/Users/karl/src/sites/test/thermal-api-client/app/templates/post-full.html",
+		"/Users/karl/src/sites/test/thermal-api-client/app/templates/post-excerpt.html",
+		"/Users/karl/src/sites/test/thermal-api-client/app/coffee/collections/terms-collection.coffee",
+		"/Users/karl/src/sites/test/thermal-api-client/app/coffee/collections/posts-collection.coffee",
+		"/Users/karl/src/sites/test/thermal-api-client/app/coffee/collections/gallery-collection.coffee",
+		"/opt/boxen/repo/modules/projects/manifests/wisp-wednesday-sample.pp",
+		"/Users/karl/src/vagrant/puppet/manifests/default.pp",
+		"/Users/karl/src/vagrant/puppet/manifests/wednesday.pp",
+		"/Users/karl/src/vagrant/puppet/Puppetfile",
+		"/Users/karl/src/vagrant/Vagrantfile",
+		"/Users/karl/src/applications/puphpet/web/assets/vendor/bootstrap/css/bootstrap.min.css",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/MainBundle/Extension/ExtensionAbstract.php",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Controller/FrontController.php",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/MainBundle/Resources/views/front/help.html.twig",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/MainBundle/Tests/Unit/MainBundle/Extension/ManagerTest.php",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Controller/ManifestController.php",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/MysqlBundle/Resources/views/manifest/Mysql.pp.twig",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/PhpBundle/Resources/views/manifest/Php.pp.twig",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/PostgresqlBundle/Resources/views/manifest/Postgresql.pp.twig",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/PuphpetExtensionApacheBundle.php",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/DependencyInjection/PuphpetExtensionApacheExtension.php",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/PhpBundle/Resources/config/available.yml",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Configure.php",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/DependencyInjection/Configuration.php",
+		"/Users/karl/src/applications/puphpet/web/assets/vendor/bootstrap/js/bootstrap.min.js",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/VagrantfileLocalBundle/Resources/views/manifest/VagrantfileLocal.pp.twig",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Resources/config/routing.yml",
+		"/Users/karl/src/applications/puphpet/app/config/routing.yml",
+		"/Users/karl/src/applications/puphpet/web/assets/vendor/bootstrap/css/bootstrap.css",
+		"/Users/karl/src/applications/puphpet/app/AppKernel.php",
+		"/Users/karl/src/applications/puphpet/web/assets/vendor/selectize.js/selectize.bootstrap3.css",
+		"/Users/karl/src/applications/puphpet/web/assets/vendor/selectize.js/selectize.min.js",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ServerBundle/Resources/views/form/Server.html.twig",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ServerBundle/Resources/views/manifest/Server.pp.twig",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Resources/config/services.yml",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/MainBundle/Resources/config/services.yml",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/VagrantfileLocalBundle/Resources/views/form/VagrantfileLocal.html.twig",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/MainBundle/Resources/views/front/sideMenu.html.twig",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Resources/views/form/sections/vhost.html.twig",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/XdebugBundle/Resources/views/manifest/Xdebug.pp.twig",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/XhprofBundle/Resources/views/manifest/Xhprof.pp.twig",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Resources/views/form/Apache.html.twig",
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Resources/views/manifest/Apache.pp.twig",
+		"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/pages/TD01-0-1_Home_Page_Landing_Page_NO_TXT_OVERLAY_COMPILATION.hbs",
+		"/Users/karl/src/sites/swarovskigroup.com/deploy/src/data/carousel.json",
+		"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/pages/TD12-2_Forgotten_my_password.hbs",
+		"/Users/karl/src/dotfiles/.profile",
+		"/Users/karl/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/karl/src/sites/ryddig/tictail.html",
+		"/Users/karl/src/sites/ryddig/deploy/src/templates/layouts/default.hbs",
+		"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/layouts/default.hbs",
+		"/opt/boxen/repo/modules/projects/manifests/jbrandjeans.pp",
+		"/Users/karl/src/sites/PHPExcel/Documentation/Examples/Reader/demo-kjp.php",
+		"/Users/karl/src/dotfiles/.bashrc",
+		"/opt/boxen/repo/modules/wednesday/manifests/dotfiles.pp",
+		"/opt/boxen/repo/.gitignore",
+		"/Users/karl/Desktop/boxen/repo-new/manifests/site.pp",
+		"/opt/boxen/repo/modules/wednesday/manifests/environment.pp",
+		"/opt/boxen/repo/modules/wednesday/manifests/virtualization.pp",
+		"/opt/boxen/repo/modules/people/manifests/karl_wednesday.pp",
+		"/opt/boxen/repo/modules/people/manifests/nhekkens.pp",
+		"/opt/boxen/repo/modules/people/manifests/terrence_wednesday.pp",
+		"/opt/boxen/repo/modules/wednesday/manifests/os.pp",
+		"/opt/boxen/repo/modules/wednesday/manifests/projects.pp",
+		"/opt/boxen/repo/modules/projects/manifests/elder-statesman.pp",
+		"/etc/hosts",
+		"/Users/karl/Downloads/oriflame/index.html",
+		"/Users/karl/Downloads/oriflame/main.css",
+		"/opt/boxen/repo/modules/projects/manifests/wednesdayagency.pp",
+		"/opt/boxen/repo/modules/projects/manifests/swarovskigroup.pp",
+		"/opt/boxen/repo/modules/projects/manifests/saturdaygroup.pp",
+		"/opt/boxen/repo/modules/projects/manifests/lindex.pp",
+		"/opt/boxen/repo/modules/projects/manifests/erdem.pp"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/karl/src/sites/wednesdayagency.com/deploy/wp-content/themes/wednesday",
+			"/Users/karl/src/sites/erdem",
+			"/Users/karl/src/sites/erdem/js",
+			"/Users/karl/src/sites/test/thermal-api-client",
+			"/Users/karl/src/vagrant",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/node_modules",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/pages",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/includes",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/data",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/pages",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/includes",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/pages",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/includes",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/node_modules/assemble-handlebars/node_modules",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/node_modules/assemble-handlebars/node_modules/handlebars-helpers",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/data",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/pages",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/pages",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/includes",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/data",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/js",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/data",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/js",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/data",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/js",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less/generic",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less/generic",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/pages",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less/generic",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less/components",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less/components",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/src/styles/less/components",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/bower_components/bootstrap/less",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/node_modules/assemble-handlebars",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy/node_modules",
+			"/Users/karl/src/sites/swarovskigroup.com/deploy",
+			"<open folders>",
+			"/Users/karl/Vagrant/wednesday"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"figure",
+			"github.com:",
+			"git@",
+			"gith",
+			"_",
+			"Collection",
+			"collection",
+			"todo",
+			"Todo",
+			"do",
+			"todo",
+			"TodoMVC",
+			"'",
+			"\"",
+			"char",
+			"apiUrl",
+			"apache",
+			"apac",
+			"server.packages",
+			"php",
+			"apache",
+			"call",
+			"---",
+			"#on_index",
+			"script",
+			"about",
+			"<scr",
+			"about",
+			"letter-s",
+			"rela",
+			"tictail_button",
+			"size_guide",
+			"status",
+			"variations_radio",
+			"position",
+			"price",
+			"url-",
+			"url",
+			"product",
+			"price",
+			"tict",
+			"tic",
+			"clear",
+			"h1",
+			"banner",
+			"h1",
+			"hr",
+			".app-container .navbar-default",
+			"<img class=\"img-responsive\" src=\"{{url-300}}\" alt=\"{{title}}\">",
+			"column",
+			"img",
+			"prod",
+			"java",
+			"1px",
+			"20% 40%",
+			"key",
+			"30px",
+			"60px",
+			"100px",
+			"kjp",
+			"1.5em;",
+			"top",
+			"img",
+			"rt \"",
+			"//",
+			"recess",
+			"urls",
+			"boot",
+			"urls",
+			"hbs",
+			"hand",
+			"hidd",
+			"hid",
+			"helpers",
+			"btn-s",
+			"trigg",
+			"block",
+			"a {",
+			";",
+			"batch: 1",
+			"<ul",
+			"<ul class=\"",
+			"<ul",
+			"page",
+			"page-head",
+			"ul",
+			"text align",
+			"col-xs-offset-2 col-xs-10 col-sm-offset-2 col-sm-10 col-md-4",
+			"col-xs-offset-3 col-xs-9 col-sm-offset-3 col-sm-9 col-md-12",
+			" sub",
+			"col-xs-offset-3 col-xs-9 col-md-12",
+			"col-xs-offset-2 col-xs-10 col-md-4",
+			"358",
+			"col-xs-offset-1 col-xs-11 ",
+			"50%",
+			"gly",
+			" <span class=\"glyphicon glyphicon-plus\"></span></a>",
+			"im",
+			"1em 0",
+			"imp",
+			"border",
+			".component-mega-menu-header",
+			"mega",
+			"disp",
+			"}\n",
+			"mega",
+			"visible",
+			"$( this )",
+			"e.",
+			"( e )",
+			".nav",
+			" active\"",
+			"acti",
+			"row",
+			"active",
+			"row",
+			" active",
+			"@gray;",
+			"col-xs-offset-1 col-xs-11 col-md-offset-0 col-md-3",
+			"darker",
+			";\n",
+			"main",
+			"<div class=\"col-md-12\">",
+			"<ul class=\"col-xs-offset-1 col-xs-11 col-md-offset-4 col-md-4\">",
+			"<div class=\"col-md-4\">",
+			"col-xs-offset-2 col-xs-10 col-md-offset-3 col-md-9",
+			"row component-mega-menu-header",
+			"row menu-"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"github.com/",
+			"collection",
+			"Collection",
+			"collection",
+			"Collections",
+			"\"",
+			"'",
+			"^on_index",
+			".navbar-default",
+			"<img class=\"product_img img-responsive\" src=\"{{url-300}}\" alt=\"{{title}}\">",
+			"rt \"../../../bower_components/bootstrap/less/",
+			"<ul class=\"list-unstyled ",
+			"text indented",
+			"col-xs-offset-2 col-xs-10 col-sm-offset-2 col-sm-10 col-md-offset-0 col-md-4",
+			"col-xs-offset-3 col-xs-9 col-sm-offset-3 col-sm-9 col-md-offset-0 col-md-12",
+			"",
+			"col-xs-offset-3 col-xs-9 col-sm-offset-3 col-sm-9 col-md-12",
+			"col-xs-offset-2 col-xs-10 col-sm-offset-2 col-sm-10 col-md-4",
+			"col-xs-offset-1 col-xs-11 col-sm-offset-1 col-sm-11 ",
+			"</a>",
+			"$(this)",
+			"event.",
+			"(event)",
+			"\"",
+			"col-md-offset-0 col-md-3",
+			"<div class=\"col-xs-offset-3 col-xs-9 col-md-12\">",
+			"<ul class=\"col-md-offset-4 col-md-4\">",
+			"<div class=\"col-xs-offset-2 col-xs-12 col-md-4\">",
+			"col-xs-12 col-md-offset-3 col-md-9",
+			"component-mega-menu-header",
+			"menu-",
+			"<ul class=\"col-xs-offset-1 col-xs-11 col-md-offset-4 col-md-4\">",
+			"<ul class=\"col-xs-offset-3 col-xs-9 col-md-offset-4 col-md-4\">",
+			"<ul class=\"col-xs-offset-2 col-xs-10 col-md-offset-3 col-md-9\">",
+			"<div class=\"col-xs-offset-1 col-xs-11 col-md-offset-0 col-md-3\">",
+			"'closing'",
+			"'opening'",
+			"Swarovski",
+			"OffsetY",
+			"OffsetX",
+			"(function",
+			"(instance)",
+			"internal",
+			"preview",
+			"'",
+			"row",
+			"video-poster-0.png",
+			"video-poster-0",
+			"filters",
+			"if_eq",
+			"@footer-height-md;",
+			"@footer-height-xs;",
+			"\"poster\": \"./",
+			"src=\"./",
+			"component-footer-navbars",
+			"#product-details-accordion",
+			"-sm-",
+			"'",
+			"535",
+			"1284",
+			"saturday-london",
+			"\"position\"",
+			"ir-chevron-up",
+			"\"orientation\": \"right\",",
+			"\"orientation\": \"left\",",
+			"\"orientation\": left,",
+			"\"orientation\": right,",
+			"class=\"ir ir-",
+			"itb-worldwide.com",
+			"public_html",
+			"development",
+			"swarovskigroup",
+			"itb-worldwide",
+			"min-width: 1.429em;",
+			"1.429em",
+			"",
+			"xl",
+			"",
+			"xl",
+			"navbarCompact",
+			"<div class=\"col-sm-3\">",
+			"menu-sign-in",
+			"lg",
+			"/shopping-bag-md-",
+			"searchBarHeight",
+			"megaMenuHeight",
+			"navBarHeight",
+			"col-md-3",
+			"$searchBar",
+			"$megaMenu",
+			"jcrew",
+			"'",
+			"class=\"match ",
+			"'",
+			"max",
+			"'",
+			"navbar-",
+			"h1",
+			"h2",
+			"{{",
+			"}}",
+			"png",
+			"saturday-group",
+			"wednesdayagency",
+			"jbrandjeans",
+			"lindex",
+			"system.meta.",
+			"<td></td>",
+			"&amp;",
+			" &amp; ",
+			">",
+			"</a>",
+			"<a",
+			"+&amp;+",
+			"'",
+			"<td></td>",
+			"' + id + '",
+			"'",
+			"src=\"/js",
+			"",
+			"<tr class=\"danger\"><td>",
+			"<tr class=\"warning\"><td>",
+			"<td>",
+			"<th>",
+			"</td>",
+			"</th>",
+			"</td>\\r\\n</tr>",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "build/views/home/index.ejs",
+					"settings":
+					{
+						"buffer_size": 2043,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8,
+								2043
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/EJS/EJS_alternative.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "build/views/layout.ejs",
+					"settings":
+					{
+						"buffer_size": 6714,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4485,
+								4263
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/EJS/EJS_alternative.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 802.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"bio",
+				"src/templates/includes/designers-biography.hbs"
+			],
+			[
+				"resul",
+				"src/templates/includes/search-results.hbs"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"223",
+				"node_modules/grunt/test/fixtures/files/src/file2-123.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 380.0,
+	"status_bar_visible": true
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%- title %></title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!--STYLES-->
+<link rel="stylesheet" href="/linker/styles/main.css">
+<!--STYLES END-->
+
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+	</head>
+
+	<body class="loading" data-spy="scroll" data-target="#navigation-main">
+
+		<a class="sr-only" href="#content-main">Skip to content</a>
+
+		<!-- Wrap all page content here -->
+		<div id="wrap">
+
+<%- partial('_partials/header')%>
+
+			<!-- Include the view file for the current controller/route -->
+<%- body %>
+
+		</div><!-- #wrap -->
+
+<%- partial('_partials/footer') %>
+
+		<!--TEMPLATES-->
+
+<!--TEMPLATES END-->
+
+		<!--SCRIPTS-->
+<script src="/linker/js/socket.io.js"></script>
+<script src="/linker/js/sails.io.js"></script>
+<script src="/linker/js/app.js"></script>
+<script src="/bower_components/requirejs/require.js"></script>
+<script src="/linker/js/require.config.js"></script>
+<script src="/linker/js/components/isotope.js"></script>
+<script src="/linker/js/components/login.js"></script>
+<script src="/linker/js/components/sections.js"></script>
+<script src="/linker/js/components/status.js"></script>
+<!--SCRIPTS END-->
+	</body>
+</html>
