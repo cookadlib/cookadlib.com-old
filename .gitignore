@@ -55,4 +55,6 @@ bower_components
 # Sails additions
 ########################
 build/config/*.js
+!build/config/adapters.js
 !build/config/custom.js
+!build/config/passport.js
