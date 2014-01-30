@@ -15,22 +15,19 @@
 		<![endif]-->
 	</head>
 
-	<body class="loading" data-spy="scroll" data-target="#navigation-main">
+	<body class="loading">
 
 		<a class="sr-only" href="#content-main">Skip to content</a>
-
-		<!-- Wrap all page content here -->
-		<div id="wrap">
+<%- partial('_partials/sidebar')%>
 
 <%- partial('_partials/header')%>
 
+		<div>
 			<!-- Include the view file for the current controller/route -->
 <%- body %>
 
-		</div><!-- #wrap -->
-
 <%- partial('_partials/footer') %>
-
+		</div>
 		<!--TEMPLATES-->
 
 <!--TEMPLATES END-->
@@ -41,10 +38,13 @@
 <script src="/linker/js/app.js"></script>
 <script src="/bower_components/requirejs/require.js"></script>
 <script src="/linker/js/require.config.js"></script>
-<script src="/linker/js/components/isotope.js"></script>
-<script src="/linker/js/components/login.js"></script>
-<script src="/linker/js/components/sections.js"></script>
-<script src="/linker/js/components/status.js"></script>
+<script src="/linker/js/functionalities/fullscreen.js"></script>
+<script src="/linker/js/functionalities/isotope.js"></script>
+<script src="/linker/js/functionalities/login.js"></script>
+<script src="/linker/js/functionalities/navbar.js"></script>
+<script src="/linker/js/functionalities/reveal.js"></script>
+<script src="/linker/js/functionalities/sections.js"></script>
+<script src="/linker/js/functionalities/status.js"></script>
 <!--SCRIPTS END-->
 	</body>
 </html>

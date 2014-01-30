@@ -30,19 +30,19 @@ figure {
     width: 100%;
 
     &.grayscale {
-        filter: none;
-        .lh-backface-visibility(hidden); /* Fix for transition flickering */
-        // .lh-filter(grayscale(0%) brightness(100%) contrast(100%)); /* Chrome 19+ & Safari 6+ */
-        .lh-transition(filter 2.5s ease); /* Fade to color for Chrome and Safari */
+      filter: none;
+      .lh-backface-visibility(hidden); /* Fix for transition flickering */
+      // .lh-filter(grayscale(0%) brightness(100%) contrast(100%)); /* Chrome 19+ & Safari 6+ */
+      .lh-transition(filter 2.5s ease); /* Fade to color for Chrome and Safari */
     }
   }
 
   figcaption {
-    .lh-transition(transform 0.25s 0.05s ease, opacity 0.75s 0.05s ease);
+    .lh-transition(transform 0.25s 0.05s ease, opacity 0.75s 0.015s ease);
     .translateY(8em);
 
     bottom: 0;
-    color: #fff;
+    color: @brand-primary;
     left: 0;
     opacity: 0;
     padding-left: 15px;
@@ -77,7 +77,7 @@ figure {
       opacity: 1;
 
       &.gradient {
-        .lh-background-image(linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%));
+        .lh-background-image(linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%));
       }
     }
   }

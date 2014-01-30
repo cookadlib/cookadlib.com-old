@@ -5,7 +5,9 @@
 
 module.exports = {
 
-	
+	'new': function(req, res) {
+		res.view();
+	}	
 
 };
 
@@ -44,6 +46,6 @@ module.exports.blueprints = {
 	// Expose simple CRUD shortcuts, e.g.
 	//	`/user/create` => `create: function (req, res) {}`
 	// (useful for prototyping)
-	shortcuts: true	
+	shortcuts: true
 
 };

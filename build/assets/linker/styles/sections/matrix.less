@@ -2,11 +2,15 @@ section {
   &.matrix {
     > .row {
       > a {
-        display: block;
+        .make-sm-column(4);
+        // display: block;
 
         figure {
-          margin-bottom: 15px;
-          margin-top: 15px;
+          margin-bottom: 30px;
+
+          img {
+            .img-responsive;
+          }
 
           figcaption {
             // bottom: 15px;

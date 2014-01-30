@@ -34,6 +34,7 @@
 // Core CSS
 @import "../../../bower_components/bootstrap/less/scaffolding.less";
 @import "../../../bower_components/bootstrap/less/type.less";
+@import "./components/type.less";
 @import "../../../bower_components/bootstrap/less/code.less";
 @import "../../../bower_components/bootstrap/less/grid.less";
 @import "../../../bower_components/bootstrap/less/tables.less";
@@ -96,13 +97,19 @@
  *  License - 
  */
 
+// Core variables and mixins
+@import "./mixins/img.less";
+
 // Structure
 @import './structure/grid.less';
 @import './structure/generic.less';
 @import './structure/sticky-footer-navbar.less';
-@import './structure/sections.less';
 
 // Components
+@import './components/button.less';
+@import './components/form.less';
+@import './components/main.less';
+@import './components/nav.less';
 @import './components/navbar.less';
 @import './components/figure.less';
 
@@ -112,3 +119,8 @@
 @import './sections/isotope.less';
 @import './sections/matrix.less';
 @import './sections/overview.less';
+
+// Layouts
+@import './layouts/home.less';
+@import './layouts/recipes.less';
+@import './layouts/signup.less';

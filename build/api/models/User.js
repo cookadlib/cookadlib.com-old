@@ -2,7 +2,7 @@
  * User
  *
  * @description
- *		A short summary of the kind of data this model represents.
+ *    A short summary of the kind of data this model represents.
  *
  */
 var bcrypt = require('bcrypt');
@@ -13,9 +13,42 @@ module.exports = {
       required: true,
       unique: true
     },
+    nickname: {
+      type: 'string',
+      required: true,
+      minLength: 2,
+      maxLength: 100
+    },
+    firstName: {
+      type: 'string',
+      required: true,
+      minLength: 2,
+      maxLength: 100
+    },
+    lastName: {
+      type: 'string',
+      required: true,
+      minLength: 2,
+      maxLength: 100
+    },
+    email: {
+      type: 'email',
+      required: true
+    },
+    dateOfBirth: {
+      type: 'date',
+      required: true
+    },
     password: {
       type: 'string',
       required: true
+    },
+    active: {
+      type: 'boolean',
+      required: true
+    },
+    fullName: function() {
+      return this.firstName + ' ' + this.lastName
     },
     toJSON: function() {
       // this gives you an object with the current values
@@ -26,7 +59,6 @@ module.exports = {
       return obj;
     }
   },
-
   beforeCreate: function(user, cb) {
     bcrypt.genSalt(10, function(err, salt) {
       bcrypt.hash(user.password, salt, function(err, hash) {

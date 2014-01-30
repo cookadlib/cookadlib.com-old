@@ -1,0 +1,10 @@
+// Responsive image
+//
+// Keep images from scaling beyond the width of their parents.
+
+.grayscale() {
+  filter: none;
+  .lh-backface-visibility(hidden); /* Fix for transition flickering */
+  // .lh-filter(grayscale(0%) brightness(100%) contrast(100%)); /* Chrome 19+ & Safari 6+ */
+  .lh-transition(filter 2.5s ease); /* Fade to color for Chrome and Safari */
+}

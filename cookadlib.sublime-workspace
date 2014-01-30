@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"z-",
+				"z-index"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
 				"smooth",
 				"smooth-scroll"
 			],
@@ -32,20 +48,8 @@
 				"text-align"
 			],
 			[
-				"ma",
-				"margin-bottom"
-			],
-			[
 				"hei",
 				"min-height"
-			],
-			[
-				"ba",
-				"background-size"
-			],
-			[
-				"bac",
-				"background-repeat"
 			],
 			[
 				"ab",
@@ -167,29 +171,17 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "build/views/home/index.ejs",
-			"settings":
-			{
-				"buffer_size": 2043,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "build/views/layout.ejs",
-			"settings":
-			{
-				"buffer_size": 6714,
-				"line_ending": "Unix"
-			}
-		}
 	],
-	"build_system": "Packages/sublime-grunt-build/grunt.sublime-build",
+	"build_system": "",
 	"command_palette":
 	{
 		"height": 127.0,
 		"selected_items":
 		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
 			[
 				"handle",
 				"Set Syntax: Handlebars"
@@ -247,7 +239,7 @@
 				"Set Syntax: Shell Script (Bash)"
 			]
 		],
-		"width": 647.0
+		"width": 593.0
 	},
 	"console":
 	{
@@ -264,9 +256,60 @@
 	},
 	"file_history":
 	[
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/functionalities/reveal.js",
+		"/Users/karl/src/sites/cookadlib.com/assets/home.txt",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/layouts/signup.less",
+		"/Users/karl/src/sites/cookadlib.com/build/views/layout.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/views/user/new.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/views/_partials/sidebar.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/main.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/layouts/home.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/sections/album.less",
+		"/Users/karl/src/sites/cookadlib.com/build/bower_components/bootstrap/less/variables.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/variables.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/structure/sticky-footer-navbar.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/nav.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/main.less",
+		"/Users/karl/src/sites/cookadlib.com/build/views/_partials/header.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/navbar.less",
+		"/Users/karl/src/sites/cookadlib.com/build/bower_components/bootstrap/less/mixins.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/functionalities/isotope.js",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/functionalities/sections.js",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/figure.less",
+		"/Users/karl/src/sites/cookadlib.com/build/config/routes.js",
+		"/Users/karl/src/sites/cookadlib.com/build/views/home/index.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/structure/generic.less",
+		"/opt/boxen/nodenv/versions/v0.8.26/lib/node_modules/npm/doc/cli/submodule.md",
+		"/Users/karl/src/sites/cookadlib.com/build/bower.json",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/form.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/functionalities/fullscreen.js",
+		"/Users/karl/src/sites/cookadlib.com/build/views/_partials/footer.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/button.less",
+		"/Users/karl/src/sites/cookadlib.com/build/bower_components/bootstrap/less/grid.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/structure/grid.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/functionalities/navbar.js",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/components/navbar.js",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/require.config.js",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/components/isotope.js",
+		"/Users/karl/src/sites/cookadlib.com/build/views/recipe/index.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/views/recipes/index.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/views/auth/login.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/api/controllers/UserController.js",
+		"/Users/karl/src/sites/cookadlib.com/build/config/policies.js",
+		"/Users/karl/src/sites/cookadlib.com/build/bower_components/bootstrap/less/forms.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/components/sections.js",
+		"/Users/karl/src/sites/swarovskigroup.com/deploy/swarovskigroup.com.sublime-project",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/sections/matrix.less",
+		"/Users/karl/src/sites/cookadlib.com/build/api/models/User.js",
+		"/Users/karl/Desktop/erm.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/components/sidebar.js",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/mixins/img.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/generic.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/type.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/structure/sections.less",
+		"/Users/karl/src/sites/cookadlib.com/build/Gruntfile.js",
 		"/Users/karl/src/sites/cookadlib.com/build/bower_components/lesshat/build/lesshat.less",
 		"/Users/karl/src/sites/cookadlib.com/build/bower_components/lesshat/build/lesshat-prefixed.less",
-		"/Users/karl/src/sites/cookadlib.com/build/bower.json",
 		"/opt/boxen/repo/modules/wednesday/manifests/packages.pp",
 		"/opt/boxen/repo/modules/wednesday/manifests/applications.pp",
 		"/opt/boxen/repo/Puppetfile",
@@ -340,58 +383,7 @@
 		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/PostgresqlBundle/Resources/views/manifest/Postgresql.pp.twig",
 		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/PuphpetExtensionApacheBundle.php",
 		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/DependencyInjection/PuphpetExtensionApacheExtension.php",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/PhpBundle/Resources/config/available.yml",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Configure.php",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/DependencyInjection/Configuration.php",
-		"/Users/karl/src/applications/puphpet/web/assets/vendor/bootstrap/js/bootstrap.min.js",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/VagrantfileLocalBundle/Resources/views/manifest/VagrantfileLocal.pp.twig",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Resources/config/routing.yml",
-		"/Users/karl/src/applications/puphpet/app/config/routing.yml",
-		"/Users/karl/src/applications/puphpet/web/assets/vendor/bootstrap/css/bootstrap.css",
-		"/Users/karl/src/applications/puphpet/app/AppKernel.php",
-		"/Users/karl/src/applications/puphpet/web/assets/vendor/selectize.js/selectize.bootstrap3.css",
-		"/Users/karl/src/applications/puphpet/web/assets/vendor/selectize.js/selectize.min.js",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ServerBundle/Resources/views/form/Server.html.twig",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ServerBundle/Resources/views/manifest/Server.pp.twig",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Resources/config/services.yml",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/MainBundle/Resources/config/services.yml",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/VagrantfileLocalBundle/Resources/views/form/VagrantfileLocal.html.twig",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/MainBundle/Resources/views/front/sideMenu.html.twig",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Resources/views/form/sections/vhost.html.twig",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/XdebugBundle/Resources/views/manifest/Xdebug.pp.twig",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/XhprofBundle/Resources/views/manifest/Xhprof.pp.twig",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Resources/views/form/Apache.html.twig",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Resources/views/manifest/Apache.pp.twig",
-		"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/pages/TD01-0-1_Home_Page_Landing_Page_NO_TXT_OVERLAY_COMPILATION.hbs",
-		"/Users/karl/src/sites/swarovskigroup.com/deploy/src/data/carousel.json",
-		"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/pages/TD12-2_Forgotten_my_password.hbs",
-		"/Users/karl/src/dotfiles/.profile",
-		"/Users/karl/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
-		"/Users/karl/src/sites/ryddig/tictail.html",
-		"/Users/karl/src/sites/ryddig/deploy/src/templates/layouts/default.hbs",
-		"/Users/karl/src/sites/swarovskigroup.com/deploy/src/templates/layouts/default.hbs",
-		"/opt/boxen/repo/modules/projects/manifests/jbrandjeans.pp",
-		"/Users/karl/src/sites/PHPExcel/Documentation/Examples/Reader/demo-kjp.php",
-		"/Users/karl/src/dotfiles/.bashrc",
-		"/opt/boxen/repo/modules/wednesday/manifests/dotfiles.pp",
-		"/opt/boxen/repo/.gitignore",
-		"/Users/karl/Desktop/boxen/repo-new/manifests/site.pp",
-		"/opt/boxen/repo/modules/wednesday/manifests/environment.pp",
-		"/opt/boxen/repo/modules/wednesday/manifests/virtualization.pp",
-		"/opt/boxen/repo/modules/people/manifests/karl_wednesday.pp",
-		"/opt/boxen/repo/modules/people/manifests/nhekkens.pp",
-		"/opt/boxen/repo/modules/people/manifests/terrence_wednesday.pp",
-		"/opt/boxen/repo/modules/wednesday/manifests/os.pp",
-		"/opt/boxen/repo/modules/wednesday/manifests/projects.pp",
-		"/opt/boxen/repo/modules/projects/manifests/elder-statesman.pp",
-		"/etc/hosts",
-		"/Users/karl/Downloads/oriflame/index.html",
-		"/Users/karl/Downloads/oriflame/main.css",
-		"/opt/boxen/repo/modules/projects/manifests/wednesdayagency.pp",
-		"/opt/boxen/repo/modules/projects/manifests/swarovskigroup.pp",
-		"/opt/boxen/repo/modules/projects/manifests/saturdaygroup.pp",
-		"/opt/boxen/repo/modules/projects/manifests/lindex.pp",
-		"/opt/boxen/repo/modules/projects/manifests/erdem.pp"
+		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/PhpBundle/Resources/config/available.yml"
 	],
 	"find":
 	{
@@ -399,9 +391,16 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles",
+			"/Users/karl/src/sites/cookadlib.com/build/bower_components/bootstrap/less",
+			"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles",
+			"/Users/karl/src/sites/cookadlib.com/build/bower_components/bootstrap/less",
+			"/Users/karl/src/sites/cookadlib.com/build/assets/linker",
+			"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles",
+			"/Users/karl/src/sites/cookadlib.com/build/bower_components/bootstrap/less",
 			"/Users/karl/src/sites/wednesdayagency.com/deploy/wp-content/themes/wednesday",
 			"/Users/karl/src/sites/erdem",
 			"/Users/karl/src/sites/erdem/js",
@@ -518,6 +517,103 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"family",
+			"sect",
+			"em",
+			"15px",
+			" class=\"list-unstyled\"",
+			"<li>",
+			"<ul>",
+			"<li><a href=\"#\"><span>",
+			" class=\"list-group-item\"",
+			" class=\"list-group\"",
+			"z-",
+			"contain",
+			"Fullscreen",
+			"FullScreen",
+			"Fullscreen",
+			"FullScreen",
+			"targetElement",
+			" class=\"list-group-item\"",
+			"aside",
+			"navba",
+			"rbga",
+			"255, ",
+			"255",
+			"gradient",
+			"linear-g",
+			"linear",
+			"lh-linea",
+			"linea",
+			"lh",
+			"$hasAttribute",
+			"launchFullScreen",
+			"launchFullscreen",
+			"section",
+			"right",
+			"center",
+			"centered",
+			".container",
+			"grid",
+			".container",
+			"pois",
+			".container",
+			"container",
+			"main",
+			"ain",
+			"collapse",
+			"button",
+			"collapse",
+			"dropdown",
+			"popover",
+			"dropdown",
+			"js/dropdown'",
+			"postal-code",
+			"Spotify",
+			"optionsRadios\"",
+			"optionsRadios",
+			"radio\">",
+			"navba",
+			"#header",
+			"#e5e5e5",
+			"are you to try",
+			"region",
+			"Region",
+			"region",
+			"<div class=\"col-sm-10\">",
+			"<label class=\"col-sm-2",
+			".input-size",
+			"contr",
+			"<label class=\"col-sm-2 control-label\"",
+			"<input",
+			"<label",
+			"container",
+			"horiz",
+			"right",
+			"center",
+			"row",
+			"nickname",
+			"tab-pane",
+			"tab-pane ",
+			"img-responsive ",
+			"class=\"col-xs-12 col-md-4\" ",
+			"div",
+			"menu-",
+			"id=\"",
+			" data-toggle=\"tab\"",
+			"pill",
+			"supplies",
+			"navb",
+			"col-md-3",
+			"mixi",
+			"make",
+			"make-grid",
+			"make-",
+			" col-md-3",
+			"						<a class=\"col-xs-12 col-md-3\" href=\"#\">\n							<figure>\n								<img class=\"img-responsive grayscale\" src=\"http://ppcdn.500px.org/55502018/aa70026a887df61e31f0569dba3865bd9b70e5cd/3.jpg\">\n								<figcaption>\n									<h1>Rustic loaf</h1>\n									<h2>Spanish artisanal bread</h2>\n								</figcaption>\n							</figure>\n						</a>\n					</div>",
+			"conn",
+			"133",
+			"port",
 			"figure",
 			"github.com:",
 			"git@",
@@ -548,104 +644,7 @@
 			"about",
 			"letter-s",
 			"rela",
-			"tictail_button",
-			"size_guide",
-			"status",
-			"variations_radio",
-			"position",
-			"price",
-			"url-",
-			"url",
-			"product",
-			"price",
-			"tict",
-			"tic",
-			"clear",
-			"h1",
-			"banner",
-			"h1",
-			"hr",
-			".app-container .navbar-default",
-			"<img class=\"img-responsive\" src=\"{{url-300}}\" alt=\"{{title}}\">",
-			"column",
-			"img",
-			"prod",
-			"java",
-			"1px",
-			"20% 40%",
-			"key",
-			"30px",
-			"60px",
-			"100px",
-			"kjp",
-			"1.5em;",
-			"top",
-			"img",
-			"rt \"",
-			"//",
-			"recess",
-			"urls",
-			"boot",
-			"urls",
-			"hbs",
-			"hand",
-			"hidd",
-			"hid",
-			"helpers",
-			"btn-s",
-			"trigg",
-			"block",
-			"a {",
-			";",
-			"batch: 1",
-			"<ul",
-			"<ul class=\"",
-			"<ul",
-			"page",
-			"page-head",
-			"ul",
-			"text align",
-			"col-xs-offset-2 col-xs-10 col-sm-offset-2 col-sm-10 col-md-4",
-			"col-xs-offset-3 col-xs-9 col-sm-offset-3 col-sm-9 col-md-12",
-			" sub",
-			"col-xs-offset-3 col-xs-9 col-md-12",
-			"col-xs-offset-2 col-xs-10 col-md-4",
-			"358",
-			"col-xs-offset-1 col-xs-11 ",
-			"50%",
-			"gly",
-			" <span class=\"glyphicon glyphicon-plus\"></span></a>",
-			"im",
-			"1em 0",
-			"imp",
-			"border",
-			".component-mega-menu-header",
-			"mega",
-			"disp",
-			"}\n",
-			"mega",
-			"visible",
-			"$( this )",
-			"e.",
-			"( e )",
-			".nav",
-			" active\"",
-			"acti",
-			"row",
-			"active",
-			"row",
-			" active",
-			"@gray;",
-			"col-xs-offset-1 col-xs-11 col-md-offset-0 col-md-3",
-			"darker",
-			";\n",
-			"main",
-			"<div class=\"col-md-12\">",
-			"<ul class=\"col-xs-offset-1 col-xs-11 col-md-offset-4 col-md-4\">",
-			"<div class=\"col-md-4\">",
-			"col-xs-offset-2 col-xs-10 col-md-offset-3 col-md-9",
-			"row component-mega-menu-header",
-			"row menu-"
+			"tictail_button"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -653,6 +652,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"<label class=\"col-sm-2 control-label\"",
+			"user[nickname]",
 			"github.com/",
 			"collection",
 			"Collection",
@@ -778,9 +779,7 @@
 			"<td>",
 			"<th>",
 			"</td>",
-			"</th>",
-			"</td>\\r\\n</tr>",
-			""
+			"</th>"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -791,273 +790,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "build/views/home/index.ejs",
-					"settings":
-					{
-						"buffer_size": 2043,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								8,
-								2043
-							]
-						],
-						"settings":
-						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2.0,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5.0,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10.0,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/EJS/EJS_alternative.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "build/views/layout.ejs",
-					"settings":
-					{
-						"buffer_size": 6714,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4485,
-								4263
-							]
-						],
-						"settings":
-						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2.0,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5.0,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10.0,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/EJS/EJS_alternative.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 802.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1106,6 +840,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"mixi",
+				"build/bower_components/bootstrap/less/mixins.less"
+			],
+			[
+				"new",
+				"build/views/user/new.ejs"
+			],
 			[
 				"bio",
 				"src/templates/includes/designers-biography.hbs"

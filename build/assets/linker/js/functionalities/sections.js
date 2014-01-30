@@ -36,12 +36,12 @@ function keyboardNavigation()
     $(document.documentElement).keydown(
         function(event)
         {
-            event.preventDefault();
-
             if (event.keyCode == 38) {
+                event.preventDefault();
                 scrollTo('up');
             }
             else if (event.keyCode == 40) {
+                event.preventDefault();
                 scrollTo('down');
             }
         }
