@@ -21,7 +21,7 @@ function attachResizeListeners()
 
 function setFullHeight()
 {
-    $('section').css(
+    $('section.full-height').css(
         'min-height',
         function(index, height) {
             // var newHeight = ( $(window).height() * 0.9 );
