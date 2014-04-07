@@ -18,16 +18,14 @@
 	<body class="loading">
 
 		<a class="sr-only" href="#content-main">Skip to content</a>
-<%- partial('_partials/sidebar')%>
+<%- partial('_partials/aside')%>
 
 <%- partial('_partials/header')%>
 
-		<div>
 			<!-- Include the view file for the current controller/route -->
 <%- body %>
 
 <%- partial('_partials/footer') %>
-		</div>
 		<!--TEMPLATES-->
 
 <!--TEMPLATES END-->
@@ -39,6 +37,7 @@
 <script src="/bower_components/requirejs/require.js"></script>
 <script src="/linker/js/require.config.js"></script>
 <script src="/linker/js/functionalities/fullscreen.js"></script>
+<script src="/linker/js/functionalities/input.js"></script>
 <script src="/linker/js/functionalities/isotope.js"></script>
 <script src="/linker/js/functionalities/login.js"></script>
 <script src="/linker/js/functionalities/navbar.js"></script>
