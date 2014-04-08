@@ -17,7 +17,7 @@
     "lesshat": "2.0.13",
     "lodash": "2.2.1",
     "marionette": "1.4.1",
-    "modernizr": "2.6.2",
+    "modernizr": "2.7.2",
     "parsleyjs": "1.2.2",
     "requirejs": "2.1.9",
     "tinysort": "latest",
@@ -28,7 +28,11 @@
     "url": "https://github.com/cookadlib/sails-application"
   },
   "resolutions": {
+<<<<<<< HEAD
     "bootstrap": "3.0.3",
+=======
+    "bootstrap": "3.1.1",
+>>>>>>> 855572f1f0f05ed3a53f2fa913a8fd87a50d3947
     "jquery": "2.1.0"
   }
 }
