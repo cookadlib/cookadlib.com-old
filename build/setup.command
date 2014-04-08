@@ -4,6 +4,6 @@ npm cache clean
 npm install
 npm update
 
-bower cache-clean
+bower cache clean
 bower install
 bower update
