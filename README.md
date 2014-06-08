@@ -10,6 +10,7 @@ Versionable API via semver
 Multi-lingual Mongo database
 JSON API endpoints
 SPARQL endpoints
+SPARQL client
 Website
 iOS app
 OS-X widget
