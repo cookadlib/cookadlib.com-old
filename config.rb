@@ -3,9 +3,10 @@ require 'compass/import-once/activate'
 
 # Set this to the root of your project when deployed:
 http_path = "app"
-css_dir = "dist/styles"
+css_dir = "app/styles"
 sass_dir = "app/styles"
 images_dir = "app/images"
+generated_images_dir = "dist/images/"
 javascripts_dir = "app/scripts"
 
 # You can select your preferred output style here (can be overridden via the command line):
@@ -27,3 +28,11 @@ sass_options = {
 	:sourcemap => true
 }
 enable_sourcemaps = true
+
+# Workaround Compass bug
+module Compass::SassExtensions::Functions::Sprites
+    def sprite_path(map)
+      Sass::Script::String.new(map.filename)
+    end
+    Sass::Script::Functions.declare :sprite_path, [:map]
+end

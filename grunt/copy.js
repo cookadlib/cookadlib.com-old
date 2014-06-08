@@ -1,5 +1,5 @@
 /**
- * Copy Static Resources
+ * Copy static resources
  */
 module.exports = {
 
@@ -56,9 +56,24 @@ module.exports = {
 				flatten: false,
 				cwd: '<%= package.config.path.source %>/fonts',
 				src: [
-					'**/*.ico'
+					'**/*'
 				],
 				dest: '<%= package.config.path.build %>/fonts',
+				filter: 'isFile'
+			}
+		]
+	},
+
+	scripts: {
+		files: [
+			{
+				expand: true,
+				flatten: false,
+				cwd: '<%= package.config.path.source %>/scripts',
+				src: [
+					'**/*.js'
+				],
+				dest: '<%= package.config.path.build %>/scripts',
 				filter: 'isFile'
 			}
 		]

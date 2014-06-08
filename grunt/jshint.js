@@ -8,7 +8,7 @@ module.exports = {
 	},
 
 	default: [
-		'<%= package.config.path.source %>/scripts/**/*.js',
+		'<%= package.config.path.source %>/scripts/source/**/*.js',
 		'grunt/**/*.js'
 	].concat('Gruntfile.js')
 

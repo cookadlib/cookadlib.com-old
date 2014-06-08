@@ -12,7 +12,7 @@ module.exports = function () {
 	};
 
 	var mountFolder = function(connect, dir) {
-		// console.log('path', dir);
+		console.log('path', dir);
 		return connect.static(require('path').resolve(dir));
 	};
 
@@ -20,8 +20,17 @@ module.exports = function () {
 
 		options: {
 			hostname: '*',
+			base: '<%= package.config.path.build %>',
 			port: '<%= package.config.server.connect.port %>',
-			base: '<%= package.config.path.build %>'
+			data: {
+				path: {
+					source: '<%= package.config.path.source %>',
+					build: '<%= package.config.path.build %>'
+				},
+				livereload: {
+					port: '<%= package.config.server.livereload.port %>'
+				}
+			},
 		},
 
 		basic: {
@@ -33,21 +42,22 @@ module.exports = function () {
 		livereload: {
 			options: {
 				// keepalive: true,
-				data: {
-					dir: '<%= package.config.path.source %>'
-				},
 				middleware: function (connect, options) { // connect, options, middlewares
+					// console.log(options);
 					return [
-						connectLivereload(options.data.port),
+						connectLivereload(options.data.livereload.port),
 						mountFolder(connect, '.tmp'),
-						mountFolder(connect, options.data.dir)
+						mountFolder(connect, options.data.path.build),
+						mountFolder(connect, options.data.path.source)
 					];
 				},
-        onCreateServer: function(server) { // server, connect, options
+        onCreateServer: function(server, connect, options) { // server, connect, options
 					server.get('/', function(req, res) {
-						console.log(req, res);
+						// console.log(req, res);
 					  res.sendfile('index.html');
 					});
+					console.log('options.data.path.build', options.data.path.source + '/scripts/source');
+
           var io = require('socket.io').listen(server);
 
           io.sockets.on('connection', function(socket) { // socket
@@ -68,14 +78,11 @@ module.exports = function () {
 
 		test: {
 			options: {
-				data: {
-					dir: '<%= package.config.path.source %>'
-				},
 				middleware: function (connect, options) { // connect, options, middlewares
 					return [
 						mountFolder(connect, '.tmp'),
 						mountFolder(connect, 'test'),
-						mountFolder(connect, options.data.dir)
+						mountFolder(connect, options.data.path.source)
 					];
 				}
 			}
@@ -83,13 +90,9 @@ module.exports = function () {
 
 		dist: {
 			options: {
-				data: {
-					dir: '<%= package.config.path.build %>',
-					port: '<%= package.config.path.port %>'
-				},
 				middleware: function (connect, options) { // connect, options, middlewares
 					return [
-						mountFolder(connect, options.data.dir)
+						mountFolder(connect, options.data.path.build)
 					];
 				}
 			}

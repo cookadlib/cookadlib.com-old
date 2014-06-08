@@ -1,20 +1,22 @@
 module.exports = {
 
-	'css': [
-		'mkdir',
+	'styles': [
+		'mkdir:root',
+		'mkdir:styles',
 		'compass', // does not work with grunt-newer
 		'newer:scsslint',
 		// 'newer:csslint', // sooooooo many errors
+		'newer:rename:styles',
 		'uncss'
 	],
 
 	'fonts': [
-		'mkdir',
+		'mkdir:root',
 		'newer:copy:fonts'
 	],
 
 	'html': [
-		'mkdir',
+		'mkdir:root',
 		'vulcanize',
 		'useminPrepare',
 		// 'newer:copy:html', // use htmlmin instead
@@ -23,26 +25,28 @@ module.exports = {
 	],
 
 	'images': [
-		'mkdir',
+		'mkdir:root',
 		'newer:copy:icons',
 		'newer:imagemin',
 		'newer:svgmin'
 	],
 
 	'misc': [
-		'mkdir',
+		'mkdir:root',
 		'newer:copy:dotFiles'
 	],
 
 	'scripts': [
-		'mkdir',
+		'mkdir:root',
+		'mkdir:scripts',
 		'newer:jshint',
-		'newer:uglify'
+		'newer:uglify',
+		'newer:rename:scripts'
 	],
 
 	'build': [
 		'html',
-		'css',
+		'styles',
 		'scripts',
 		'images',
 		'fonts',

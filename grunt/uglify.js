@@ -5,12 +5,12 @@ module.exports = {
 
 	default: {
 		options: {
-			beautify: true,
+			beautify: false,
 			sourceMap: true,
-			sourceMappingURL: '<%= package.config.path.build %>/scripts/main.map.js',
+			sourceMappingURL: '<%= package.config.path.source %>/scripts/main.map.js',
 		},
 		files: {
-			'<%= package.config.path.build %>/scripts/main.js': [
+			'<%= package.config.path.source %>/scripts/main.js': [
 				'<%= package.config.path.source %>/scripts/source/**/*.js'
 			]
 		}
