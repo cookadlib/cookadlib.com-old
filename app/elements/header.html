@@ -1,0 +1,16 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="header-element" noscript>
+    <template>
+        <header>
+            <div class="container">
+                <a class="navbar-brand" ui-sref="/">Cook AdLib</a>
+                <menu>
+                    <li><a ui-sref="/">Sign in</a></li>
+                    <li class="hidden-xs"><a ui-sref="/">Tour</a></li>
+                    <li><button class="btn btn-link btn-inline" data-action="reveal" data-target="sidebar"><span class="sr-only">Menu</span> <i class="fa fa-bars"></i></button></li>
+                </menu>
+            </div>
+        </header>
+    </template>
+</polymer-element>

@@ -1,0 +1,28 @@
+main {
+  > article,
+  > aside,
+  > form,
+  > section {
+    background-color: #f00;
+  }
+
+  > article {
+    background-color: #f00;
+  }
+
+  // > aside {
+  //   .make-sm-column(3);
+
+  //   + article,
+  //   + section {
+  //     .make-sm-column(9);
+  //   }
+  // }
+
+  // > section {
+  //   .clearfix;
+  //   height: 100%;
+  //   min-height: 2000px;
+  //   position: relative;
+  // }
+}

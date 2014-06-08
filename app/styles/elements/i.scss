@@ -1,0 +1,27 @@
+@include keyframes(changeColorToWhite) {
+  0% {
+    color: #fff;
+  }
+
+  100% {
+    color: #000;
+  }
+}
+
+@include keyframes(changeColorToBlack) {
+  0% {
+    color: #000;
+  }
+
+  100% {
+    color: #fff;
+  }
+}
+
+i {
+  @include animation(changeColorToWhite 1000ms ease normal 1 running both);
+
+  &:hover {
+    @include animation(changeColorToBlack 250ms ease normal 1 running both);
+  }
+}

@@ -1,0 +1,37 @@
+//
+// Grid system
+// --------------------------------------------------
+
+// Set the container width, and override it for fixed navbars in media queries
+// .container {
+//   @media (min-width: $screen-xl-min) {
+//     width: $container-xl;
+//   }
+//   @media (min-width: $screen-xxl-min) {
+//     width: $container-xxl;
+//   }
+// }
+
+// Extra large grid
+//
+// Columns, offsets, pushes, and pulls for the extra large desktop device range.
+
+// @media (min-width: $screen-xl-min) {
+//   @include make-grid-columns-float(xl);
+//   @include make-grid($grid-columns, xl, width);
+//   @include make-grid($grid-columns, xl, pull);
+//   @include make-grid($grid-columns, xl, push);
+//   @include make-grid($grid-columns, xl, offset);
+// }
+
+// Extra extra large grid
+//
+// Columns, offsets, pushes, and pulls for the extra extra large desktop device range.
+
+// @media (min-width: $screen-xxl-min) {
+//   @include make-grid-columns-float(xxl);
+//   @include make-grid($grid-columns, xxl, width);
+//   @include make-grid($grid-columns, xxl, pull);
+//   @include make-grid($grid-columns, xxl, push);
+//   @include make-grid($grid-columns, xxl, offset);
+// }

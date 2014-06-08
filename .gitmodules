@@ -1,0 +1,3 @@
+[submodule "components/element-navigation"]
+	path = components/element-navigation
+	url = git@github.com:cookadlib/element-navigation.git

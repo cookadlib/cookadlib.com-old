@@ -1,0 +1,40 @@
+.grid {
+
+  /* 5 columns by default */
+  > .grid-sizer {
+    width: 20%;
+  }
+
+  @media screen and (min-width: 720px) {
+  	/* 10 columns for larger screens */
+    > .grid-sizer {
+      width: 10%;
+  	}
+  }
+
+  > .item {
+    background-color: #f00;
+    height: 100px;
+  }
+}
+
+#animate-item-size-responsive .item {
+  height: 60px;
+  width: 20%;
+
+  /* item has expanded size */
+  > .is-expanded {
+    height: 120px;
+    width: 60%;
+  }
+}
+
+#animate-item-size-responsive .item-content {
+  background: #09d;
+  height: 100%;
+  -moz-transition: width 400ms, height 400ms;
+  -o-transition: width 400ms, height 400ms;
+  -webkit-transition: width 400ms, height 400ms;
+  transition: width 400ms, height 400ms;
+  width: 100%;
+}

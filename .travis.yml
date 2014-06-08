@@ -1,0 +1,13 @@
+before_script:
+  - npm install -g grunt-cli
+language: node_js
+node_js:
+  - '0.11.x'
+notifications:
+  webhooks:
+    urls:
+      - http://webhooks.nodejitsu.com/1/deploy
+    on_success: always
+    on_failure: never
+services:
+  - mongodb

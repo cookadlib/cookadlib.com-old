@@ -4,15 +4,35 @@
 		"selected_items":
 		[
 			[
+				"ov",
+				"overflow"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
 				"z-",
 				"z-index"
 			],
 			[
 				"ba",
-				"background-color"
-			],
-			[
-				"bac",
 				"background-color"
 			],
 			[
@@ -33,10 +53,6 @@
 			],
 			[
 				"tex",
-				"text-transform"
-			],
-			[
-				"te",
 				"text-transform"
 			],
 			[
@@ -70,10 +86,6 @@
 			[
 				"c",
 				"color"
-			],
-			[
-				"pad",
-				"padding"
 			],
 			[
 				"marg",
@@ -118,10 +130,6 @@
 			[
 				"panel",
 				"panel-collapse"
-			],
-			[
-				"mar",
-				"margin-bottom"
 			],
 			[
 				"nav",
@@ -175,7 +183,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 127.0,
+		"height": 27.0,
 		"selected_items":
 		[
 			[
@@ -256,32 +264,88 @@
 	},
 	"file_history":
 	[
+		"/Users/karl/src/sites/cookadlib.com/deploy/package.json",
+		"/Users/karl/src/sites/cookadlib.com/deploy/.travis.yml",
+		"/Users/karl/src/sites/cookadlib.com/deploy/README.md",
+		"/Users/karl/src/sites/cookadlib.com/app/elements/blog.html",
+		"/Users/karl/src/sites/cookadlib.com/app/sass/screen.scss",
+		"/Users/karl/src/sites/cookadlib.com/app/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/_bootstrap-mincer.scss",
+		"/Users/karl/src/sites/cookadlib.com/app/sass/components/figure.scss",
+		"/Users/karl/src/sites/cookadlib.com/app/sass/pages/signup.scss",
+		"/Users/karl/src/sites/cookadlib.com/app/sass/sections/matrix.scss",
+		"/Users/karl/src/sites/cookadlib.com/.sass-cache/44f0cac292ab9fc2cd78b685a8683034024bba0d/_brightness.scssc",
+		"/Users/karl/src/sites/cookadlib.com/app/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_variables.scss",
+		"/Users/karl/src/sites/cookadlib.com/grunt/compass.js",
+		"/Users/karl/src/sites/cookadlib.com/Gruntfile.js",
+		"/Users/karl/src/sites/cookadlib.com/app/sass/components/navbar.scss",
+		"/Users/karl/src/sites/cookadlib.com/app/bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss",
+		"/Users/karl/src/sites/cookadlib.com/app/sass/components/generic.scss",
+		"/Users/karl/src/sites/cookadlib.com/app/styles/sass/components/figure.scss",
+		"/Users/karl/src/sites/cookadlib.com/.gitattributes",
+		"/Users/karl/src/sites/cookadlib.com/app/index.html",
+		"/Users/karl/src/sites/cookadlib.com/.jshintrc",
+		"/Users/karl/src/sites/test/test/sass/screen.scss",
+		"/Users/karl/src/sites/cookadlib.com/app/scripts/cookAdLibApp.js",
+		"/Users/karl/src/sites/cookadlib.com/config.rb",
+		"/Users/karl/src/sites/cookadlib.com/grunt/clean.js",
+		"/Users/karl/src/sites/cookadlib.com/grunt/jshint.js",
+		"/Users/karl/src/sites/cookadlib.com/grunt/notify.js",
+		"/Users/karl/src/sites/cookadlib.com/grunt/spritesmith.js",
+		"/Users/karl/src/sites/cookadlib.com/grunt/svgmin.js",
+		"/Users/karl/src/sites/cookadlib.com/grunt/uglify.js",
+		"/Users/karl/src/sites/cookadlib.com/grunt/aliases.js",
+		"/Users/karl/src/sites/cookadlib.com/grunt/bowerInstall.js",
+		"/Users/karl/src/sites/test/test1/cookadlib/config.rb",
+		"/Users/karl/src/sites/cookadlib.com/app/sass/components/form.scss",
+		"/Users/karl/src/sites/cookadlib.com/app/stylesheets/main.scss",
+		"/Users/karl/src/sites/cookadlib.com/app/stylesheets/screen.css",
+		"/Users/karl/src/sites/cookadlib.com/build/views/_partials/header.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/package.json",
+		"/Users/karl/src/sites/cookadlib.com/build/Gruntfile.js",
+		"/Users/karl/src/sites/swarovskigroup.com/deploy/Gruntfile.js",
+		"/Users/karl/src/sites/swarovskigroup.com/deploy/package.json",
+		"/Users/karl/src/sites/cookadlib.com/build/grunt/spritesmith.js",
+		"/Users/karl/src/sites/cookadlib.com/build/grunt/csslint.js",
+		"/Users/karl/src/sites/cookadlib.com/build/grunt/htmlinspector.js",
+		"/Users/karl/src/sites/cookadlib.com/build/grunt/imagemin.js",
+		"/Users/karl/src/sites/cookadlib.com/build/grunt/compass.js",
+		"/Users/karl/src/sites/cookadlib.com/build/grunt/jshint.js",
+		"/Users/karl/src/sites/cookadlib.com/build/grunt/helloworld.js",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/app.js",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/layouts/signup.less",
+		"/Users/karl/src/sites/cookadlib.com/build/views/user/new.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/views/recipes/index.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/views/recipe/index.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/structure/sticky-footer-navbar.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/variables.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/sections/hero.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/main.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/mixins/vertical-align-middle.less",
+		"/Users/karl/src/sites/cookadlib.com/build/bower_components/lesshat/build/lesshat-prefixed.less",
+		"/Users/karl/src/sites/cookadlib.com/build/views/home/index.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/type.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/form.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/navbar.less",
+		"/Users/karl/src/sites/swarovskigroup.com/deploy/src/helpers/helper-google-anlytics.js",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/main.less",
+		"/Users/karl/src/sites/cookadlib.com/build/views/layout.ejs",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/layouts/recipes.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/functionalities/sections.js",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/sections/matrix.less",
+		"/Users/karl/src/sites/cookadlib.com/build/bower_components/bootstrap/less/mixins.less",
+		"/Users/karl/src/sites/cookadlib.com/build/bower_components/bootstrap/less/variables.less",
+		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/figure.less",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/functionalities/reveal.js",
 		"/Users/karl/src/sites/cookadlib.com/assets/home.txt",
-		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/layouts/signup.less",
-		"/Users/karl/src/sites/cookadlib.com/build/views/layout.ejs",
-		"/Users/karl/src/sites/cookadlib.com/build/views/user/new.ejs",
 		"/Users/karl/src/sites/cookadlib.com/build/views/_partials/sidebar.ejs",
-		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/main.less",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/layouts/home.less",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/sections/album.less",
-		"/Users/karl/src/sites/cookadlib.com/build/bower_components/bootstrap/less/variables.less",
-		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/variables.less",
-		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/structure/sticky-footer-navbar.less",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/nav.less",
-		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/main.less",
-		"/Users/karl/src/sites/cookadlib.com/build/views/_partials/header.ejs",
-		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/navbar.less",
-		"/Users/karl/src/sites/cookadlib.com/build/bower_components/bootstrap/less/mixins.less",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/functionalities/isotope.js",
-		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/functionalities/sections.js",
-		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/figure.less",
 		"/Users/karl/src/sites/cookadlib.com/build/config/routes.js",
-		"/Users/karl/src/sites/cookadlib.com/build/views/home/index.ejs",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/structure/generic.less",
 		"/opt/boxen/nodenv/versions/v0.8.26/lib/node_modules/npm/doc/cli/submodule.md",
 		"/Users/karl/src/sites/cookadlib.com/build/bower.json",
-		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/form.less",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/functionalities/fullscreen.js",
 		"/Users/karl/src/sites/cookadlib.com/build/views/_partials/footer.ejs",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/button.less",
@@ -291,25 +355,19 @@
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/components/navbar.js",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/require.config.js",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/components/isotope.js",
-		"/Users/karl/src/sites/cookadlib.com/build/views/recipe/index.ejs",
-		"/Users/karl/src/sites/cookadlib.com/build/views/recipes/index.ejs",
 		"/Users/karl/src/sites/cookadlib.com/build/views/auth/login.ejs",
 		"/Users/karl/src/sites/cookadlib.com/build/api/controllers/UserController.js",
 		"/Users/karl/src/sites/cookadlib.com/build/config/policies.js",
 		"/Users/karl/src/sites/cookadlib.com/build/bower_components/bootstrap/less/forms.less",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/components/sections.js",
 		"/Users/karl/src/sites/swarovskigroup.com/deploy/swarovskigroup.com.sublime-project",
-		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/sections/matrix.less",
 		"/Users/karl/src/sites/cookadlib.com/build/api/models/User.js",
 		"/Users/karl/Desktop/erm.ejs",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/js/components/sidebar.js",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/mixins/img.less",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/generic.less",
-		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components/type.less",
 		"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/structure/sections.less",
-		"/Users/karl/src/sites/cookadlib.com/build/Gruntfile.js",
 		"/Users/karl/src/sites/cookadlib.com/build/bower_components/lesshat/build/lesshat.less",
-		"/Users/karl/src/sites/cookadlib.com/build/bower_components/lesshat/build/lesshat-prefixed.less",
 		"/opt/boxen/repo/modules/wednesday/manifests/packages.pp",
 		"/opt/boxen/repo/modules/wednesday/manifests/applications.pp",
 		"/opt/boxen/repo/Puppetfile",
@@ -333,57 +391,7 @@
 		"/Users/karl/src/sites/thermal-api-client/app/js/collections/terms-collection.js",
 		"/Users/karl/src/sites/thermal-api-client/app/js/models/post-model.js",
 		"/Users/karl/src/sites/thermal-api-client/app/js/models/media-model.js",
-		"/Users/karl/src/sites/thermal-api-client/app/js/models/term-model.js",
-		"/opt/boxen/repo/modules/projects/manifests/wednesday-sample.pp",
-		"/Users/karl/src/sites/thermal-api-client/app/coffee/models/post-model.coffee",
-		"/Users/karl/src/sites/thermal-api-client/app/coffee/collections/posts-collection.coffee",
-		"/Users/karl/src/sites/thermal-api-client/app/coffee/embed.coffee",
-		"/Users/karl/src/sites/thermal-api-client/app/coffee/wisp.coffee",
-		"/Users/karl/src/sites/erdem/js/TodoMVC.js",
-		"/Users/karl/src/sites/erdem/bower.json",
-		"/Users/karl/src/sites/erdem/bower_components/todomvc-common/base.css",
-		"/Users/karl/src/sites/erdem/bower_components/todomvc-common/base.js",
-		"/Users/karl/src/sites/erdem/css/app.css",
-		"/Users/karl/src/sites/erdem/index.html",
-		"/Users/karl/src/sites/erdem/js/TodoMVC.Layout.js",
-		"/Users/karl/src/sites/erdem/js/TodoMVC.TodoList.js",
-		"/Users/karl/src/sites/erdem/js/TodoMVC.TodoList.Views.js",
-		"/Users/karl/src/sites/erdem/js/TodoMVC.Todos.js",
-		"/Users/karl/src/sites/erdem/js/Collections.js",
-		"/Users/karl/src/sites/erdem/js/Collections.Layout.js",
-		"/Users/karl/src/sites/erdem/js/Collections.TodoList.js",
-		"/Users/karl/src/sites/erdem/js/Collections.TodoList.Views.js",
-		"/Users/karl/src/sites/erdem/js/Collections.Todos.js",
-		"/Users/karl/src/sites/thermal-api-client/app/coffee/collections/gallery-collection.coffee",
-		"/Users/karl/src/sites/wednesday-sample/dbv/config.php",
-		"/Users/karl/src/vagrant/puppet/hieradata/common.yaml",
-		"/Users/karl/src/sites/wisp.wednesday-sample/build/public/index.html",
-		"/Users/karl/src/sites/test/thermal-api-client/app/coffee/embed.coffee",
-		"/Users/karl/src/sites/test/thermal-api-client/app/coffee/prototypes.coffee",
-		"/Users/karl/src/sites/test/thermal-api-client/app/coffee/wisp.coffee",
-		"/Users/karl/src/sites/test/thermal-api-client/app/coffee/router.coffee",
-		"/Users/karl/src/sites/test/thermal-api-client/app/templates/post-full.html",
-		"/Users/karl/src/sites/test/thermal-api-client/app/templates/post-excerpt.html",
-		"/Users/karl/src/sites/test/thermal-api-client/app/coffee/collections/terms-collection.coffee",
-		"/Users/karl/src/sites/test/thermal-api-client/app/coffee/collections/posts-collection.coffee",
-		"/Users/karl/src/sites/test/thermal-api-client/app/coffee/collections/gallery-collection.coffee",
-		"/opt/boxen/repo/modules/projects/manifests/wisp-wednesday-sample.pp",
-		"/Users/karl/src/vagrant/puppet/manifests/default.pp",
-		"/Users/karl/src/vagrant/puppet/manifests/wednesday.pp",
-		"/Users/karl/src/vagrant/puppet/Puppetfile",
-		"/Users/karl/src/vagrant/Vagrantfile",
-		"/Users/karl/src/applications/puphpet/web/assets/vendor/bootstrap/css/bootstrap.min.css",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/MainBundle/Extension/ExtensionAbstract.php",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Controller/FrontController.php",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/MainBundle/Resources/views/front/help.html.twig",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/MainBundle/Tests/Unit/MainBundle/Extension/ManagerTest.php",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/Controller/ManifestController.php",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/MysqlBundle/Resources/views/manifest/Mysql.pp.twig",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/PhpBundle/Resources/views/manifest/Php.pp.twig",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/PostgresqlBundle/Resources/views/manifest/Postgresql.pp.twig",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/PuphpetExtensionApacheBundle.php",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/ApacheBundle/DependencyInjection/PuphpetExtensionApacheExtension.php",
-		"/Users/karl/src/applications/puphpet/src/Puphpet/Extension/PhpBundle/Resources/config/available.yml"
+		"/Users/karl/src/sites/thermal-api-client/app/js/models/term-model.js"
 	],
 	"find":
 	{
@@ -391,9 +399,20 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
+			"/Users/karl/src/sites/cookadlib.com/app/bower_components",
+			"/Users/karl/src/sites/cookadlib.com/app/bower_components/bootstrap-sass-official",
+			"/Users/karl/src/sites/cookadlib.com/app/sass/components",
+			"/Users/karl/src/sites/cookadlib.com/app/styles",
+			"/Users/karl/src/sites/cookadlib.com",
+			"/Users/karl/src/sites/cookadlib.com/app/bower_components",
+			"/Users/karl/src/sites/cookadlib.com/app/styles",
+			"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles",
+			"/Users/karl/src/sites/cookadlib.com/build/bower_components",
+			"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles",
+			"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles/components",
 			"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles",
 			"/Users/karl/src/sites/cookadlib.com/build/bower_components/bootstrap/less",
 			"/Users/karl/src/sites/cookadlib.com/build/assets/linker/styles",
@@ -517,6 +536,55 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"thumb",
+			"brightness",
+			"bright",
+			"script",
+			"font-awesome/",
+			"mixins",
+			"sass",
+			"$brand-primary",
+			"stylesheets/bootstrap/",
+			"scss",
+			"brand",
+			".lh-",
+			"lh-",
+			"compass",
+			"lh-",
+			"lh",
+			"main.css",
+			"../../bower_components",
+			"assets",
+			"make-row",
+			"layouts",
+			".scss",
+			"lh-background-size",
+			"load",
+			"scss",
+			"load",
+			"tab",
+			"@tab-height",
+			" img-circle",
+			"tab",
+			"translateY",
+			"@media",
+			"\" +",
+			"div",
+			"li",
+			"div",
+			"aside",
+			"dish",
+			" class=\"sr-only\"",
+			"\">",
+			"					<div class=\"row\">\n						<a href=\"#\">\n							<figure>\n								<img class=\"grayscale img-circle\" src=\"http://ppcdn.500px.org/55502018/aa70026a887df61e31f0569dba3865bd9b70e5cd/3.jpg\">\n								<figcaption>\n									<h1>Rustic loaf</h1>\n									<h2>Spanish artisanal bread</h2>\n								</figcaption>\n							</figure>\n						</a>\n						<a href=\"#\">\n							<figure>\n								<img class=\"grayscale img-circle\" src=\"http://ppcdn.500px.org/55502018/aa70026a887df61e31f0569dba3865bd9b70e5cd/3.jpg\">\n								<figcaption>\n									<h1>Rustic loaf</h1>\n									<h2>Spanish artisanal bread</h2>\n								</figcaption>\n							</figure>\n						</a>\n						<a href=\"#\">\n							<figure>\n								<img class=\"grayscale img-circle\" src=\"http://ppcdn.500px.org/55502018/aa70026a887df61e31f0569dba3865bd9b70e5cd/3.jpg\">\n								<figcaption>\n									<h1>Rustic loaf</h1>\n									<h2>Spanish artisanal bread</h2>\n								</figcaption>\n							</figure>\n						</a>\n					</div>",
+			"grayscale",
+			".hidden-print;",
+			"prin",
+			"hidden-print",
+			"@primary-color",
+			"prim",
+			"fff",
+			"a ",
 			"family",
 			"sect",
 			"em",
@@ -595,56 +663,7 @@
 			"nickname",
 			"tab-pane",
 			"tab-pane ",
-			"img-responsive ",
-			"class=\"col-xs-12 col-md-4\" ",
-			"div",
-			"menu-",
-			"id=\"",
-			" data-toggle=\"tab\"",
-			"pill",
-			"supplies",
-			"navb",
-			"col-md-3",
-			"mixi",
-			"make",
-			"make-grid",
-			"make-",
-			" col-md-3",
-			"						<a class=\"col-xs-12 col-md-3\" href=\"#\">\n							<figure>\n								<img class=\"img-responsive grayscale\" src=\"http://ppcdn.500px.org/55502018/aa70026a887df61e31f0569dba3865bd9b70e5cd/3.jpg\">\n								<figcaption>\n									<h1>Rustic loaf</h1>\n									<h2>Spanish artisanal bread</h2>\n								</figcaption>\n							</figure>\n						</a>\n					</div>",
-			"conn",
-			"133",
-			"port",
-			"figure",
-			"github.com:",
-			"git@",
-			"gith",
-			"_",
-			"Collection",
-			"collection",
-			"todo",
-			"Todo",
-			"do",
-			"todo",
-			"TodoMVC",
-			"'",
-			"\"",
-			"char",
-			"apiUrl",
-			"apache",
-			"apac",
-			"server.packages",
-			"php",
-			"apache",
-			"call",
-			"---",
-			"#on_index",
-			"script",
-			"about",
-			"<scr",
-			"about",
-			"letter-s",
-			"rela",
-			"tictail_button"
+			"img-responsive "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -652,6 +671,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"background-size",
+			"@tab-height-sm",
+			"\"+",
 			"<label class=\"col-sm-2 control-label\"",
 			"user[nickname]",
 			"github.com/",
@@ -776,10 +798,7 @@
 			"",
 			"<tr class=\"danger\"><td>",
 			"<tr class=\"warning\"><td>",
-			"<td>",
-			"<th>",
-			"</td>",
-			"</th>"
+			"<td>"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -841,12 +860,36 @@
 		"selected_items":
 		[
 			[
-				"mixi",
-				"build/bower_components/bootstrap/less/mixins.less"
+				"_bright",
+				".sass-cache/44f0cac292ab9fc2cd78b685a8683034024bba0d/_brightness.scssc"
 			],
 			[
 				"new",
 				"build/views/user/new.ejs"
+			],
+			[
+				"recipe",
+				"build/assets/linker/styles/layouts/recipes.less"
+			],
+			[
+				"sec",
+				"build/assets/linker/js/functionalities/sections.js"
+			],
+			[
+				"mixin",
+				"build/bower_components/bootstrap/less/mixins.less"
+			],
+			[
+				"mix",
+				"build/bower_components/bootstrap/less/mixins.less"
+			],
+			[
+				"varia",
+				"build/bower_components/bootstrap/less/variables.less"
+			],
+			[
+				"mixi",
+				"build/bower_components/bootstrap/less/mixins.less"
 			],
 			[
 				"bio",

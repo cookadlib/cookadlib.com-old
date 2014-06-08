@@ -1,0 +1,10 @@
+main {
+
+  &.home {
+
+    > section {
+      // position: relative;
+      background-color: #f00;
+    }
+  }
+}

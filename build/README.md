@@ -1,2 +1,0 @@
-# cookadlib
-### a Sails application

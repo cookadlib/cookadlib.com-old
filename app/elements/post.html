@@ -1,0 +1,55 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="post-element" attributes="post selected">
+
+  <template if="{{post.gsx$slug.$t === selected}}">
+
+    <style>
+      /* styles for the custom element itself - lowest specificity */
+      :host { display: block; }
+      /*
+      style if an ancestor has the different class
+      :host(.different) { }
+      */
+    </style>
+
+    <article>
+
+      <template if="{{post.gsx$slug.$t === selected}}">
+
+        <h1>
+          <a href="#{{post.gsx$slug.$t}}">
+            {{post.gsx$title.$t  }}
+          </a>
+        </h1>
+
+        <p>By {{post.gsx$author.$t}}</p>
+        <p>{{post.gsx$content.$t}}</p>
+        <p>Published on: {{post.gsx$date.$t}}</p>
+
+        <small>Keywords: {{post.gsx$keywords.$t}}</small>
+
+      </template>
+
+    </article>
+
+    <jquery></jquery>
+
+  </template>
+
+  <script>
+    Polymer('post-element', {
+      // element is fully prepared
+      ready: function(){ },
+      // instance of the element is created
+      created: function() { },
+      // instance was inserted into the document
+      enteredView: function() { },
+      // instance was removed from the document
+      leftView: function() { },
+      // attribute added, removed or updated
+      attributeChanged: function(attrName, oldVal, newVal) { }
+    });
+  </script>
+
+</polymer-element>
