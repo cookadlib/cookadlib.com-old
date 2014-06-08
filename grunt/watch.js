@@ -64,6 +64,8 @@ module.exports = {
 
 	scripts: {
 		files: [
+			'Gruntfile.js',
+			'grunt/*.js',
 			'<%= package.config.path.source %>/scripts/**/*.js',
 			'!<%= package.config.path.source %>/bower_components/**/*'
 		],
