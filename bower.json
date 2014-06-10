@@ -45,6 +45,7 @@
   "resolutions": {
     "polymer": ">=0.3.0 <1.0.0",
     "modernizr": "~2.8.0",
-    "jquery": "~2.1.0"
+    "jquery": "~2.1.0",
+    "platform": ">=0.3.0 <1.0.0"
   }
 }
