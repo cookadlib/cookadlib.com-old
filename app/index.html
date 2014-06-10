@@ -1,84 +1,105 @@
 <!doctype html>
+<html class="no-js">
+<!--
 <html class="no-js" ng-app="cookAdLibApp">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Cook AdLib</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <base href="/">
+    <title>Cook AdLib</title>
 
-        <!-- build:css styles/screen.css -->
-        <link href="/styles/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
-        <!-- endbuild-->
-        <!-- build:css styles/print.css -->
-        <!-- <link href="/styles/print.css" media="print" rel="stylesheet" type="text/css" /> -->
-        <!-- endbuild-->
-        <!--[if IE]>
-            <link href="/styles/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-        <![endif]-->
+    <meta name="description" content="Sample app">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Browser chrome
-        ================================================== -->
-        <link rel="shortcut icon" href="/images/chrome/favicon.png" />
+    <base href="/">
 
-        <!-- iPhone -->
-        <link href="/images/chrome/apple-touch-icon-57x57.png" sizes="57x57" rel="apple-touch-icon" />
-        <link href="/images/chrome/apple-touch-startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image" />
+    <!-- build:css styles/screen.css -->
+    <link href="/styles/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <!-- endbuild-->
 
-        <!-- iPhone (Retina) -->
-        <link href="/images/chrome/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon" />
-        <link href="/images/chrome/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <!-- build:css styles/print.css -->
+    <!-- <link href="/styles/print.css" media="print" rel="stylesheet" type="text/css" /> -->
+    <!-- endbuild-->
 
-        <!-- iPhone 5 -->
-        <link href="/images/chrome/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <!--[if IE]>
+        <link href="/styles/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
 
-        <!-- iPad -->
-        <link href="/images/chrome/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon" />
-        <link href="/images/chrome/apple-touch-startup-image-768x1024.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image" />
-        <link href="/images/chrome/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image" />
+    <!-- Browser chrome
+    ================================================== -->
+    <link rel="shortcut icon" href="/images/chrome/favicon.png" />
 
-        <!-- iPad (Retina) -->
-        <link href="/images/chrome/apple-touch-icon-144x144.png" sizes="144x144" rel="apple-touch-icon" />
-        <link href="/images/chrome/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-        <link href="/images/chrome/apple-touch-startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <!-- iPhone -->
+    <link href="/images/chrome/apple-touch-icon-57x57.png" sizes="57x57" rel="apple-touch-icon" />
+    <link href="/images/chrome/apple-touch-startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image" />
 
-        <!-- Fix initial load size for iPhone -->
+    <!-- iPhone (Retina) -->
+    <link href="/images/chrome/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon" />
+    <link href="/images/chrome/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
 
-        <script src="/bower_components/platform/platform.js"></script>
+    <!-- iPhone 5 -->
+    <link href="/images/chrome/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
 
-        <script src="/bower_components/angular/angular.js"></script>
-        <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- iPad -->
+    <link href="/images/chrome/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon" />
+    <link href="/images/chrome/apple-touch-startup-image-768x1024.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image" />
+    <link href="/images/chrome/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image" />
 
-        <link rel="import" href="/bower_components/core-ajax/core-ajax.html">
+    <!-- iPad (Retina) -->
+    <link href="/images/chrome/apple-touch-icon-144x144.png" sizes="144x144" rel="apple-touch-icon" />
+    <link href="/images/chrome/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/images/chrome/apple-touch-startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
 
-        <link rel="import" href="/elements/navigation/navigation.html">
-        <link rel="import" href="/elements/header.html">
-        <link rel="import" href="/elements/footer.html">
+    <!-- Fix initial load size for iPhone -->
 
-        <link rel="import" href="/elements/list.html">
-        <link rel="import" href="/elements/greeting.html">
-        <link rel="import" href="/elements/blog.html">
-    </head>
+    <script src="/bower_components/platform/platform.js"></script>
 
-    <body unresolved>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
-        <a class="sr-only" href="#content-main">Skip to content</a>
+    <link rel="import" href="/bower_components/core-ajax/core-ajax.html">
 
-        <navigation-element></navigation-element>
+    <link rel="import" href="/elements/navigation/navigation.html">
+    <link rel="import" href="/elements/header.html">
+    <link rel="import" href="/elements/footer.html">
 
-        <header-element></header-element>
+    <link rel="import" href="/elements/list.html">
+    <link rel="import" href="/elements/greeting.html">
+    <link rel="import" href="/elements/blog.html">
+  </head>
 
-        <main ui-view></main>
+  <body>
 
-        <footer-element></footer-element>
+    <a class="sr-only" href="#content-main">Skip to content</a>
 
-        <!--
-        <script src="/linker/js/socket.io.js"></script>
-        -->
-        <script src="/scripts/main.js"></script>
+    <navigation-element></navigation-element>
 
-    </body>
+    <header-element></header-element>
+    <!--
+    <main ui-view></main>
+    -->
+    <footer-element></footer-element>
+
+    <script src="/bower_components/socket.io-client/socket.io.js"></script>
+    <!--
+    <script src="/socket.io/socket.io.js"></script>
+    -->
+
+
+    <script>
+      var socket = io('http://localhost:4020');
+      socket.on('connect', function() {
+        console.log('connected to server');
+        socket.on('event', function(data) {
+
+        });
+        socket.on('disconnect', function() {
+
+        });
+      });
+    </script>
+    <script src="/scripts/main.js"></script>
+
+  </body>
 </html>
