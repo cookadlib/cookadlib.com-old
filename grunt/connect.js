@@ -58,20 +58,26 @@ module.exports = function () {
 					});
 					console.log('options.data.path.build', options.data.path.source + '/scripts/source');
 
-          var io = require('socket.io').listen(server);
+          var socket = require('socket.io').listen(server);
 
-          io.sockets.on('connection', function(socket) { // socket
-            // do something with socket
+					// Socket.io
+					socket.on('connection', function(socket) {
 						console.log('a user connected');
 
-						socket.on('chat message', function(message) { //message
+						socket.on('disconnect', function() {
+							console.log('a user disconnected');
+						});
+
+						socket.emit('event', {
+							hello: 'world'
+						});
+
+						socket.on('confirmation', function(message) {
 							console.log('message: ' + message);
 						});
-          });
 
-					io.socket.on('disconnect', function() { // socket
-						console.log('user disconnected');
 					});
+
         }
 			}
 		},
