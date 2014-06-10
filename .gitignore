@@ -7,3 +7,7 @@ app/bower_components
 test/bower_components/
 
 /app/images/sample/
+
+icons-*.png
+
+/data/
