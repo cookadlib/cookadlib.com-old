@@ -38,13 +38,13 @@
     "polymer-jsonp": "PolymerLabs/polymer-jsonp#~0.3.0",
     "modernizr": "~2.8.0",
     "parsleyjs": "~2.0.0",
-    "videojs": "~4.5.0"
+    "videojs": "~4.5.0",
+    "socket.io-client": "~1.0.4"
   },
   "devDependencies": {},
   "resolutions": {
     "polymer": ">=0.3.0 <1.0.0",
     "modernizr": "~2.8.0",
-    "jquery": "~2.1.0",
-    "platform": ">=0.3.0 <1.0.0"
+    "jquery": "~2.1.0"
   }
 }
