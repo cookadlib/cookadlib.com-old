@@ -11,3 +11,5 @@ test/bower_components/
 icons-*.png
 
 /data/
+
+/scss-lint-report.xml
