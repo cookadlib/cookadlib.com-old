@@ -7,10 +7,14 @@ module.exports = {
     jshintrc: '.jshintrc'
   },
 
-  default: [
-    '<%= package.config.path.source %>/scripts/source/**/*.js',
-    'grunt/**/*.js',
-    'Gruntfile.js'
+  node: [
+    'app.js',
+    'Gruntfile.js',
+    'grunt/**/*.js'
+  ].concat('Gruntfile.js'),
+
+  scripts: [
+    '<%= package.config.path.source %>/scripts/source/**/*.js'
   ].concat('Gruntfile.js')
 
 };

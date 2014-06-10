@@ -62,10 +62,23 @@ module.exports = {
     ]
   },
 
-  scripts: {
+  node: {
+    options: {
+      reload: true
+    },
     files: [
+      'app.js',
       'Gruntfile.js',
       'grunt/*.js',
+    ],
+    tasks: [
+      'exec:setMaxfiles',
+      'node'
+    ]
+  },
+
+  scripts: {
+    files: [
       '<%= package.config.path.source %>/scripts/**/*.js',
       '!<%= package.config.path.source %>/bower_components/**/*'
     ],

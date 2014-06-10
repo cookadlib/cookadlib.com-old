@@ -36,15 +36,20 @@ module.exports = {
     'newer:copy:dotFiles'
   ],
 
+  'node': [
+    'newer:jshint:node'
+  ],
+
   'scripts': [
     'mkdir:root',
     'mkdir:scripts',
-    'newer:jshint',
+    'newer:jshint:scripts',
     'newer:uglify',
     'newer:rename:scripts'
   ],
 
   'build': [
+    // 'node',
     'html',
     'styles',
     'scripts',
