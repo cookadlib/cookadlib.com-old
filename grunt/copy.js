@@ -11,9 +11,25 @@ module.exports = {
 				flatten: false,
 				cwd: '<%= package.config.path.source %>',
 				src: [
-					'**/.*'
+					'.htaccess',
+					'.htpasswd'
 				],
 				dest: '<%= package.config.path.build %>',
+				filter: 'isFile'
+			}
+		]
+	},
+
+	fonts: {
+		files: [
+			{
+				expand: true,
+				flatten: false,
+				cwd: '<%= package.config.path.source %>/fonts',
+				src: [
+					'**/*'
+				],
+				dest: '<%= package.config.path.build %>/fonts',
 				filter: 'isFile'
 			}
 		]
@@ -44,21 +60,6 @@ module.exports = {
 					'**/*.ico'
 				],
 				dest: '<%= package.config.path.build %>/images',
-				filter: 'isFile'
-			}
-		]
-	},
-
-	fonts: {
-		files: [
-			{
-				expand: true,
-				flatten: false,
-				cwd: '<%= package.config.path.source %>/fonts',
-				src: [
-					'**/*'
-				],
-				dest: '<%= package.config.path.build %>/fonts',
 				filter: 'isFile'
 			}
 		]

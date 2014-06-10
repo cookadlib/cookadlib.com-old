@@ -5,8 +5,8 @@ module.exports = {
 
   options: {
     config: 'config.rb',
-    outputStyle: 'nested',
     debugInfo: false,
+    outputStyle: 'nested',
     sourcemap: true,
   },
 
