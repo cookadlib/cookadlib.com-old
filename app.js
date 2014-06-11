@@ -8,8 +8,9 @@ var koa = require('koa');
 var app = koa();
 
 // var compress = require('koa-compress')();
-// var router = require('koa-router');
-var route = require('koa-route');
+var mount = require('koa-mount');
+// var router = require('koa-route');
+var router = require('koa-router');
 var serve = require('koa-static');
 var views = require('koa-views');
 var livereload = require('koa-livereload');
@@ -26,7 +27,9 @@ var books = wrap(db.get('books'));
 
 var open = require('open');
 
-var packageJson = require('./package.json');
+var routes = require(__dirname + '/app/routes');
+// console.log('routes', routes);
+var packageJson = require(__dirname + '/package.json');
 
 // logger
 // app.use(function *(next) {
@@ -45,10 +48,16 @@ function *list() {
   this.body = res;
 }
 
-function *show(title) {
+function *show_route(title) {
   'use strict';
   title = decodeURI(title);
   var res = yield books.find({title: title});
+  this.body = res;
+}
+
+function *show_router(next) {
+  'use strict';
+  var res = yield books.find({title: this.params.title});
   this.body = res;
 }
 
@@ -69,18 +78,41 @@ app.use(serve(__dirname + '/' + packageJson.config.path.source), {
 app.use(views(__dirname +'/views', 'jade', {}));
 
 // use koa-router
-// app.use(router(app));
+app.use(router(app));
 
 // routes can go both before and after but app.use(router(app)); must be before
-// app.get('/', function *(next) {
-//   yield this.render('index', {
-//     my: 'data'
-//   });
-// });
+app.get('/', function *(next) {
+  yield this.render('index', {
+    my: 'data'
+  });
+});
+app.get('/book', list);
+app.get('/book/:title', show_router);
+
+var APIv1 = new router();
+var APIv2 = new router();
+
+APIv1.get('/sign-in', function *() {
+  // ...
+});
+
+APIv2.get('/sign-in', function *() {
+  // ...
+});
+
+app
+  .use(mount('/v1', APIv1.middleware()))
+  .use(mount('/v2', APIv2.middleware()));
 
 // use koa-route
-app.use(route.get('/book', list));
-app.use(route.get('/book/:title', show));
+// app.use(router.get('/book', list));
+// app.use(router.get('/book/:title', show_route));
+// app.use(router.get('/', list));
+
+// reference Express routes
+// app.use(route.get('/', routes.index));
+// app.use(route.get('/partials/:name', routes.partials));
+// app.use(route.get('*', routes.index));
 
 // response
 // app.use(function *() {
