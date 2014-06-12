@@ -1,161 +1,48 @@
-// Recommended that you .use() the koa-logger middleware near the top to "wrap" all subsequent middleware.
-// var logger = require('koa-logger');
-
-// var app = require('koa')();
-
-// Run Koa app
-var koa = require('koa');
-var app = koa();
-
-// var compress = require('koa-compress')();
-var mount = require('koa-mount');
-// var router = require('koa-route');
-var router = require('koa-router');
-var serve = require('koa-static');
-var views = require('koa-views');
-var livereload = require('koa-livereload');
-
-// var co = require('co');
-var monk = require('monk');
-var wrap = require('co-monk');
-// var db = monk('localhost/data/db');
-var db = monk('localhost/starwars');
-
-// database collections
-// var users = wrap(db.get('users'));
-var books = wrap(db.get('books'));
-
-var open = require('open');
-
-var routes = require(__dirname + '/app/routes');
-// console.log('routes', routes);
 var packageJson = require(__dirname + '/package.json');
 
+var koa = require('koa');
+var logger = require('koa-logger');
+var mount = require('koa-mount');
+var router = require('koa-router');
+
+var api = require(__dirname + '/applications/api');
+var database = require(__dirname + '/applications/database');
+var socket = require(__dirname + '/applications/socket');
+
+var app = koa();
+var demo = koa();
+
 // logger
-// app.use(function *(next) {
-//   var start = new Date;
-//   yield next;
-//   var ms = new Date - start;
-//   console.log('%s %s - %s', this.method, this.url, ms);
-// });
-
-// Monk
-// console.log('users', users);
-
-function *list() {
-  'use strict';
-  var res = yield books.find({});
-  this.body = res;
-}
-
-function *show_route(title) {
-  'use strict';
-  title = decodeURI(title);
-  var res = yield books.find({title: title});
-  this.body = res;
-}
-
-function *show_router(next) {
-  'use strict';
-  var res = yield books.find({title: this.params.title});
-  this.body = res;
-}
-
-// this middleware can be used with a LiveReload server e.g. grunt-contrib-watch.
-app.use(livereload({
-  port : packageJson.config.server.livereload.port
-}));
-
-// serve static files
-app.use(serve(__dirname + '/' + packageJson.config.path.build), {
-  defer: true
-}); // true web root
-app.use(serve(__dirname + '/' + packageJson.config.path.source), {
-  defer: true
-}); // to save copying bower_components, SASS files, etc.
-
-// use jade
-app.use(views(__dirname +'/views', 'jade', {}));
+app.use(function *(next) {
+  var start = new Date;
+  yield next;
+  var ms = new Date - start;
+  console.log('%s %s - %s', this.method, this.url, ms);
+});
 
 // use koa-router
 app.use(router(app));
 
-// routes can go both before and after but app.use(router(app)); must be before
 app.get('/', function *(next) {
-  yield this.render('index', {
-    my: 'data'
-  });
-});
-app.get('/book', list);
-app.get('/book/:title', show_router);
-
-var APIv1 = new router();
-var APIv2 = new router();
-
-APIv1.get('/sign-in', function *() {
-  // ...
+  yield next;
+  this.body = 'Welcome to the main application';
 });
 
-APIv2.get('/sign-in', function *() {
-  // ...
+demo.use(function *(next){
+  yield next;
+  this.body = 'Welcome to the demo application';
 });
 
-app
-  .use(mount('/v1', APIv1.middleware()))
-  .use(mount('/v2', APIv2.middleware()));
+// mount applications
+app.use(mount('/demo', demo));
+app.use(mount('/api', api));
+app.use(mount('/database', database));
+app.use(mount('/socket', socket));
 
-// use koa-route
-// app.use(router.get('/book', list));
-// app.use(router.get('/book/:title', show_route));
-// app.use(router.get('/', list));
-
-// reference Express routes
-// app.use(route.get('/', routes.index));
-// app.use(route.get('/partials/:name', routes.partials));
-// app.use(route.get('*', routes.index));
-
-// response
-// app.use(function *() {
-//   this.body = 'Hello World';
-// });
-
-// this must come after last app.use()
-var server = require('http').Server(app.callback());
-var socket = require('socket.io')(server);
-
-// middlewares
-
-// Socket.io
-socket.on('connection', function(socket) {
-  'use strict';
-  console.log('a user connected');
-
-  socket.on('disconnect', function() {
-    console.log('a user disconnected');
-  });
-
-  socket.emit('event', {
-    hello: 'world'
-  });
-
-  socket.on('confirmation', function(message) {
-    console.log('message: ' + message);
-  });
-
-});
-
-//Run servers
-server.listen(packageJson.config.server.socketio.port); //socket.io
-
-// main app server
-// app.listen(packageJson.config.server.koa.port); //koa
+// set koa to listen on specified port
 if (!module.parent) {
-  app.listen(packageJson.config.server.koa.port); //koa
+  app.listen(packageJson.config.server.koa.port);
 }
 
-// open a new browser instance
-open('http://localhost:' + packageJson.config.server.koa.port);
-// open('http://www.google.com');
-
-console.info('Koa now running on http://localhost:' + packageJson.config.server.koa.port);
-console.info('Socket.io now running on http://localhost:' + packageJson.config.server.socketio.port);
+// open('http://localhost:' + packageJson.config.server.koa.port);
+console.info('main Koa application now running on http://localhost:' + packageJson.config.server.koa.port);
