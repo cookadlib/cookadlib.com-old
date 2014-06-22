@@ -6,14 +6,16 @@ var logger = require('koa-logger');
 var mount = require('koa-mount');
 var router = require('koa-router');
 var session = require('koa-session');
-var views = require('koa-views');
-
-var api = require(__dirname + '/applications/api');
-var database = require(__dirname + '/applications/database');
-var socket = require(__dirname + '/applications/socket');
+var serve = require('koa-static');
+var views = require('co-views');
 
 var app = koa();
-var demo = koa();
+var demoApp = koa();
+
+var viewsApp = require(__dirname + '/applications/views');
+var apiApp = require(__dirname + '/applications/api');
+var databaseApp = require(__dirname + '/applications/database');
+var socketApp = require(__dirname + '/applications/socket');
 
 // logger
 app.use(function *(next) {
@@ -26,47 +28,29 @@ app.use(function *(next) {
 // use koa-router
 app.use(router(app));
 
-// app.get('/', function *(next) {
-//   yield next;
-//   this.body = 'Welcome to the main application';
-// });
-
-demo.use(function *(next){
+demoApp.use(function *(next){
   yield next;
   this.body = 'Welcome to the demo application';
 });
 
 // mount applications
-app.use(mount('/demo', demo));
-app.use(mount('/api', api));
-app.use(mount('/database', database));
-app.use(mount('/socket', socket));
+app.use(mount('/', viewsApp));
+app.use(mount('/demo', demoApp));
+app.use(mount('/api', apiApp));
+app.use(mount('/database', databaseApp));
+app.use(mount('/socket', socketApp));
 
 // setup session
 app.keys = ['secrets'];
 app.use(session());
 
-// serve views
-app.use(views({
-  cache: true,
-
-  map: {
-    html: 'underscore'
-  }
-}));
-
-app.use(function* (next) {
-  var n = this.session.views || 0;
-  this.session.views = ++n;
-
-  this.locals = {
-    session: this.session
-  };
-
-  yield this.render('source/views/index', {
-    user: 'John'
-  });
-});
+// serve static files
+app.use(serve(__dirname + '/' + packageJson.config.path.build), {
+  defer: true
+}); // true web root
+app.use(serve(__dirname + '/' + packageJson.config.path.source), {
+  defer: true
+}); // to save copying bower_components, SASS files, etc.
 
 // set koa to listen on specified port
 if (!module.parent) {
