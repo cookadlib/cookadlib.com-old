@@ -11,6 +11,8 @@ npm cache clean
 npm install
 npm update
 
+n 0.11.13
+
 bower cache clean
 bower install
-bower uodate
+bower update
