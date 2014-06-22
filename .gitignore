@@ -11,3 +11,5 @@ source/bower_components/
 source/images/sample/
 test/bower_components/
 test/temp
+
+/build/
