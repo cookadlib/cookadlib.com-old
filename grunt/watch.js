@@ -8,6 +8,39 @@ module.exports = {
     livereload: true
   },
 
+  fonts: {
+    files: [
+      '<%= package.config.path.source %>/fonts/**/*',
+      '!<%= package.config.path.source %>/bower_components/**/*'
+    ],
+    tasks: [
+      // 'exec:setMaxfiles',
+      'fonts'
+    ]
+  },
+
+  html: {
+    files: [
+      '<%= package.config.path.source %>/**/*.html',
+      '!<%= package.config.path.source %>/bower_components/**/*'
+    ],
+    tasks: [
+      // 'exec:setMaxfiles',
+      'newer:copy:html'
+    ]
+  },
+
+  icons: {
+    files: [
+      '<%= package.config.path.source %>/images/**/*.ico',
+      '!<%= package.config.path.source %>/bower_components/**/*'
+    ],
+    tasks: [
+      // 'exec:setMaxfiles',
+      'newer:copy:icons'
+    ]
+  },
+
   livereload: {
     options: {
       livereload: '<%= package.config.server.livereload.port %>'
@@ -18,73 +51,19 @@ module.exports = {
     ]
   },
 
-  html: {
-    files: [
-      '<%= package.config.path.source %>/**/*.html',
-      '!<%= package.config.path.source %>/bower_components/**/*'
-    ],
-    tasks: [
-      'exec:setMaxfiles',
-      'newer:copy:html'
-    ]
-  },
-
-  styles: {
-    files: [
-      '<%= package.config.path.source %>/styles/sass/**/*.scss',
-      '!<%= package.config.path.source %>/bower_components/**/*'
-    ],
-    tasks: [
-      'exec:setMaxfiles',
-      'styles'
-    ]
-  },
-
-  fonts: {
-    files: [
-      '<%= package.config.path.source %>/fonts/**/*',
-      '!<%= package.config.path.source %>/bower_components/**/*'
-    ],
-    tasks: [
-      'exec:setMaxfiles',
-      'fonts'
-    ]
-  },
-
-  icons: {
-    files: [
-      '<%= package.config.path.source %>/images/**/*.ico',
-      '!<%= package.config.path.source %>/bower_components/**/*'
-    ],
-    tasks: [
-      'exec:setMaxfiles',
-      'newer:copy:icons'
-    ]
-  },
-
   node: {
     options: {
       reload: true
     },
     files: [
       'app.js',
+      'applications/**/*.js',
       'Gruntfile.js',
-      'grunt/*.js',
+      'grunt/*.js'
     ],
     tasks: [
-      'exec:setMaxfiles',
+      // 'exec:setMaxfiles',
       'node'
-    ]
-  },
-
-  scripts: {
-    files: [
-      '<%= package.config.path.source %>/scripts/**/*.js',
-      '!<%= package.config.path.source %>/bower_components/**/*'
-    ],
-    tasks: [
-      'exec:setMaxfiles',
-      'scripts'
     ]
   },
 
@@ -94,8 +73,30 @@ module.exports = {
       '!<%= package.config.path.source %>/bower_components/**/*'
     ],
     tasks: [
-      'exec:setMaxfiles',
+      // 'exec:setMaxfiles',
       'newer:imagemin'
+    ]
+  },
+
+  scripts: {
+    files: [
+      '<%= package.config.path.source %>/scripts/**/*.js',
+      '!<%= package.config.path.source %>/bower_components/**/*'
+    ],
+    tasks: [
+      // 'exec:setMaxfiles',
+      'scripts'
+    ]
+  },
+
+  styles: {
+    files: [
+      '<%= package.config.path.source %>/styles/sass/**/*.scss',
+      '!<%= package.config.path.source %>/bower_components/**/*'
+    ],
+    tasks: [
+      // 'exec:setMaxfiles',
+      'styles'
     ]
   },
 
@@ -105,7 +106,7 @@ module.exports = {
       '!<%= package.config.path.source %>/bower_components/**/*'
     ],
     tasks: [
-      'exec:setMaxfiles',
+      // 'exec:setMaxfiles',
       'newer:svgmin'
     ]
   }

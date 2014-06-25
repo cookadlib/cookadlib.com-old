@@ -1,15 +1,5 @@
 module.exports = {
 
-  'styles': [
-    'mkdir:root',
-    'mkdir:styles',
-    'newer:scsslint',
-    'compass', // does not work with grunt-newer
-    // 'newer:csslint', // sooooooo many errors
-    'newer:rename:styles',
-    'uncss'
-  ],
-
   'fonts': [
     'mkdir:root',
     'newer:copy:fonts'
@@ -46,6 +36,16 @@ module.exports = {
     'newer:jshint:scripts',
     'newer:uglify',
     'newer:rename:scripts'
+  ],
+
+  'styles': [
+    'mkdir:root',
+    'mkdir:styles',
+    'newer:scsslint',
+    'compass', // does not work with grunt-newer
+    // 'newer:csslint', // sooooooo many errors
+    'newer:rename:styles',
+    'uncss'
   ],
 
   'build': [
