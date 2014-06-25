@@ -106,7 +106,7 @@
         "port": 4000
       },
       "database": {
-        "name": "localhost/starwars"
+        "name": "localhost/cookadlib"
       },
       "koa": {
         "port": 4010
