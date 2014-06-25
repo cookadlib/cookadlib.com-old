@@ -10,7 +10,6 @@ var serve = require('koa-static');
 var views = require('co-views');
 
 var app = koa();
-var demoApp = koa();
 
 var viewsApp = require(__dirname + '/applications/views');
 var apiApp = require(__dirname + '/applications/api');
@@ -28,14 +27,8 @@ app.use(function *(next) {
 // use koa-router
 app.use(router(app));
 
-demoApp.use(function *(next){
-  yield next;
-  this.body = 'Welcome to the demo application';
-});
-
 // mount applications
 app.use(mount('/', viewsApp));
-app.use(mount('/demo', demoApp));
 app.use(mount('/api', apiApp));
 app.use(mount('/database', databaseApp));
 app.use(mount('/socket', socketApp));
