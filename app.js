@@ -7,7 +7,6 @@ var mount = require('koa-mount');
 var router = require('koa-router');
 var session = require('koa-session');
 var serve = require('koa-static');
-var views = require('co-views');
 
 var app = koa();
 
@@ -16,11 +15,15 @@ var apiApp = require(__dirname + '/applications/api');
 var databaseApp = require(__dirname + '/applications/database');
 var socketApp = require(__dirname + '/applications/socket');
 
-// logger
+// wrap subsequent middleware in a logger
+app.use(logger());
+
+// use logger
 app.use(function *(next) {
-  var start = new Date;
+  'use strict';
+  var start = new Date();
   yield next;
-  var ms = new Date - start;
+  var ms = new Date() - start;
   console.log('%s %s - %s', this.method, this.url, ms);
 });
 
