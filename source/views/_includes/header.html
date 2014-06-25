@@ -55,10 +55,9 @@
 
     <script src="/bower_components/platform/platform.js"></script>
 
-    <!--
+
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    -->
 
     <link rel="import" href="/bower_components/core-ajax/core-ajax.html">
 
@@ -71,50 +70,116 @@
     <link rel="import" href="/elements/blog.html">
   </head>
 
-  <body>
+  <body class="<%= bodyClass %>">
 
-    <a class="sr-only" href="#content-main">Skip to content</a>
+    <% include google.analytics.html %>
 
-    <element-navigation></element-navigation>
+    <a class="sr-only" href="#main">Skip to content</a>
 
-    <header-element></header-element>
-    <!--
-    <main ui-view></main>
-    -->
+    <!-- <element-navigation></element-navigation> -->
+    <nav>
+      <button type="button" class="close" data-action="reveal" data-target="sidebar" aria-hidden="true">&times;</button>
+      <ul>
+        <li>
+          <a ui-sref="#">Tour</a>
+        </li>
+        <li>
+          <a ui-sref="#">Log in</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a ui-sref="#">My Planner</a>
+        </li>
+        <li>
+          <a ui-sref="#">My Diet</a>
+        </li>
+        <li>
+          <a ui-sref="#">My Shopping List</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a ui-sref="#">Editorial</a>
+        </li>
+        <li>
+          <a ui-sref="#">Recipes</a>
+        </li>
+        <li>
+          <a ui-sref="#">Shopping Assistant</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a ui-sref="#">Help &amp; Support</a>
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li>
+          <a ui-sref="#">About Cook AdLib</a>
+        </li>
+        <li>
+          <a ui-sref="#">Blog</a>
+        </li>
+        <li>
+          <a ui-sref="#">Developers</a>
+        </li>
+        <li>
+          <a ui-sref="#">Press &amp; Media</a>
+        </li>
+        <li>
+          <a ui-sref="#">Terms of Service</a>
+        </li>
+        <li>
+          <a ui-sref="#">Privacy Policy</a>
+        </li>
+        <li>
+          <a ui-sref="#">Contact Us</a>
+        </li>
+      </ul>
+      <hr />
+      <div>
+        <a href="#">
+          <span>Twitter</span><i class="fa fa-twitter"></i>
+        </a>
+        <a href="#">
+          <span>Facebook</span><i class="fa fa-facebook"></i>
+        </a>
+        <a href="#">
+          <span>Google+</span><i class="fa fa-google-plus"></i>
+        </a>
+        <a href="#">
+          <span>YouTube</span><i class="fa fa-youtube"></i>
+        </a>
+        <a href="#">
+          <span>Tumblr</span><i class="fa fa-tumblr"></i>
+        </a>
+        <a href="#">
+          <span>Reddit</span><i class="fa fa-arrow-circle-o-up"></i>
+        </a>
+      </div>
+    </nav>
 
-    <main>
+    <!-- <header-element></header-element> -->
+    <header>
+      <div class="container">
+        <a class="navbar-brand" ui-sref="/">Cook AdLib</a>
+        <menu>
+          <li>
+            <a ui-sref="/">Sign in</a>
+            </li>
+          <li class="hidden-xs">
+            <a ui-sref="/">Tour</a>
+            </li>
+          <li>
+            <button class="btn btn-link btn-inline" data-action="reveal" data-target="sidebar">
+              <span class="sr-only">Menu</span> <i class="fa fa-bars"></i>
+            </button>
+          </li>
+        </menu>
+      </div>
+    </header>
 
-    </main>
-
-    <footer-element></footer-element>
-
-    <script src="/bower_components/socket.io-client/socket.io.js"></script>
-    <!--
-    <script src="/socket.io/socket.io.js"></script>
-    -->
-
-    <script>
-      var socket = io('http://localhost:4020');
-
-      socket.on('connect', function() {
-
-        console.log('connected to server');
-
-        socket.emit('confirmation', 'I have connected to the server');
-
-        socket.on('event', function(data) {
-          console.log('new data of type "event": ', data);
-          socket.emit('confirmation', 'user received new data of type "event": ' + JSON.stringify(data));
-        });
-
-        socket.on('disconnect', function() {
-          console.log('disconnected from server');
-        });
-      });
-
-    </script>
-
-    <script src="/scripts/main.js"></script>
-
-  </body>
-</html>
+    <main id="main" ui-view>
+    <!-- <main id="main"> -->

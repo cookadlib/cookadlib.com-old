@@ -22,18 +22,23 @@ var render = views('source/views', {
   cache: true,
 
   map: {
-    html: 'underscore'
+    html: 'ejs'
   }
 });
 
-function *list() {
-  this.body = yield render('recipes/create', { todos: 'todos' });
+function *index(next) {
+  this.body = yield render('index', {
+    bodyClass: 'index'
+  });
 }
 
-app.get('/', function *(next) {
-  yield next;
-  this.body = 'Welcome to the views application';
-});
-app.get('/recipes/create', list);
+function *list(next) {
+  this.body = yield render('recipe/create', {
+    bodyClass: 'recipe create'
+  });
+}
+
+app.get('/', index);
+app.get('/recipe/create', list);
 
 module.exports = app;
