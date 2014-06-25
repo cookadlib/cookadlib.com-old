@@ -127,5 +127,5 @@
     "start": "n use 0.11.13 --harmony app.js",
     "debug": "n use 0.11.13 --harmony debug app.js"
   },
-  "postinstall": "./node_modules/bower/bin/bower install"
+  "postinstall": "bower install"
 }
