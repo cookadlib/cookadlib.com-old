@@ -1,7 +1,5 @@
 .sass-cache
 .tmp
-app/bower_components/
-app/images/sample/
 build/
 data/
 dist/
