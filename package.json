@@ -98,7 +98,7 @@
   },
   "config": {
     "path": {
-      "build": "dist",
+      "build": "build",
       "source": "source"
     },
     "server": {
