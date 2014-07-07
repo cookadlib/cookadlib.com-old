@@ -1,6 +1,9 @@
 require 'compass/import-once/activate'
 # Require any additional compass plugins here.
 
+# define bourbon path, use a common library for preventing duplicates
+add_import_path '/opt/rubies/2.0.0-p451/lib/ruby/gems/2.0.0/gems/bourbon-4.0.2/app/assets/stylesheets'
+
 # Set this to the root of your project when deployed:
 http_path = "dist"
 css_dir = "source/styles"
