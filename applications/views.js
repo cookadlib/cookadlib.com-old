@@ -40,5 +40,6 @@ function *list(next) {
 
 app.get('/', index);
 app.get('/recipe/create', list);
+app.post('/recipe/create', list);
 
 module.exports = app;
