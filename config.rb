@@ -5,11 +5,11 @@ require 'compass/import-once/activate'
 add_import_path '/opt/rubies/2.0.0-p451/lib/ruby/gems/2.0.0/gems/bourbon-4.0.2/app/assets/stylesheets'
 
 # Set this to the root of your project when deployed:
-http_path = "dist"
+http_path = "build"
 css_dir = "source/styles"
 sass_dir = "source/styles"
 images_dir = "source/images"
-generated_images_dir = "dist/images/"
+generated_images_dir = "build/images/"
 javascripts_dir = "source/scripts"
 
 # You can select your preferred output style here (can be overridden via the command line):
