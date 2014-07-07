@@ -1,185 +1,20 @@
-<!doctype html>
-<html class="no-js">
-<!--
-<html class="no-js" ng-app="cookAdLibApp">
--->
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<div class="container">
 
-    <title>Cook AdLib</title>
+  <a class="navbar-brand" ui-sref="/">Cook AdLib</a>
 
-    <meta name="description" content="Sample app">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <menu>
+    <li>
+      <a ui-sref="/">Sign in</a>
+    </li>
+    <li class="hidden-xs">
+      <a ui-sref="/">Tour</a>
+    </li>
+    <li>
+      <button class="btn btn-link btn-inline" data-action="toggle" data-target="sidebar-open">
+        <span class="sr-only">Menu</span> <i class="fa fa-bars"></i>
+      </button>
+    </li>
 
-    <base href="/">
+  </menu>
 
-    <!-- build:css styles/screen.css -->
-    <link href="/styles/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <!-- endbuild-->
-
-    <!-- build:css styles/print.css -->
-    <!-- <link href="/styles/print.css" media="print" rel="stylesheet" type="text/css" /> -->
-    <!-- endbuild-->
-
-    <!--[if IE]>
-        <link href="/styles/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
-    <![endif]-->
-
-    <!-- Browser chrome
-    ================================================== -->
-    <link rel="shortcut icon" href="/images/chrome/favicon.png" />
-
-    <!-- iPhone -->
-    <link href="/images/chrome/apple-touch-icon-57x57.png" sizes="57x57" rel="apple-touch-icon" />
-    <link href="/images/chrome/apple-touch-startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image" />
-
-    <!-- iPhone (Retina) -->
-    <link href="/images/chrome/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon" />
-    <link href="/images/chrome/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-
-    <!-- iPhone 5 -->
-    <link href="/images/chrome/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-
-    <!-- iPad -->
-    <link href="/images/chrome/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon" />
-    <link href="/images/chrome/apple-touch-startup-image-768x1024.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image" />
-    <link href="/images/chrome/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image" />
-
-    <!-- iPad (Retina) -->
-    <link href="/images/chrome/apple-touch-icon-144x144.png" sizes="144x144" rel="apple-touch-icon" />
-    <link href="/images/chrome/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-    <link href="/images/chrome/apple-touch-startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-
-    <!-- Fix initial load size for iPhone -->
-
-    <script src="/bower_components/platform/platform.js"></script>
-
-
-    <script src="/bower_components/angular/angular.js"></script>
-    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-
-    <link rel="import" href="/bower_components/core-ajax/core-ajax.html">
-
-    <link rel="import" href="/bower_components/element-navigation/component.html">
-    <link rel="import" href="/elements/header.html">
-    <link rel="import" href="/elements/footer.html">
-
-    <link rel="import" href="/elements/list.html">
-    <link rel="import" href="/elements/greeting.html">
-    <link rel="import" href="/elements/blog.html">
-  </head>
-
-  <body class="<%= bodyClass %>">
-
-    <% include google.analytics.html %>
-
-    <a class="sr-only" href="#main">Skip to content</a>
-
-    <!-- <element-navigation></element-navigation> -->
-    <nav>
-      <button type="button" class="close" data-action="reveal" data-target="sidebar" aria-hidden="true">&times;</button>
-      <ul>
-        <li>
-          <a ui-sref="#">Tour</a>
-        </li>
-        <li>
-          <a ui-sref="#">Log in</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a ui-sref="#">My Planner</a>
-        </li>
-        <li>
-          <a ui-sref="#">My Diet</a>
-        </li>
-        <li>
-          <a ui-sref="#">My Shopping List</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a ui-sref="#">Editorial</a>
-        </li>
-        <li>
-          <a ui-sref="#">Recipes</a>
-        </li>
-        <li>
-          <a ui-sref="#">Shopping Assistant</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a ui-sref="#">Help &amp; Support</a>
-        </li>
-      </ul>
-      <hr />
-      <ul>
-        <li>
-          <a ui-sref="#">About Cook AdLib</a>
-        </li>
-        <li>
-          <a ui-sref="#">Blog</a>
-        </li>
-        <li>
-          <a ui-sref="#">Developers</a>
-        </li>
-        <li>
-          <a ui-sref="#">Press &amp; Media</a>
-        </li>
-        <li>
-          <a ui-sref="#">Terms of Service</a>
-        </li>
-        <li>
-          <a ui-sref="#">Privacy Policy</a>
-        </li>
-        <li>
-          <a ui-sref="#">Contact Us</a>
-        </li>
-      </ul>
-      <hr />
-      <div>
-        <a href="#">
-          <span>Twitter</span><i class="fa fa-twitter"></i>
-        </a>
-        <a href="#">
-          <span>Facebook</span><i class="fa fa-facebook"></i>
-        </a>
-        <a href="#">
-          <span>Google+</span><i class="fa fa-google-plus"></i>
-        </a>
-        <a href="#">
-          <span>YouTube</span><i class="fa fa-youtube"></i>
-        </a>
-        <a href="#">
-          <span>Tumblr</span><i class="fa fa-tumblr"></i>
-        </a>
-        <a href="#">
-          <span>Reddit</span><i class="fa fa-arrow-circle-o-up"></i>
-        </a>
-      </div>
-    </nav>
-
-    <!-- <header-element></header-element> -->
-    <header>
-      <div class="container">
-        <a class="navbar-brand" ui-sref="/">Cook AdLib</a>
-        <menu>
-          <li>
-            <a ui-sref="/">Sign in</a>
-            </li>
-          <li class="hidden-xs">
-            <a ui-sref="/">Tour</a>
-            </li>
-          <li>
-            <button class="btn btn-link btn-inline" data-action="reveal" data-target="sidebar">
-              <span class="sr-only">Menu</span> <i class="fa fa-bars"></i>
-            </button>
-          </li>
-        </menu>
-      </div>
-    </header>
-
-    <main id="main" ui-view>
-    <!-- <main id="main"> -->
+</div>
