@@ -4,7 +4,7 @@
 module.exports = {
 
   server: {
-    path: 'http://localhost:<%= package.config.server.connect.port %>'
+    path: 'http://localhost:<%= package.config.server.koa.port %>'
   }
 
 };

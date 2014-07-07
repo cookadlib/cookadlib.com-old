@@ -33,8 +33,10 @@ module.exports = {
   'scripts': [
     'mkdir:root',
     'mkdir:scripts',
+    // 'newer:concat',
     'newer:jshint:scripts',
-    'newer:uglify',
+    // 'newer:uglify',
+    'uglify',
     'newer:rename:scripts'
   ],
 
@@ -45,7 +47,7 @@ module.exports = {
     'compass', // does not work with grunt-newer
     // 'newer:csslint', // sooooooo many errors
     'newer:rename:styles',
-    'uncss'
+    // 'uncss'
   ],
 
   'build': [
@@ -60,7 +62,8 @@ module.exports = {
   ],
 
   'serve': [
-    'connect:livereload',
+    // 'connect:livereload',
+    'forever:app:start',
     'open:server',
     'notify:serve',
     'watch'

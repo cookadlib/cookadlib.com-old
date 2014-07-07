@@ -51,6 +51,21 @@ module.exports = {
 				filter: 'isFile'
 			}
 		]
+	},
+
+	vendorScripts: {
+		files: [
+			{
+				src: ['<%= package.config.path.source %>/scripts/vendor.js'],
+				dest: '<%= package.config.path.build %>/scripts/vendor.js',
+				filter: 'isFile'
+			},
+			{
+				src: ['<%= package.config.path.source %>/scripts/vendor.map'],
+				dest: '<%= package.config.path.build %>/scripts/vendor.map',
+				filter: 'isFile'
+			}
+		]
 	}
 
 };

@@ -21,12 +21,14 @@ module.exports = {
 
   html: {
     files: [
-      '<%= package.config.path.source %>/**/*.html',
+      '<%= package.config.path.source %>/*.html',
+      '<%= package.config.path.source %>/views/**/*.html',
       '!<%= package.config.path.source %>/bower_components/**/*'
     ],
     tasks: [
       // 'exec:setMaxfiles',
-      'newer:copy:html'
+      'newer:copy:html',
+      'forever:app:restart'
     ]
   },
 
@@ -85,7 +87,9 @@ module.exports = {
     ],
     tasks: [
       // 'exec:setMaxfiles',
-      'scripts'
+      'newer:jshint:scripts',
+      'uglify:scripts',
+      'newer:rename:scripts'
     ]
   },
 
@@ -108,6 +112,17 @@ module.exports = {
     tasks: [
       // 'exec:setMaxfiles',
       'newer:svgmin'
+    ]
+  },
+
+  vendor: {
+    files: [
+      'grunt/uglify.js'
+    ],
+    tasks: [
+      // 'exec:setMaxfiles',
+      'uglify:vendor',
+      'newer:rename:vendorScripts'
     ]
   }
 

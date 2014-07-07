@@ -1,6 +1,6 @@
 var packageJson = require(__dirname + '/package.json');
 
-var open = require('open');
+// var open = require('open');
 var koa = require('koa');
 var logger = require('koa-logger');
 var mount = require('koa-mount');
@@ -53,5 +53,5 @@ if (!module.parent) {
   app.listen(packageJson.config.server.koa.port);
 }
 
-open('http://localhost:' + packageJson.config.server.koa.port);
+// open('http://localhost:' + packageJson.config.server.koa.port);
 console.info('main Koa application now running on http://localhost:' + packageJson.config.server.koa.port);
