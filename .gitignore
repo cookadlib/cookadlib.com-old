@@ -6,9 +6,12 @@ build/
 data/
 dist/
 icons-*.png
+logs/
 node_modules/
 scss-lint-report.xml
 source/bower_components/
 source/images/sample/
+source/scripts/*.js
+source/scripts/*.map
 test/bower_components/
 test/temp
