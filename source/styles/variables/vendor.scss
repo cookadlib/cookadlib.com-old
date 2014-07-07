@@ -51,6 +51,7 @@ $brand-success:         #333;
 
 $nav-bg:               		#000;
 
+
 // Typography
 // -------------------------
 
@@ -64,10 +65,15 @@ $font-family-sans-serif:  'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvet
 // $dropdown-fallback-border:       #ccc;
 // $dropdown-divider-bg:            #e5e5e5;
 
+// Sidebar
+// -------------------------
+
+$sidebar-width:        280px;
+
 // Navbar
 // -------------------------
 
-$navbar-height:                    50px;
+$navbar-height:        50px;
 // $navbar-default-color:             $text-color;
 // $navbar-default-bg:                transparent;
 // $navbar-default-border:            transparent;

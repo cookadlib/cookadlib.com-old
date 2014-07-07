@@ -7,6 +7,7 @@
  *  Compass
  */
 @import 'compass';
+// @import 'bourbon';
 
 /*!
  *  Include SASS dependencies from vendor packages
@@ -36,8 +37,7 @@
 
 // Structure
 @import './structure/grid';
-@import './structure/generic';
-@import './structure/sticky-footer-navbar';
+@import './structure/structure';
 
 // Elements
 @import './elements/button';
