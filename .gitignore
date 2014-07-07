@@ -2,14 +2,13 @@
 .tmp
 app/bower_components/
 app/images/sample/
+build/
 data/
-dist
+dist/
 icons-*.png
-node_modules
+node_modules/
 scss-lint-report.xml
 source/bower_components/
 source/images/sample/
 test/bower_components/
 test/temp
-
-/build/
