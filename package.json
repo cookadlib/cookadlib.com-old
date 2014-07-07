@@ -95,6 +95,7 @@
     "load-grunt-tasks": "^0.2.0",
     "open": "^0.0.5",
     "pretty": "^0.1.0",
+    "psi": "0.0.4",
     "time-grunt": "^0.1.0"
   },
   "config": {
