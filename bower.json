@@ -39,7 +39,8 @@
     "modernizr": "~2.8.0",
     "parsleyjs": "~2.0.0",
     "videojs": "~4.5.0",
-    "socket.io-client": "~1.0.4"
+    "socket.io-client": "~1.0.4",
+    "restangular": "~1.4.0"
   },
   "devDependencies": {},
   "resolutions": {
