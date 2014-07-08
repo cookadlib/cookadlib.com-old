@@ -121,6 +121,11 @@
       "socketio": {
         "port": 4020
       }
+    },
+    "api": {
+      "google": {
+        "key": "AIzaSyABR4Vcjsg7B4HKc4BAI7ksJA4jr6-_DOc"
+      }
     }
   },
   "engines": {
