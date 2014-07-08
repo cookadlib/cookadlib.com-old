@@ -5,7 +5,8 @@ module.exports = {
 
   options: {
     nospawn: true,
-    livereload: true
+    // livereload: true
+    // livereload: '<%= package.config.server.livereload.port %>'
   },
 
   fonts: {
