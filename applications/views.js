@@ -1,5 +1,6 @@
 var packageJson = require(__dirname + '/../package.json');
 
+var _ = require('lodash');
 var koa = require('koa');
 var logger = require('koa-logger');
 var router = require('koa-router');
@@ -26,16 +27,28 @@ var render = views('source/views', {
   }
 });
 
+var defaults = {
+  packageJson: packageJson
+};
+
 function *index(next) {
-  this.body = yield render('index', {
+  var settings = {
     bodyClass: 'index'
-  });
+  };
+
+  _.merge(settings, defaults);
+
+  this.body = yield render('index', settings);
 }
 
 function *list(next) {
-  this.body = yield render('recipe/create', {
+  var settings = {
     bodyClass: 'recipe create'
-  });
+  };
+
+  _.merge(settings, defaults);
+
+  this.body = yield render('recipe/create', settings);
 }
 
 app.get('/', index);
