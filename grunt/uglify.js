@@ -34,7 +34,11 @@ module.exports = {
 
     files: {
       '<%= package.config.path.source %>/scripts/vendor.js': [
-        '<%= package.config.path.source %>/bower_components/jquery/dist/jquery.js',
+        // '<%= package.config.path.source %>/bower_components/jquery/dist/jquery.js',
+        '<%= package.config.path.source %>/bower_components/angular/angular.js',
+        '<%= package.config.path.source %>/bower_components/angular-ui-router/release/angular-ui-router.js',
+        '<%= package.config.path.source %>/bower_components/restangular/dist/restangular.js',
+        '<%= package.config.path.source %>/bower_components/platform/platform.js',
         '<%= package.config.path.source %>/bower_components/socket.io-client/socket.io.js'
       ]
     }
