@@ -49,7 +49,7 @@ module.exports = {
       livereload: '<%= package.config.server.livereload.port %>'
     },
     files: [
-      '<%= package.config.path.source %>/**/*',
+      '<%= package.config.path.build %>/**/*.*',
       '!<%= package.config.path.source %>/bower_components/**/*'
     ]
   },
