@@ -6,32 +6,32 @@ var monk = require('monk');
 
 var application = function(data) {
 
-    // private property
-    var database;
+  // private property
+  var database;
 
-    // private constructor
-    var __construct = function(data) {
-      // console.log('Object Created.');
+  // private constructor
+  var __construct = function(data) {
+    // console.log('Object Created.');
 
-      if(!data) {
-        data = packageJson.config.server.database.name;
-      }
-
-      database = monk(data);
-      // console.log('database', database);
-    }();
-
-    this.getDatabase = function() {
-      return database;
+    if(!data) {
+      data = packageJson.config.server.database.name;
     }
 
-    this.setDatabase = function(data) {
-      database = monk(data);
-    }
+    database = monk(data);
+    // console.log('database', database);
+  }();
 
-    this.collection = function(data) {
-      return wrap(database.get(data));
-    }
+  this.getDatabase = function() {
+    return database;
+  }
+
+  this.setDatabase = function(data) {
+    database = monk(data);
+  }
+
+  this.collection = function(data) {
+    return wrap(database.get(data));
+  }
 
 };
 

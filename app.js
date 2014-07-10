@@ -10,10 +10,11 @@ var serve = require('koa-static');
 
 var app = koa();
 
-var viewsApp = require(__dirname + '/applications/views');
-var apiApp = require(__dirname + '/applications/api');
-var databaseApp = require(__dirname + '/applications/database');
-var socketApp = require(__dirname + '/applications/socket');
+var applications = [];
+applications['views'] = require(__dirname + '/applications/views');
+applications['api'] = require(__dirname + '/applications/api');
+applications['database'] = require(__dirname + '/applications/database');
+applications['socket'] = require(__dirname + '/applications/socket');
 
 // wrap subsequent middleware in a logger
 app.use(logger());
@@ -34,10 +35,10 @@ app.use(function *(next) {
 app.use(router(app));
 
 // mount applications
-app.use(mount('/', viewsApp));
-app.use(mount('/api', apiApp));
-app.use(mount('/database', databaseApp));
-app.use(mount('/socket', socketApp));
+app.use(mount('/', applications['views']));
+app.use(mount('/api', applications['api']));
+app.use(mount('/database', applications['database']));
+app.use(mount('/socket', applications['socket']));
 
 // setup session
 app.keys = ['secrets'];
