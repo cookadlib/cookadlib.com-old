@@ -1,28 +1,61 @@
-// var koa = require('koa');
+var packageJson = require(__dirname + '/../../package.json');
+
+var _ = require('lodash');
+var koa = require('koa');
 var router = require('koa-router');
-//
-// var app = koa();
+var views = require('co-views');
+
+var app = koa();
 
 // use koa-router
-// app.use(router(app));
+app.use(router(app));
 
-var routes = new router();
+// logger
+app.use(function *(next) {
+  var start = new Date;
+  yield next;
+  var ms = new Date - start;
+  console.log('%s %s - %s', this.method, this.url, ms);
+});
 
-function *list(next) {
-// routes.list = function *(next) {
+var render = views('source/views', {
+  cache: true,
+
+  map: {
+    html: 'ejs'
+  }
+});
+
+var defaults = {
+  packageJson: packageJson
+};
+
+// use koa-router
+app.use(router(app));
+
+function *index(next) {
   var settings = {
-    bodyClass: 'user create'
+    bodyClass: 'index'
   };
 
   _.merge(settings, defaults);
 
-  this.body = yield render('user/create', settings);
+  this.body = yield render('users/index', settings);
 }
 
-// app.get('/user/create', list);
-// app.post('/user/create', list);
-routes.get('/user/create', list);
-routes.post('/user/create', list);
+function *list(next) {
+  var settings = {
+    bodyClass: 'users create'
+  };
 
-// module.exports = app;
-module.exports = routes;
+  _.merge(settings, defaults);
+
+  this.body = yield render('users/create', settings);
+}
+
+app.get('/', index);
+app.get('/create', list);
+app.post('/create', list);
+app.get(/^([^.]+)$/, index); //matches everything without an extension
+
+module.exports = app;

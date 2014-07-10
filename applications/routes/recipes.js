@@ -30,21 +30,32 @@ var defaults = {
   packageJson: packageJson
 };
 
-function *list(next) {
+// use koa-router
+app.use(router(app));
+
+function *index(next) {
   var settings = {
-    bodyClass: 'recipe create'
+    bodyClass: 'index'
   };
 
   _.merge(settings, defaults);
 
-  this.body = yield render('recipe/create', settings);
+  this.body = yield render('recipes/index', settings);
 }
 
-// use koa-router
-app.use(router(app));
+function *list(next) {
+  var settings = {
+    bodyClass: 'recipes create'
+  };
 
-app.get('/', list);
+  _.merge(settings, defaults);
+
+  this.body = yield render('recipes/create', settings);
+}
+
+app.get('/', index);
 app.get('/create', list);
 app.post('/create', list);
+app.get(/^([^.]+)$/, index); //matches everything without an extension
 
 module.exports = app;

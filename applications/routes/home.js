@@ -30,6 +30,9 @@ var defaults = {
   packageJson: packageJson
 };
 
+// use koa-router
+app.use(router(app));
+
 function *index(next) {
   var settings = {
     bodyClass: 'index'
@@ -39,9 +42,6 @@ function *index(next) {
 
   this.body = yield render('index', settings);
 }
-
-// use koa-router
-app.use(router(app));
 
 app.get('/', index);
 app.get(/^([^.]+)$/, index); //matches everything without an extension
