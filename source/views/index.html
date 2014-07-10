@@ -1,30 +1,105 @@
 <% include _includes/major-header.html %>
 
-<section data-ng-controller="SimpleController">
-  <h2>Angular Sample</h2>
-  <ul>
-    <li data-ng-repeat="customer in customers">{{ customer.name }} - {{ customer.city }}</li>
-  </ul>
-  <br />
-  <form role="form">
-    <div class="form-group">
-      <label for="newCustomer[name]">Email address</label>
-      <input type="text" class="form-control" id="newCustomer[name]" data-ng-model="newCustomer.name" placeholder="Enter name">
+<section data-ng-controller="usersController">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <h2>Users Dataset</h2>
+      <ul>
+        <li data-ng-repeat="user in users">{{ user.name }} - {{ user.city }}</li>
+      </ul>
     </div>
-    <div class="form-group">
-      <label for="newCustomer[city]">Email address</label>
-      <input type="text" class="form-control" id="newCustomer[city]" data-ng-model="newCustomer.city" placeholder="Enter city">
+    <div class="col-xs-12 col-sm-4">
+      <h2>Add New User To Dataset</h2>
+      <form role="form">
+        <div class="form-group">
+          <label for="newUser[name]">Name</label>
+          <input type="text" class="form-control" id="newUser[name]" data-ng-model="newUser.name" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="newUser[city]">City</label>
+          <input type="text" class="form-control" id="newUser[city]" data-ng-model="newUser.city" placeholder="Enter city">
+        </div>
+        <button data-ng-click="postUser()">Add User</button>
+      </form>
     </div>
-    <button data-ng-click="addCustomer()">Add Customer</button>
-    <br />
-    <input type="text" data-ng-model="filter.name" value="Bob" />
-  </form>
+    <div class="col-xs-12 col-sm-4">
+      <h2>Filter User Dataset</h2>
+      <form role="form">
+        <div class="form-group">
+          <label for="userName">Enter User Name</label>
+          <input type="text" class="form-control" id="userName" data-ng-model="filter.name" value="Bob" />
+        </div>
+      </form>
+      <br />
+      <h3>Dataset Matches for "{{ filter.name }}"</h3>
+      <ul>
+        <li data-ng-repeat="user in users | filter:filter.name | orderBy:'city'">{{ user.name }} - {{ user.city }}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Restangular Example</h2>
+  <a target="_blank" href="https://github.com/mgonto/restangular">Click here to check out the library</a>
+  <a href="http://angularjs.org/#wire-up-a-backend" target="_blank">Based on AngularJS's sample</a>
   <br />
-  <span>{{ name }}</span>
   <br />
-  <ul>
-    <li data-ng-repeat="customer in customers | filter:filter.name | orderBy:'city'">{{ customer.name }} - {{ customer.city }}</li>
-  </ul>
+  <div ng-view></div>
+
+  <!-- CACHE FILE: list.html -->
+  <script type="text/ng-template" id="list.html">
+    <input type="text" ng-model="search" class="search-query" placeholder="Search" />
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Project</th>
+        <th>Description</th>
+        <th><a href="#/new"><i class="icon-plus-sign">Add</i></a></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="project in projects | filter:search | orderBy:'name'" ng-show="project._id.$oid">
+        <td><a href="{{project.site}}" target="_blank">{{project.name}}</a></td>
+        <td>{{project.description}}</td>
+        <td>
+          <a href="#/edit/{{project._id.$oid}}"><i class="icon-pencil">Edit</i></a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </script>
+
+  <!-- CACHE FILE: detail.html -->
+  <script type="text/ng-template" id="detail.html">
+
+    <form role="form" name="myForm">
+
+      <div class="form-group" ng-class="{error: myForm.name.$invalid}">
+        <label for="name" class="control-label">Name</label>
+        <input type="text" class="form-control" name="name" ng-model="project.name" required>
+        <span ng-show="myForm.name.$error.required" class="help-inline">Required</span>
+      </div>
+
+      <div class="form-group" ng-class="{error: myForm.site.$invalid}">
+        <label for="site" class="control-label">Website</label>
+        <input type="url" class="form-control" name="site" ng-model="project.site" required>
+        <span ng-show="myForm.site.$error.required" class="help-inline">Required</span>
+        <span ng-show="myForm.site.$error.url" class="help-inline">Not a URL</span>
+      </div>
+
+      <div class="form-group" ng-class="{error: myForm.name.$invalid}">
+        <label for="name" class="control-label">Description</label>
+        <textarea class="form-control" name="description" ng-model="project.description"></textarea>
+      </div>
+
+      <br>
+      <a href="#/" class="btn">Cancel</a>
+      <button ng-click="save()" ng-disabled="isClean() || myForm.$invalid" class="btn btn-primary">Save</button>
+      <button ng-click="destroy()" ng-show="project._id" class="btn btn-danger">Delete</button>
+
+    </form>
+  </script>
 </section>
 
 <% include _includes/major-footer.html %>
