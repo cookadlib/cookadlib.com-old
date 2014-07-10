@@ -25,6 +25,9 @@ app.use(function *(next) {
   yield next;
   var ms = new Date() - start;
   console.log('%s %s - %s', this.method, this.url, ms);
+
+  // console.log(this, this.request, this.response);
+  // console.log(this.request.header);
 });
 
 // use koa-router

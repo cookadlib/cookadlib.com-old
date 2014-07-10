@@ -19,10 +19,12 @@ app.use(function *(next) {
 // use koa-router
 app.use(router(app));
 
-app.get('/', function *(next) {
-  yield next;
-  this.body = 'Welcome to the api application';
-});
+// app.get('/', function *(next) {
+//   yield next;
+//   this.body = 'Welcome to the api application';
+// });
+
+app.redirect('/', '/api/v2');
 
 var database = require(__dirname + '/database');
 
@@ -91,13 +93,26 @@ app.get('/book/:id', api.book.read);
 var APIv1 = new router();
 var APIv2 = new router();
 
+APIv1.get('/', function *(next) {
+  yield next;
+  this.body = 'Welcome to the API v1 application';
+});
+
 APIv1.get('/sign-in', function *() {
   // ...
+});
+
+APIv2.get('/', function *(next) {
+  yield next;
+  this.body = 'Welcome to the API v2 application';
 });
 
 APIv2.get('/sign-in', function *() {
   // ...
 });
+
+app.use(mount('/v1', APIv1.middleware()));
+app.use(mount('/v2', APIv2.middleware()));
 
 
 module.exports = app;
