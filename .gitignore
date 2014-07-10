@@ -13,3 +13,5 @@ source/scripts/*.js
 source/scripts/*.map
 test/bower_components/
 test/temp
+
+npm-debug.log
