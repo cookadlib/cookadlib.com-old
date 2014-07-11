@@ -42,7 +42,8 @@ module.exports = {
 				flatten: false,
 				cwd: '<%= package.config.path.source %>',
 				src: [
-					'**/*.html'
+					'**/*.html',
+					'!bower_components/*'
 				],
 				dest: '<%= package.config.path.build %>',
 				filter: 'isFile'
