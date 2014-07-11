@@ -72,7 +72,7 @@ function *error404(next) {
   }
 }
 
-app.get(/^([^.]+)$/, error404); //matches everything without an extension
 app.get('/', index);
+app.get(/^([^.]+)$/, error404); //matches everything without an extension
 
 module.exports = app;
