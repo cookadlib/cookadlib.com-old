@@ -69,9 +69,13 @@ module.exports = {
     'watch'
   ],
 
+  'stop': [
+    'forever:app:stop'
+  ],
+
   'default': [
     'build',
     'serve'
-  ]
+  ],
 
 };
