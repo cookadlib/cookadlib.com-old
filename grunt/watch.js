@@ -66,7 +66,8 @@ module.exports = {
     ],
     tasks: [
       // 'exec:setMaxfiles',
-      'node'
+      'node',
+      'forever:app:restart'
     ]
   },
 
@@ -118,7 +119,7 @@ module.exports = {
 
   vendor: {
     files: [
-      'grunt/uglify.js'
+      '<%= package.config.path.source %>/bower_components/*/*.js' //only 1 level deep to avoid watching too many files
     ],
     tasks: [
       // 'exec:setMaxfiles',
