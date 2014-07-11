@@ -33,6 +33,13 @@ var defaults = {
 // use koa-router
 app.use(router(app));
 
+function getAllMethods(object) {
+  console.log('in getAllMethods');
+  return Object.getOwnPropertyNames(object).filter(function(property) {
+    return typeof object[property] == 'function';
+  });
+}
+
 function *index(next) {
   var settings = {
     bodyClass: 'index'
@@ -40,22 +47,32 @@ function *index(next) {
 
   _.merge(settings, defaults);
 
-  this.body = yield render('recipes/index', settings);
+  this.body = yield render('index', settings);
 }
 
-function *list(next) {
+function *error404(next) {
   var settings = {
-    bodyClass: 'recipes create'
+    bodyClass: 'error error404'
   };
 
   _.merge(settings, defaults);
 
-  this.body = yield render('recipes/create', settings);
+  console.log('app', app, getAllMethods(app));
+  console.log('this.method', this.method, 'this.path', this.path);
+
+  // if (app.match(this.method, this.path)) {
+  if ('app.route', app.route) {
+    console.log('app.match true');
+    yield next
+  } else {
+    console.log('app.match false');
+    // this.throw('404 / Not Found', 404)
+    this.body = yield render('error404', settings);
+    this.status = 404;
+  }
 }
 
+app.get(/^([^.]+)$/, error404); //matches everything without an extension
 app.get('/', index);
-app.get('/create', list);
-app.post('/create', list);
-// app.get(/^([^.]+)$/, index); //matches everything without an extension
 
 module.exports = app;

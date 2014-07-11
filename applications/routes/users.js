@@ -12,10 +12,10 @@ app.use(router(app));
 
 // logger
 app.use(function *(next) {
-  var start = new Date;
+  // var start = new Date;
   yield next;
-  var ms = new Date - start;
-  console.log('%s %s - %s', this.method, this.url, ms);
+  // var ms = new Date - start;
+  // console.log('%s %s - %s', this.method, this.url, ms);
 });
 
 var render = views('source/views', {
@@ -56,6 +56,6 @@ function *list(next) {
 app.get('/', index);
 app.get('/create', list);
 app.post('/create', list);
-app.get(/^([^.]+)$/, index); //matches everything without an extension
+// app.get(/^([^.]+)$/, index); //matches everything without an extension
 
 module.exports = app;

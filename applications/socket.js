@@ -10,12 +10,12 @@ var io = require('socket.io');
 var app = koa();
 
 // logger
-// app.use(function *(next) {
-//   var start = new Date;
-//   yield next;
+app.use(function *(next) {
+  // var start = new Date;
+  yield next;
 //   var ms = new Date - start;
-//   console.log('%s %s - %s', this.method, this.url, ms);
-// });
+  // console.log('%s %s - %s', this.method, this.url, ms);
+});
 
 // use koa-router
 app.use(router(app));

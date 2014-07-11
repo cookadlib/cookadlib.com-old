@@ -11,10 +11,10 @@ var serve = require('koa-static');
 var app = koa();
 
 var applications = [];
-applications['views'] = require(__dirname + '/applications/views');
-applications['api'] = require(__dirname + '/applications/api');
-applications['database'] = require(__dirname + '/applications/database');
-applications['socket'] = require(__dirname + '/applications/socket');
+applications.views = require(__dirname + '/applications/views');
+applications.api = require(__dirname + '/applications/api');
+applications.database = require(__dirname + '/applications/database');
+applications.socket = require(__dirname + '/applications/socket');
 
 // wrap subsequent middleware in a logger
 app.use(logger());
@@ -22,10 +22,10 @@ app.use(logger());
 // use logger
 app.use(function *(next) {
   'use strict';
-  var start = new Date();
+  // var start = new Date();
   yield next;
-  var ms = new Date() - start;
-  console.log('%s %s - %s', this.method, this.url, ms);
+  // var ms = new Date() - start;
+  // console.log('%s %s - %s', this.method, this.url, ms);
 
   // console.log(this, this.request, this.response);
   // console.log(this.request.header);
@@ -35,10 +35,10 @@ app.use(function *(next) {
 app.use(router(app));
 
 // mount applications
-app.use(mount('/', applications['views']));
-app.use(mount('/api', applications['api']));
-app.use(mount('/database', applications['database']));
-app.use(mount('/socket', applications['socket']));
+app.use(mount('/api', applications.api));
+app.use(mount('/database', applications.database));
+app.use(mount('/socket', applications.socket));
+app.use(mount('/', applications.views));
 
 // setup session
 app.keys = ['secrets'];

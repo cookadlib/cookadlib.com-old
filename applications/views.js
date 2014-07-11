@@ -10,16 +10,16 @@ var views = require('co-views');
 var app = koa();
 
 var routeModules = [];
-routeModules['home'] = require(__dirname + '/routes/home');
-routeModules['recipes'] = require(__dirname + '/routes/recipes');
-routeModules['users'] = require(__dirname + '/routes/users');
+routeModules.general = require(__dirname + '/routes/general');
+routeModules.recipes = require(__dirname + '/routes/recipes');
+routeModules.users = require(__dirname + '/routes/users');
 
 // logger
 app.use(function *(next) {
-  var start = new Date;
+  // var start = new Date;
   yield next;
-  var ms = new Date - start;
-  console.log('%s %s - %s', this.method, this.url, ms);
+  // var ms = new Date - start;
+  // console.log('%s %s - %s', this.method, this.url, ms);
 });
 
 var render = views('source/views', {
@@ -30,28 +30,16 @@ var render = views('source/views', {
   }
 });
 
-// var defaults = {
-//   packageJson: packageJson
-// };
-//
-// function *index(next) {
-//   var settings = {
-//     bodyClass: 'index'
-//   };
-//
-//   _.merge(settings, defaults);
-//
-//   this.body = yield render('index', settings);
-// }
+var defaults = {
+  packageJson: packageJson
+};
 
 // use koa-router
 app.use(router(app));
 
-app.use(mount('/recipes', routeModules['recipes']));
-app.use(mount('/users', routeModules['users']));
-app.use(mount('/', routeModules['home'])); // contains catch-all rule so mount last
-
-// app.get('/', index);
-// app.get(/^([^.]+)$/, index); //matches everything without an extension
+app.use(mount('/recipes', routeModules.recipes));
+app.use(mount('/users', routeModules.users));
+app.use(mount('/', routeModules.general)); // contains catch-all rule so mount last
+// app.use(mount('/', routeModules.error));
 
 module.exports = app;
