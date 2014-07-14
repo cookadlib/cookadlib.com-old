@@ -19,7 +19,7 @@ module.exports = {
 
 	serve: {
 		options: {
-			message: 'Server ready at http://localhost:<%= package.config.server.connect.port %>'
+			message: 'Server ready at http://localhost:<%= package.config.server.koa.port %>'
 		}
 	}
 
