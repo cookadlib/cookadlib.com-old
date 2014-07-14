@@ -12,7 +12,7 @@ var should = require('should');
 var database = require(__dirname + '/../database');
 
 var app = koa();
-var db = new database('localhost/cookadlib');
+var db = new database(packageJson.config.server.database, packageJson.config.server.database);
 var users = db.collection('users');
 var ingredients = db.collection('ingredients');
 
