@@ -1,6 +1,7 @@
 var packageJson = require(__dirname + '/package.json');
 
 // var open = require('open');
+// var http = require('http');
 var koa = require('koa');
 var logger = require('koa-logger');
 var mount = require('koa-mount');
@@ -54,7 +55,9 @@ app.use(serve(__dirname + '/' + packageJson.config.path.source), {
 
 // set koa to listen on specified port
 if (!module.parent) {
-  app.listen(packageJson.config.server.koa.port);
+  app.listen(packageJson.config.server.koa.port); // The app.listen(...) method is simply sugar for the following:
+  // http.createServer(app.callback()).listen(80);
+  // http.createServer(app.callback()).listen(443);
 }
 
 // open('http://localhost:' + packageJson.config.server.koa.port);
