@@ -1,5 +1,10 @@
 /* global angular, Modernizr */
 
+
+// var app = angular.module('cookAdLibApp', ['ngDreamFactory']);
+// app.constant('DSP_URL', 'http://ec2-54-77-21-229.eu-west-1.compute.amazonaws.com');
+// app.constant('DSP_API_KEY', 'X-DreamFactory-CookAdLib');
+
 var app = angular.module('cookAdLibApp', ['restangular', 'ngRoute']);
 
 app.factory('usersFactory', function () {
@@ -35,7 +40,7 @@ app.factory('usersFactory', function () {
 
 var controllers = {};
 
-controllers.usersController = function ($scope, usersFactory, Restangular) {
+controllers.usersController = function ($scope, usersFactory) {
   'use strict';
 
   $scope.users = [];
@@ -69,6 +74,7 @@ controllers.CreateController = function ($scope, $location, Restangular) {
 // function CreateCtrl($scope, $location, Restangular) {
   $scope.save = function() {
     Restangular.all('projects').post($scope.project).then(function(project) {
+      console.log('project', project);
       $location.path('/list');
     });
   };
@@ -111,16 +117,6 @@ app.config(function($locationProvider, $httpProvider, $routeProvider, Restangula
     $httpProvider.defaults.headers.common['X-HTML5Mode'] = Modernizr.history.toString();
   }
 
-  // var config = {
-  //   headers:  {
-  //     'Authorization': 'Basic d2VudHdvcnRobWFuOkNoYW5nZV9tZQ==',
-  //     'Accept': 'application/json;odata=verbose',
-  //     "X-Testing" : "testing"
-  //   }
-  // };
-  //
-  // $http.get("/test", config);
-
   $routeProvider.
   when('/', {
     controller:controllers.ListController,
@@ -128,7 +124,8 @@ app.config(function($locationProvider, $httpProvider, $routeProvider, Restangula
   }).
   when('/edit/:projectId', {
     controller:controllers.EditController,
-    templateUrl:'detail.html',
+    // templateUrl:'detail.html',
+    templateUrl: 'views/_elements/detail.html',
     resolve: {
       project: function(Restangular, $route){
         return Restangular.one('projects', $route.current.params.projectId).get();
@@ -146,7 +143,7 @@ app.config(function($locationProvider, $httpProvider, $routeProvider, Restangula
   });
 
   RestangularProvider.setRequestInterceptor(function(elem, operation, what) {
-
+    console.log('what', what);
     if (operation === 'put') {
       elem._id = undefined;
       return elem;
