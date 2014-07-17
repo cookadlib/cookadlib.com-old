@@ -61,12 +61,11 @@ module.exports = {
     'notify:build'
   ],
 
-  'serve': [
+  'start': [
     // 'connect:livereload',
     'forever:app:start',
-    'open:server',
-    'notify:serve',
-    'watch'
+    // 'open:server',
+    'notify:serve'
   ],
 
   'stop': [
@@ -75,7 +74,8 @@ module.exports = {
 
   'default': [
     'build',
-    'serve'
-  ],
+    // 'serve',
+    'watch'
+  ]
 
 };
