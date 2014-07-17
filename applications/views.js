@@ -37,6 +37,7 @@ var defaults = {
 // use koa-router
 app.use(router(app));
 
+app.use(mount('/ingredients', routeModules.recipes));
 app.use(mount('/recipes', routeModules.recipes));
 app.use(mount('/users', routeModules.users));
 app.use(mount('/', routeModules.general)); // contains catch-all rule so mount last
