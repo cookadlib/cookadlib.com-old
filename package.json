@@ -1,7 +1,7 @@
 {
   "name": "cookadlib.com",
   "description": "cookadlib.com main site",
-  "version": "0.1.0-3",
+  "version": "0.1.0-6",
   "domains": [
     "cookadlib.com",
     "www.cookadlib.com"
@@ -23,6 +23,15 @@
   },
   "license": "",
   "private": true,
+  "engines": {
+    "node": ">=0.10"
+  },
+  "main": "app.js",
+  "scripts": {
+    "start": "node --harmony app.js",
+    "debug": "node --harmony debug app.js"
+  },
+  "postinstall": "bower install",
   "dependencies": {
     "bower": "^1.3.0",
     "co": "^3.0.6",
@@ -30,13 +39,13 @@
     "co-monk": "^1.0.0",
     "co-views": "^0.2.0",
     "connect-flash": "^0.1.0",
-    "connect-livereload": "^0.2.0",
+    "connect-livereload": "^0.4.0",
     "ejs": "^1.0.0",
     "grunt-forever": "^0.4.4",
-    "koa": "^0.6.0",
+    "koa": "^0.8.1",
     "koa-compress": "^1.0.7",
     "koa-mount": "^1.3.0",
-    "koa-passport": "^0.4.0",
+    "koa-passport": "^0.5.1",
     "koa-route": "^1.1.4",
     "koa-router": "^3.1.4",
     "koa-session": "^2.0.0",
@@ -45,7 +54,7 @@
     "moment": "^2.5.0",
     "mongoose": "^3.8.0",
     "monk": "^0.9.0",
-    "optimist": "^0.3.0",
+    "optimist": "^0.6.1",
     "passport": "^0.2.0",
     "passport-facebook": "^1.0",
     "passport-google": "^0.3.0",
@@ -63,50 +72,50 @@
   },
   "devDependencies": {
     "assemble": "^0.4.0",
-    "assemble-contrib-contextual": "^0.1.0",
+    "assemble-contrib-contextual": "^0.2.0",
     "assemble-contrib-sitemap": "^0.2.0",
     "grunt": "^0.4.0",
     "grunt-bower-install": "^1.3.0",
     "grunt-contrib-clean": "^0.5.0",
-    "grunt-contrib-compass": "^0.7.0",
+    "grunt-contrib-compass": "^0.9.0",
     "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-connect": "^0.7.0",
+    "grunt-contrib-connect": "^0.8.0",
     "grunt-contrib-copy": "^0.5.0",
     "grunt-contrib-csslint": "^0.2.0",
-    "grunt-contrib-cssmin": "^0.6.0",
-    "grunt-contrib-htmlmin": "^0.1.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-htmlmin": "^0.3.0",
     "grunt-contrib-imagemin": "^0.7.1",
-    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-rename": "^0.0.3",
-    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-uglify": "^0.5.0",
     "grunt-contrib-watch": "^0.6.0",
     "grunt-devtools": "^0.2.1",
     "grunt-exec": "^0.4.0",
     "grunt-html-inspector": "^0.1.0",
     "grunt-jekyll": "^0.4.0",
     "grunt-mkdir": "^0.1.0",
-    "grunt-mocha": "^0.3.0",
+    "grunt-mocha": "^0.4.11",
     "grunt-newer": "^0.7.0",
-    "grunt-notify": "^0.2.0",
+    "grunt-notify": "^0.3.0",
     "grunt-open": "^0.2.0",
-    "grunt-pagespeed": "^0.2.0",
+    "grunt-pagespeed": "^0.3.0",
     "grunt-rev": "^0.1.0",
     "grunt-scss-lint": "^0.1.0",
     "grunt-svgmin": "^0.4.0",
     "grunt-symlink": "^0.4.0",
     "grunt-uncss": "^0.3.0",
-    "grunt-usemin": "^0.1.0",
-    "grunt-vulcanize": "^0.1.0",
-    "imagemin": "^0.1.0",
-    "jshint-stylish": "^0.1.0",
+    "grunt-usemin": "^2.3.0",
+    "grunt-vulcanize": "^0.3.0",
+    "imagemin": "^0.4.6",
+    "jshint-stylish": "^0.4.0",
     "koa-livereload": "^0.1.23",
     "koa-logger": "^1.2.1",
-    "load-grunt-config": "^0.9.0",
-    "load-grunt-tasks": "^0.2.0",
+    "load-grunt-config": "^0.12.0",
+    "load-grunt-tasks": "^0.6.0",
     "open": "^0.0.5",
     "pretty": "^0.1.0",
-    "psi": "0.0.4",
-    "time-grunt": "^0.1.0"
+    "psi": "0.1.1",
+    "time-grunt": "^0.4.0"
   },
   "config": {
     "path": {
@@ -136,15 +145,5 @@
         "key": "AIzaSyABR4Vcjsg7B4HKc4BAI7ksJA4jr6-_DOc"
       }
     }
-  },
-  "engines": {
-    "node": ">=0.11.13"
-  },
-  "main": "app.js",
-  "scripts": {
-    "start": "node --harmony app.js",
-    "debug": "node --harmony debug app.js",
-    "develop": "n use 0.11.13 --harmony debug app.js"
-  },
-  "postinstall": "bower install"
+  }
 }
