@@ -4,33 +4,42 @@ var co = require('co');
 var wrap = require('co-monk');
 var monk = require('monk');
 
-var application = function(configuation) {
+var application = function(configuration) {
 
   // private property
   var database;
 
   // private constructor
-  var __construct = function(configuation) {
+  var __construct = function(configuration) {
     // console.log('Object Created.');
+    var connectionString = '';
 
-    if(!configuation) {
-      configuation = packageJson.config.server.database;
+    if(!configuration) {
+      configuration = packageJson.config.server.database;
     }
 
-    database = monk(configuation.name);
+    connectionString += configuration.protocol;
+    connectionString += '://';
+    connectionString += configuration.credentials.username;
+    connectionString += ':';
+    connectionString += configuration.credentials.password;
+    connectionString += '@';
+    connectionString += configuration.host;
+    connectionString += ':';
+    connectionString += configuration.port;
+    connectionString += '/';
+    connectionString += configuration.name;
+    // e,g, mongodb://nodejitsu:31446693dac807d62cbe52f522408bf6@troup.mongohq.com:10026/nodejitsudb1124257398
+
+    // console.log('connectionString1', 'mongodb://nodejitsu:31446693dac807d62cbe52f522408bf6@troup.mongohq.com:10026/nodejitsudb1124257398');
+    // console.log('connectionString2', connectionString);
+
+    database = monk(connectionString);
     // console.log('database', database);
   }();
 
-  this.getDatabase = function() {
-    return database;
-  }
-
-  this.setDatabase = function(data) {
-    database = monk(configuation.name);
-  }
-
-  this.collection = function(data) {
-    return wrap(database.get(configuation.name));
+  this.collection = function(collection) {
+    return wrap(database.get(collection));
   }
 
 };

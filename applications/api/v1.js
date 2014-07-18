@@ -7,12 +7,12 @@ var koa = require('koa');
 var logger = require('koa-logger');
 var request = require('koa-request');
 var router = require('koa-router');
-var rdfstore = require('rdfstore');
+// var rdfstore = require('rdfstore');
 var should = require('should');
 var database = require(__dirname + '/../database');
 
 var app = koa();
-var db = new database(packageJson.config.server.database, packageJson.config.server.database);
+var db = new database(packageJson.config.server.database);
 var users = db.collection('users');
 var ingredients = db.collection('ingredients');
 
@@ -110,71 +110,35 @@ function* freebaseMetawebQuery (name) {
 api.get('/', function *(next) {
   yield next;
   this.body = 'Welcome to the API v1 application';
+  this.type = 'application/json';
 });
 
 api.get('/ingredients', function *(next) {
+  // yield ingredients.remove({});
   var res = yield ingredients.find({});
   this.body = res;
+  this.type = 'application/json';
 });
 
 api.get('/ingredients/:name', function *(next) {
   var ingredientName = this.params.name;
-  var result = null;
 
-  result = yield ingredients.findOne({
+  var result = yield ingredients.findOne({
+  // var result = yield ingredients.find({
     name: ingredientName
   });
 
-  if(result) {
-    this.body = result;
-  } else {
+  // console.log('result', result, result.should.have.length(1));
+
+  if(!result || result.length !== 1) {
     var search = yield freebaseSearch (ingredientName);
     var document = search.result[0];
 
-    var promise = yield ingredients.insert(document, function (err, doc) {
-      // console.log('err', err, 'doc', doc);
-      if (err) {
-        console.log('error inline', err);
-        this.body = 'Unable to process request';
-        this.status = 400;
-        throw err;
-      }
-      // else {
-      //   this.body = doc;
-      //   this.status = 201; // change to be set only on success
-      // }
-    });
-
-    console.log('promise.type', promise.type);
-
-    promise.error(function(err){
-      console.log('error 1', err);
-      this.body = 'Unable to process request 1';
-      this.status = 400;
-      throw err;
-    });
-    promise.on('error', function(err){
-      console.log('error 2', err);
-      this.body = 'Unable to process request 2';
-      this.status = 400;
-      throw err;
-    });
-    promise.on('success', function(doc){
-      console.log('success 1', doc);
-      this.body = doc;
-      this.status = 201; // change to be set only on success
-    });
-    promise.on('complete', function(err, doc){
-      console.log('complete', err, doc);
-      this.body = doc;
-      this.status = 201; // change to be set only on success
-    });
-    promise.success(function(doc){
-      console.log('success 1', doc);
-      this.body = doc;
-      this.status = 201; // change to be set only on success
-    });
+    var result = yield ingredients.insert(document);
   }
+
+  this.body = result;
+  this.type = 'application/json';
 
   // console.log('result', result);
 
@@ -185,6 +149,7 @@ api.get('/ingredients/:name/nutrition', function *(next) {
 
   var result = yield freebaseMetawebQuery (name);
   this.body = result;
+  this.type = 'application/json';
 });
 
 api.get('/ingredients/:name/activity', function *(next) {
@@ -192,6 +157,7 @@ api.get('/ingredients/:name/activity', function *(next) {
     name: this.params.name
   });
   this.body = res;
+  this.type = 'application/json';
 });
 
 api.post('/ingredients/create', function *(next) {
@@ -212,6 +178,7 @@ api.put('/ingredients/:name/update', function *(next) {
     name: this.params.username
   });
   this.body = res;
+  this.type = 'application/json';
 });
 
 // Routes: Users

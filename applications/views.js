@@ -11,6 +11,7 @@ var app = koa();
 
 var routeModules = [];
 routeModules.general = require(__dirname + '/routes/general');
+routeModules.ingredients = require(__dirname + '/routes/ingredients');
 routeModules.recipes = require(__dirname + '/routes/recipes');
 routeModules.users = require(__dirname + '/routes/users');
 
@@ -37,6 +38,7 @@ var defaults = {
 // use koa-router
 app.use(router(app));
 
+app.use(mount('/ingredients', routeModules.ingredients));
 app.use(mount('/recipes', routeModules.recipes));
 app.use(mount('/users', routeModules.users));
 app.use(mount('/', routeModules.general)); // contains catch-all rule so mount last
