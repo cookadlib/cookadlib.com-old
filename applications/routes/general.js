@@ -42,12 +42,12 @@ function getAllMethods(object) {
 
 function *index(next) {
   var settings = {
-    bodyClass: 'index'
+    bodyClass: 'home'
   };
 
   _.merge(settings, defaults);
 
-  this.body = yield render('index', settings);
+  this.body = yield render('home', settings);
 }
 
 function *error404(next) {

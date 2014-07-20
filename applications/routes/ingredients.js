@@ -35,7 +35,7 @@ app.use(router(app));
 
 function *index(next) {
   var settings = {
-    bodyClass: 'index'
+    bodyClass: 'ingredients index'
   };
 
   _.merge(settings, defaults);
