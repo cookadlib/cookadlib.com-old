@@ -24,7 +24,7 @@
   "license": "",
   "private": true,
   "engines": {
-    "node": ">=0.10"
+    "node": ">=0.12"
   },
   "main": "app.js",
   "scripts": {
@@ -41,11 +41,13 @@
     "connect-flash": "^0.1.0",
     "connect-livereload": "^0.4.0",
     "ejs": "^1.0.0",
+    "gm": "^1.16.0",
     "grunt-forever": "^0.4.4",
     "koa": "^0.8.1",
     "koa-compress": "^1.0.7",
     "koa-mount": "^1.3.0",
     "koa-passport": "^0.5.1",
+    "koa-request": "^1.0.0",
     "koa-route": "^1.1.4",
     "koa-router": "^3.1.4",
     "koa-session": "^2.0.0",
@@ -109,6 +111,7 @@
     "koa-logger": "^1.2.1",
     "load-grunt-config": "^0.12.0",
     "load-grunt-tasks": "^0.6.0",
+    "npmedge": "^0.2.0",
     "open": "^0.0.5",
     "pretty": "^0.1.0",
     "psi": "0.1.1",
@@ -124,8 +127,14 @@
         "port": 4000
       },
       "database": {
-        "name": "localhost/cookadlib",
-        "port": 1234
+        "protocol": "mongodb",
+        "host": "troup.mongohq.com",
+        "name": "nodejitsudb1124257398",
+        "port": 10026,
+        "credentials": {
+          "username": "nodejitsu",
+          "password": "31446693dac807d62cbe52f522408bf6"
+        }
       },
       "koa": {
         "port": 4010
