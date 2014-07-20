@@ -46,7 +46,7 @@ module.exports = {
     'newer:scsslint',
     'compass', // does not work with grunt-newer
     // 'newer:csslint', // sooooooo many errors
-    'newer:rename:styles',
+    'newer:rename:styles'
     // 'uncss'
   ],
 
@@ -74,7 +74,7 @@ module.exports = {
 
   'default': [
     'build',
-    // 'serve',
+    'start',
     'watch'
   ]
 
