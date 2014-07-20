@@ -6,13 +6,23 @@ module.exports = {
 	scripts: {
 		files: [
 			{
+				src: ['<%= package.config.path.source %>/scripts/vendor.js'],
+				dest: '<%= package.config.path.build %>/scripts/vendor.js',
+				filter: 'isFile'
+			},
+			{
+				src: ['<%= package.config.path.source %>/scripts/vendor.js.map'],
+				dest: '<%= package.config.path.build %>/scripts/vendor.js.map',
+				filter: 'isFile'
+			},
+			{
 				src: ['<%= package.config.path.source %>/scripts/main.js'],
 				dest: '<%= package.config.path.build %>/scripts/main.js',
 				filter: 'isFile'
 			},
 			{
-				src: ['<%= package.config.path.source %>/scripts/main.map'],
-				dest: '<%= package.config.path.build %>/scripts/main.map',
+				src: ['<%= package.config.path.source %>/scripts/main.js.map'],
+				dest: '<%= package.config.path.build %>/scripts/main.js.map',
 				filter: 'isFile'
 			}
 		]
@@ -48,21 +58,6 @@ module.exports = {
 			{
 				src: ['<%= package.config.path.source %>/styles/print.css.map'],
 				dest: '<%= package.config.path.build %>/styles/print.css.map',
-				filter: 'isFile'
-			}
-		]
-	},
-
-	vendorScripts: {
-		files: [
-			{
-				src: ['<%= package.config.path.source %>/scripts/vendor.js'],
-				dest: '<%= package.config.path.build %>/scripts/vendor.js',
-				filter: 'isFile'
-			},
-			{
-				src: ['<%= package.config.path.source %>/scripts/vendor.map'],
-				dest: '<%= package.config.path.build %>/scripts/vendor.map',
 				filter: 'isFile'
 			}
 		]
