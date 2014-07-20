@@ -1,7 +1,8 @@
 /*!
  *  Import CSS once built to avoid Lint errors
  */
-@import 'library.css';
+@import url(http://fonts.googleapis.com/css?family=Tangerine|Open+Sans:300italic,300,600);
+@import './library.css';
 
 /*!
  *  Compass
@@ -30,6 +31,9 @@
 // Compass sprites
 @import '../images/icons/*.png';
 @include all-icons-sprites;
+
+// Typography
+@import './type/type';
 
 // Core variables and mixins
 @import './mixins/img';
