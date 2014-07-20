@@ -1,0 +1,179 @@
+html {
+
+  body {
+
+    &.home {
+
+      main {
+
+        > section {
+          @include make-row();
+          min-height: 550px;
+          position: relative;
+          text-align: center;
+
+          &.background {
+            min-height: 700px;
+          }
+
+          &.hero,
+          &.join,
+          &.showcase {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+          }
+
+          &.hero {
+
+            background-image: url('/images/backgrounds/chicago-food-photography-fiesta-darker.jpg');
+            // background-image: url('http://www.tylliebarbosa.com/wp-content/uploads/2013/02/chicago-food-photography-Fiesta-1500x964.jpg');
+            // background-image: url('http://www.highresolutiontextures.com/wp-content/uploads/2010/11/food-textures-05-pasta-texture.jpg');
+
+            .introduction {
+              @include vertical-align-middle();
+
+              h2 {
+                margin-bottom: 4rem;
+              }
+
+              span {
+                display: block;
+                margin-bottom: 1rem;
+                margin-top: 1rem;
+              }
+
+            }
+
+            .credit {
+              bottom: 5px;
+              position: absolute;
+              right: 15px;
+            }
+
+          }
+
+          &.join {
+            // background-image: url('http://ninanco.com/wp-content/uploads/2013/09/organic-fruit.jpg');
+            background-image: url('http://www.highresolutiontextures.com/wp-content/uploads/2010/11/food-textures-05-pasta-texture.jpg');
+
+            > div {
+              @include vertical-align-middle();
+              position: absolute;
+
+              h1,
+              a {
+                margin-bottom: 4rem;
+              }
+
+              > div {
+                margin-bottom: 3rem;
+              }
+
+            }
+
+          }
+
+          &.showcase {
+
+            > div {
+              @include vertical-align-middle();
+
+              h1 {
+                margin-bottom: 2rem;
+              }
+
+              span {
+                display: block;
+                margin-bottom: 2rem;
+              }
+
+              .btn {
+                margin-bottom: 8rem;
+              }
+
+              .images {
+                @include clearfix();
+
+                > div {
+                  background-position: center center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+
+                  @media (max-width: $screen-xs-max) {
+                    // height: calc((100vw / 3) * .75);
+                    margin-bottom: 1rem;
+                  }
+
+                  // @media (min-width: $screen-sm-min) {
+                  //   height: calc(100vw * .2);
+                  // }
+
+                }
+
+              }
+
+            }
+
+          }
+
+          &.grid {
+
+            div {
+              // background-position: center center;
+              // background-repeat: no-repeat;
+              // background-size: cover;
+              height: 100%;
+              // outline: 1px solid $body-bg;
+            }
+
+            > div {
+
+              @media (max-width: $screen-xs-max) {
+                height: calc((100vw / 1) * .66);
+              }
+
+              @media (min-width: $screen-sm-min) {
+                height: calc((100vw / 2) * .66);
+              }
+
+              .row {
+
+                &.row-xs-2 {
+
+                  &:first-of-type {
+                    height: 61.8%;
+                  }
+
+                  &:last-of-type {
+                    height: 38.2%;
+                  }
+
+                }
+
+              }
+
+            }
+
+            figure {
+              height: 100%;
+              outline: 1px solid $body-bg;
+
+              div.img {
+                @include make-row();
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

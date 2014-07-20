@@ -46,23 +46,24 @@
 // Elements
 @import './elements/button';
 @import './elements/figure';
-@import './elements/form';
-@import './elements/input';
-@import './elements/main';
-@import './elements/navigation-element';
+// @import './elements/form';
+// @import './elements/input';
+// @import './elements/main';
+// @import './elements/navigation-element';
 
 // Components
 @import './components/navbar';
 
 // Sections
-@import './sections/album';
-@import './sections/hero';
-@import './sections/icons';
-@import './sections/isotope';
-@import './sections/matrix';
-@import './sections/overview';
+// @import './sections/album';
+// @import './sections/hero';
+// @import './sections/icons';
+// @import './sections/isotope';
+// @import './sections/matrix';
+// @import './sections/overview';
 
 // Layouts
-@import './pages/index';
-@import './pages/recipe';
-@import './pages/signup';
+@import './layouts/home';
+@import './layouts/ingredients';
+@import './layouts/recipe';
+@import './layouts/signup';

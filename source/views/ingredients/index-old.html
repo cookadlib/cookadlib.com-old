@@ -1,0 +1,68 @@
+<% include ../_includes/major-header.html %>
+
+<section>
+  <h1>Ingredients</h1>
+
+  <div ng-view></div>
+
+  <!-- CACHE FILE: list.html -->
+  <script type="text/ng-template" id="list.html">
+    <input type="text" ng-model="search" class="search-query" placeholder="Search" />
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Ingredient</th>
+        <th>Description</th>
+        <th><a href="ingredients/new"><span class="icon-plus-sign">Add</span></a></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="ingredient in ingredients | filter:search | orderBy:'name'" ng-show="ingredient._id">
+        <td><a href="{{ingredient.mid}}" target="_blank">{{ingredient.name}}</a></td>
+        <td>{{ingredient.mid}}</td>
+        <td>
+          <a href="ingredients/edit/{{ingredient.name}}"><span class="icon-pencil">Edit</span></a>
+        </td>
+        <td>
+          <a href="ingredients/delete/{{ingredient.name}}"><span class="icon-pencil">Delete</span></a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </script>
+
+  <!-- CACHE FILE: detail.html -->
+  <script type="text/ng-template" id="detail.html">
+
+    <form role="form" name="myForm">
+
+      <div class="form-group" ng-class="{error: myForm.name.$invalid}">
+        <label for="name" class="control-label">Name</label>
+        <input type="text" class="form-control" name="name" ng-model="ingredient.name" required>
+        <span ng-show="myForm.name.$error.required" class="help-inline">Required</span>
+      </div>
+
+      <div class="form-group" ng-class="{error: myForm.mid.$invalid}">
+        <label for="mid" class="control-label">mid</label>
+        <input type="mid" class="form-control" name="mid" ng-model="ingredient.mid" required>
+        <span ng-show="myForm.mid.$error.required" class="help-inline">Required</span>
+        <span ng-show="myForm.mid.$error.url" class="help-inline">Not a URL</span>
+      </div>
+
+      <div class="form-group" ng-class="{error: myForm.name.$invalid}">
+        <label for="name" class="control-label">Description</label>
+        <textarea class="form-control" name="description" ng-model="ingredient.description"></textarea>
+      </div>
+
+      <br>
+      <a href="/ingredients" class="btn">Cancel</a>
+      <button ng-click="save()" ng-disabled="isClean() || myForm.$invalid" class="btn btn-primary">Save</button>
+      <button ng-click="destroy()" ng-show="ingredient._id" class="btn btn-danger">Delete</button>
+
+    </form>
+
+  </script>
+
+</section>
+
+<% include ../_includes/major-footer.html %>

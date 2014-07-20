@@ -51,11 +51,13 @@
     <link href="/images/chrome/apple-touch-startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
 
     <!-- Fix initial load size for iPhone -->
+
+    <script src="/bower_components/platform/platform.js"></script>
     <!--
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="/bower_components/platform/platform.js"></script>
     -->
+
     <link rel="import" href="/bower_components/core-ajax/core-ajax.html" />
 
     <link rel="import" href="/bower_components/element-navigation/component.html" />
@@ -72,10 +74,10 @@
 
     <% include google.analytics.html %>
 
-    <a class="sr-only" href="#main">Skip to content</a>
+    <a class="sr-only" href="#content">Skip to main content</a>
 
-    <div>
+    <div><!-- .container -->
 
       <header data-ui-view="header"></header>
 
-      <main id="main" data-ui-view="main">
+      <div id="content"><!-- .row -->
