@@ -35,19 +35,27 @@ $container-xl:                 $container-extra-large-desktop;
 $container-extra-extra-large-desktop:      ((1860px + $grid-gutter-width));
 $container-xxl:                 $container-extra-extra-large-desktop;
 
-// Brand colors
-// -------------------------
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gray-dark:              lighten(#000, 20%) !default;   // #333
+$gray:                   lighten(#000, 33.5%) !default; // #555
+$gray-light:             lighten(#000, 60%) !default;   // #999
+$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 
 $brand-primary:         #111;
 $brand-success:         #333;
-// $brand-warning:         #f0ad4e;
-// $brand-danger:          #d9534f;
-// $brand-info:            #5bc0de;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
 
 // Scaffolding
 // -------------------------
-// $body-bg:               #000;
-// $text-color:            #000;
+$body-bg:               #fff;
+$text-color:            #000;
+$text-color-overlay:    $body-bg;
 
 $nav-bg:               		#000;
 
