@@ -57,7 +57,8 @@ app.config(function($locationProvider, $httpProvider, $routeProvider, Restangula
   // });
 
   RestangularProvider.setRestangularFields({
-    id: '_id.$oid'
+    // id: '_id.$oid'
+    id: '_id'
   });
 
   $locationProvider.html5Mode(true);
@@ -67,13 +68,15 @@ app.config(function($locationProvider, $httpProvider, $routeProvider, Restangula
     controller:controllers.ListController,
     templateUrl:'list.html'
   }).
-  when('/ingredients/edit/:projectId', {
+  when('/ingredients/edit/:ingredientId', {
     controller:controllers.EditController,
     templateUrl:'detail.html',
     // templateUrl: 'views/_elements/detail.html',
     resolve: {
       ingredient: function(Restangular, $route) {
-        return Restangular.one('ingredients', $route.current.params.projectId).get();
+        console.log($route.current.params, $route.current.params.ingredientId);
+        // return Restangular.one('ingredients', $route.current.params.ingredientId).get();
+        return Restangular.one('ingredients', $route.current.params.name).get();
       }
     }
   }).
@@ -82,7 +85,7 @@ app.config(function($locationProvider, $httpProvider, $routeProvider, Restangula
     templateUrl:'detail.html'
   }).
   otherwise({
-    redirectTo:'/ingredients'
+    // redirectTo:'/ingredients'
   });
 
   RestangularProvider.setRequestInterceptor(function(elem, operation, what) {
