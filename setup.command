@@ -1,5 +1,8 @@
 cd `dirname $0`
 
+brew install imagemagick
+brew install graphicsmagick
+
 git config core.ignorecase false
 
 gem update --system
