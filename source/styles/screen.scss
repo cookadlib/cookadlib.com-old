@@ -32,6 +32,9 @@
 @import '../images/icons/*.png';
 @include all-icons-sprites;
 
+// Utility classes
+@import 'utilities/visibility';
+
 // Typography
 @import './type/type';
 
@@ -47,6 +50,7 @@
 @import './elements/button';
 @import './elements/figure';
 // @import './elements/form';
+@import './elements/img';
 // @import './elements/input';
 // @import './elements/main';
 // @import './elements/navigation-element';

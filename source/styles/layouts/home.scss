@@ -26,8 +26,7 @@ html {
           }
 
           &.hero {
-
-            background-image: url('/images/backgrounds/chicago-food-photography-fiesta-darker.jpg');
+            // background-image: url('/images/backgrounds/chicago-food-photography-fiesta-darker.jpg');
             // background-image: url('http://www.tylliebarbosa.com/wp-content/uploads/2013/02/chicago-food-photography-Fiesta-1500x964.jpg');
             // background-image: url('http://www.highresolutiontextures.com/wp-content/uploads/2010/11/food-textures-05-pasta-texture.jpg');
 
@@ -56,7 +55,7 @@ html {
 
           &.join {
             // background-image: url('http://ninanco.com/wp-content/uploads/2013/09/organic-fruit.jpg');
-            background-image: url('http://www.highresolutiontextures.com/wp-content/uploads/2010/11/food-textures-05-pasta-texture.jpg');
+            // background-image: url('http://www.highresolutiontextures.com/wp-content/uploads/2010/11/food-textures-05-pasta-texture.jpg');
 
             > div {
               @include vertical-align-middle();

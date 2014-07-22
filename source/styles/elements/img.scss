@@ -1,3 +1,13 @@
-.img-responsive-upsize {
-  width: 100%;
+img,
+div.img {
+  @include transition(opacity 500ms ease);
+
+  &.transparent {
+    opacity: 0;
+  }
+
+  &.img-responsive-upsize {
+    width: 100%;
+  }
+
 }
