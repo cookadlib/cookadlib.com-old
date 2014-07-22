@@ -42,7 +42,8 @@
     "socket.io-client": "~1.0.6",
     "restangular": "~1.4.0",
     "angular-dreamfactory": "*",
-    "angular-route": "~1.2.19"
+    "angular-route": "~1.2.19",
+    "jQuery-Sonar": "artzstudio/jQuery-Sonar"
   },
   "devDependencies": {},
   "resolutions": {
