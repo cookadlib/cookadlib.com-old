@@ -16,5 +16,12 @@
     "unused": true,
     "strict": true,
     "trailing": true,
-    "smarttabs": true
+    "smarttabs": true,
+    "globals": {
+      "$": true,
+      "document": true,
+      "imagesLoaded": true,
+      "jQuery": true,
+      "window": true
+    }
 }
