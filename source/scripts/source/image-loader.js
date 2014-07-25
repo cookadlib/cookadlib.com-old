@@ -4,7 +4,7 @@ $(document).ready(function () {
   var functions = {};
 
   functions.initialiseImagesLoaded = function (selector) {
-		console.log('initialiseImageLoader', selector);
+		// console.log('initialiseImageLoader', selector);
 
 		if(!selector) {
 			selector = 'main';
@@ -14,25 +14,25 @@ $(document).ready(function () {
 
     var $imgLoader = imagesLoaded(selector);
 
-    $imgLoader.on('always', function(instance) {
-      console.log('ALWAYS - all images have been loaded', instance);
-    });
-
-    $imgLoader.on('done', function(instance) {
-      console.log('DONE  - all images have been successfully loaded', instance);
-    });
-
-    $imgLoader.on('fail', function(instance) {
-      console.log('FAIL - all images loaded, at least one is broken', instance);
-    });
+    // $imgLoader.on('always', function(instance) {
+    //   console.log('ALWAYS - all images have been loaded', instance);
+    // });
+    //
+    // $imgLoader.on('done', function(instance) {
+    //   console.log('DONE  - all images have been successfully loaded', instance);
+    // });
+    //
+    // $imgLoader.on('fail', function(instance) {
+    //   console.log('FAIL - all images loaded, at least one is broken', instance);
+    // });
 
     $imgLoader.on('progress', function(instance, image) {
       if(image.isLoaded) {
         $(image.img).removeClass('transparent');
       }
 
-      var result = image.isLoaded ? 'loaded' : 'broken';
-      console.log( 'image is ' + result + ' for ' + image.img.src );
+      // var result = image.isLoaded ? 'loaded' : 'broken';
+      // console.log( 'image is ' + result + ' for ' + image.img.src );
     });
 
 	};
