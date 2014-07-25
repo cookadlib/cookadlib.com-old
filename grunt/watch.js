@@ -82,16 +82,16 @@ module.exports = {
     ]
   },
 
-  scripts: {
+  browser: {
     files: [
       '<%= package.config.path.source %>/scripts/**/*.js',
       '!<%= package.config.path.source %>/bower_components/**/*'
     ],
     tasks: [
       // 'exec:setMaxfiles',
-      'newer:jshint:scripts',
-      'uglify:scripts',
-      'newer:rename:scripts'
+      'newer:jshint:browser',
+      'uglify:browser',
+      'newer:rename:browserScripts'
     ]
   },
 
@@ -117,7 +117,7 @@ module.exports = {
     ]
   },
 
-  vendor: {
+  vendorScripts: {
     files: [
       '<%= package.config.path.source %>/bower_components/*/*.js' //only 1 level deep to avoid watching too many files
     ],

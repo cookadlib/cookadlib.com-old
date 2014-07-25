@@ -34,10 +34,11 @@ module.exports = {
     'mkdir:root',
     'mkdir:scripts',
     // 'newer:concat',
-    'newer:jshint:scripts',
+    'newer:jshint:browser',
     // 'newer:uglify',
     'uglify',
-    'newer:rename:scripts'
+    'newer:rename:browserScripts',
+    'newer:rename:vendorScripts'
   ],
 
   'styles': [

@@ -7,7 +7,7 @@ module.exports = {
     sourceMap: true
   },
 
-  scripts: {
+  browser: {
 
     options: {
       compress: false,
@@ -36,7 +36,6 @@ module.exports = {
 
     files: {
       '<%= package.config.path.source %>/scripts/vendor.js': [
-        // '<%= package.config.path.source %>/bower_components/jquery/dist/jquery.js',
         '<%= package.config.path.source %>/bower_components/modernizr/modernizr.js',
         '<%= package.config.path.source %>/bower_components/lodash/dist/lodash.compat.js',
         // '<%= package.config.path.source %>/bower_components/platform/platform.js',
@@ -45,7 +44,12 @@ module.exports = {
         // '<%= package.config.path.source %>/bower_components/angular-ui-router/release/angular-ui-router.js',
         '<%= package.config.path.source %>/bower_components/restangular/dist/restangular.js',
         // '<%= package.config.path.source %>/bower_components/angular-dreamfactory/angular-dreamfactory.js',
-        '<%= package.config.path.source %>/bower_components/socket.io-client/socket.io.js'
+        '<%= package.config.path.source %>/bower_components/socket.io-client/socket.io.js',
+        '<%= package.config.path.source %>/bower_components/jquery/dist/jquery.js',
+        '<%= package.config.path.source %>/bower_components/jQuery-Sonar/jquery.sonar.js',
+        '<%= package.config.path.source %>/bower_components/eventEmitter/EventEmitter.js',
+        '<%= package.config.path.source %>/bower_components/eventie/eventie.js',
+        '<%= package.config.path.source %>/bower_components/imagesloaded/imagesloaded.js'
       ]
     }
 

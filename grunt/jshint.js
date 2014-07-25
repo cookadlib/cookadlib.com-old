@@ -13,8 +13,20 @@ module.exports = {
     'grunt/**/*.js'
   ].concat('Gruntfile.js'),
 
-  scripts: [
-    '<%= package.config.path.source %>/scripts/source/**/*.js'
-  ].concat('Gruntfile.js')
+  browser: {
+    options: {
+      browser: true,
+      globals: {
+        $: true,
+        document: true,
+        jQuery: true
+      }
+    },
+    files: {
+      src: [
+        '<%= package.config.path.source %>/scripts/source/**/*.js'
+      ]
+    },
+  }
 
 };

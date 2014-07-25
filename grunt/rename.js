@@ -3,7 +3,7 @@
  */
 module.exports = {
 
-	scripts: {
+	vendorScripts: {
 		files: [
 			{
 				src: ['<%= package.config.path.source %>/scripts/vendor.js'],
@@ -14,7 +14,12 @@ module.exports = {
 				src: ['<%= package.config.path.source %>/scripts/vendor.js.map'],
 				dest: '<%= package.config.path.build %>/scripts/vendor.js.map',
 				filter: 'isFile'
-			},
+			}
+		]
+	},
+
+	browserScripts: {
+		files: [
 			{
 				src: ['<%= package.config.path.source %>/scripts/main.js'],
 				dest: '<%= package.config.path.build %>/scripts/main.js',
