@@ -22,6 +22,7 @@
       "document": true,
       "imagesLoaded": true,
       "jQuery": true,
+      "navigator": true,
       "window": true
     }
 }
