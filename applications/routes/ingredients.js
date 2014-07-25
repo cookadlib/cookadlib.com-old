@@ -35,7 +35,7 @@ app.use(router(app));
 
 function *index(next) {
   var settings = {
-    bodyClass: 'ingredients index'
+    bodyClass: 'ingredients index clear-header'
   };
 
   _.merge(settings, defaults);
@@ -45,7 +45,7 @@ function *index(next) {
 
 function *list(next) {
   var settings = {
-    bodyClass: 'ingredients create'
+    bodyClass: 'ingredients create clear-header'
   };
 
   _.merge(settings, defaults);
