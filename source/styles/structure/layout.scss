@@ -3,23 +3,30 @@ html {
   min-height: 100%;
 
   body {
-    @include transition-duration(.75s);
-    @include transition-property(all);
-    @include transition-timing-function(ease-in-out);
+    // @include transition-duration(.75s);
+    // @include transition-property(all);
+    // @include transition-timing-function(ease-in-out);
     background-color: $nav-bg;
     height: 100%;
     min-height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     position: relative;
-    width: calc(100% + #{$sidebar-width});
+    // width: calc(100% + #{$sidebar-width});
+
+    > div,
+    > nav {
+      @include transition-duration(.75s);
+      @include transition-property(all);
+      @include transition-timing-function(ease-in-out);
+    }
 
     > div {
       background-color: $body-bg;
       // height: 100%;
-      margin-right: $sidebar-width;
-      // min-height: 100%;
-      padding-right: $sidebar-width;
+      // margin-right: $sidebar-width;
+      min-height: 100vh;
+      // padding-right: $sidebar-width;
       width: 100%;
 
       > header,
@@ -31,6 +38,7 @@ html {
       > header {
         height: $navbar-height;
         left: 0;
+        padding-top: 1.25rem;
         position: fixed;
         top: 0;
         width: 100%;
@@ -84,12 +92,6 @@ html {
               //   padding: 15px;
               // }
 
-              &:hover,
-              &:focus {
-                background-color: transparent;
-                // color: #fff;
-              }
-
             }
 
             &:last-child {
@@ -134,6 +136,7 @@ html {
 
       /* Set the fixed height of the footer here */
       > footer {
+        border-top: 1px solid #f0f0f0;
         height: $footer-height;
         padding-top: 70px;
         position: relative;
@@ -161,10 +164,13 @@ html {
     }
 
     > nav {
+      @include transform(translateX($sidebar-width));
       background-color: $nav-bg;
+      height: 100%;
       // padding: 15px 30px;
       padding-top: $navbar-height;
-      position: absolute;
+      // position: absolute;
+      position: fixed;
       right: 0;
       top: 0;
       width: $sidebar-width;
@@ -179,8 +185,16 @@ html {
         opacity: 1;
         padding: 1.5rem;
         position: absolute;
-        right: 1.5rem;
+        right: 0;
         top: 0;
+
+        &:active,
+        &:focus,
+        &:hover {
+          color: $gray-lighter;
+          outline: none;
+        }
+
       }
 
       > hr {
@@ -200,7 +214,7 @@ html {
           > a {
             color: $btn-primary-color;
             display: block;
-            padding: .5rem 3rem;
+            padding: .5rem 1.5rem;
             text-transform: uppercase;
           }
 
@@ -226,8 +240,24 @@ html {
 
     }
 
+    &.clear-header {
+
+      #content {
+        padding-top: $navbar-height;
+      }
+
+    }
+
     &.sidebar-open {
-      @include transform(translateX(-$sidebar-width));
+
+      > div {
+        @include transform(translateX(-$sidebar-width));
+      }
+
+      > nav {
+        @include transform(translateX(0));
+      }
+
     }
 
   }

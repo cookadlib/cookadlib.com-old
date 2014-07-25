@@ -11,7 +11,8 @@ body {
 //   font-family: 'Tangerine', cursive;
 // }
 
-.overlay {
+.overlay,
+.overlay * {
   color: $text-color-overlay;
-  text-shadow: 0 0 1px rgba(0,0,0,0.6);
+  text-shadow: 0 0 1px rgba(0, 0, 0, .6);
 }

@@ -1,4 +1,23 @@
-.btn-inline {
-  padding: 0;
-  vertical-align: baseline;
+a,
+.btn,
+.btn-link {
+  color: $gray-darker;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $gray-dark;
+  }
+
+  &:active,
+  &:active:focus,
+  &:focus {
+    outline: none;
+  }
+
+  &.btn-inline {
+    padding: 0;
+    vertical-align: baseline;
+  }
+
 }
