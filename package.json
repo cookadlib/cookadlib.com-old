@@ -105,6 +105,7 @@
     "grunt-uncss": "^0.3.0",
     "grunt-usemin": "^2.3.0",
     "grunt-vulcanize": "^0.3.0",
+    "grunt-webfont": "^0.4.4",
     "imagemin": "^0.4.6",
     "jshint-stylish": "^0.4.0",
     "koa-livereload": "^0.1.23",
