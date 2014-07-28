@@ -16,7 +16,8 @@ html {
 
     > div,
     > nav {
-      @include transition-duration(.75s);
+      @include transition-delay(500ms);
+      @include transition-duration(750ms);
       @include transition-property(all);
       @include transition-timing-function(ease-in-out);
     }
@@ -51,6 +52,8 @@ html {
         > .navbar-brand {
           // padding-left: 0;
           // .make-sm-column(4);
+          @include transition(all 500ms ease);
+          color: $navigation-color;
           display: inline-block;
           padding-left: 0;
         }
@@ -82,7 +85,11 @@ html {
 
             > a,
             > button {
+              @include transition(all 500ms ease);
+              // color: $text-color;
+              color: $navigation-color;
               padding: 1.5rem;
+              // text-shadow: 0 0 1px rgba(255, 255, 255, .6);
 
               // @media (max-width: $screen-xs-max) {
               //   margin-right: 15px;
@@ -132,6 +139,44 @@ html {
           margin-top: 0;
         }
 
+        .pills {
+          @include vertical-align-middle();
+          position: fixed;
+          right: 15px;
+
+          a {
+            display: block;
+            margin-bottom: 15px;
+            margin-top: 15px;
+            padding: 5px;
+
+            &.active,
+            &:focus,
+            &:hover {
+
+              span {
+                transform: scale(2.5);
+              }
+
+            }
+
+            span {
+              // @include border-radius(5px);
+              @include transition(all 500ms ease);
+              background-color: $navigation-color;
+              // box-shadow: 0 0 1px rgba(255, 255, 255, 1);
+              // color: #000;
+              display: block;
+              height: 1px;
+              text-indent: -9999px;
+              width: 10px;
+
+            }
+
+          }
+
+        }
+
       }
 
       /* Set the fixed height of the footer here */
@@ -164,6 +209,8 @@ html {
     }
 
     > nav {
+      // @include transition(all 500ms ease);
+      // @include transition(translateX($sidebar-width) 500ms ease 500ms);
       @include transform(translateX($sidebar-width));
       background-color: $nav-bg;
       height: 100%;
@@ -214,7 +261,7 @@ html {
           > a {
             color: $btn-primary-color;
             display: block;
-            padding: .5rem 1.5rem;
+            padding: .5rem 3rem;
             text-transform: uppercase;
           }
 
@@ -252,10 +299,93 @@ html {
 
       > div {
         @include transform(translateX(-$sidebar-width));
+
+        > header {
+
+          > .navbar-brand {
+            opacity: 0;
+          }
+
+          > menu {
+
+            > li {
+
+              > a,
+              > button {
+                opacity: 0;
+              }
+
+            }
+
+          }
+
+        }
+
+        main {
+
+          .pills {
+
+            a {
+
+              span {
+                opacity: 0;
+              }
+
+            }
+
+          }
+
+        }
+
       }
 
       > nav {
         @include transform(translateX(0));
+      }
+
+    }
+
+    &.inverse-lightness {
+
+      > div {
+
+        > header {
+
+          > .navbar-brand {
+            color: $navigation-color-inverse;
+          }
+
+          > menu {
+
+            > li {
+
+              > a,
+              > button {
+                color: $navigation-color-inverse;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      main {
+
+        .pills {
+
+          a {
+
+            span {
+              background-color: $navigation-color-inverse;
+            }
+
+          }
+
+        }
+
       }
 
     }

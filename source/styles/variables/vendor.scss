@@ -57,8 +57,13 @@ $body-bg:               #fff;
 $text-color:            #000;
 $text-color-overlay:    $body-bg;
 
+// Sidebar Navigation
 $nav-bg:               		#000;
 
+// Main Navigation
+// -------------------------
+$navigation-color:         $text-color;
+$navigation-color-inverse: $body-bg;
 
 // Typography
 // -------------------------
