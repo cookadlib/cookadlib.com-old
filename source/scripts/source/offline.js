@@ -1,9 +1,11 @@
 $(document).ready(function () {
   'use strict';
 
-  var functions = {};
+  var functions = window.functions = window.functions || {};
 
-  functions.initialiseConnectivityStatus = function () {
+  functions.Navigator = window.functions.Navigator = window.functions.Navigator || {};
+
+  functions.Navigator.InitialiseConnectivityStatus = function () {
     if (navigator.onLine) {
       console.log('Application online');
     } else {
@@ -23,6 +25,6 @@ $(document).ready(function () {
     }, false);
   };
 
-  functions.initialiseConnectivityStatus();
+  functions.Navigator.InitialiseConnectivityStatus();
 
 });

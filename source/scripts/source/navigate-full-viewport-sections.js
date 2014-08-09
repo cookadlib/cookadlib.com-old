@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   var functions = window.functions = window.functions || {};
 
-  functions.Navigation = window.functions = window.functions || {};
+  functions.Navigation = window.functions.Navigation = window.functions.Navigation || {};
 
   functions.Navigation.sections = 'main > section';
   functions.Navigation.$sections = $(functions.Navigation.sections);
@@ -33,7 +33,7 @@ $(document).ready(function () {
   };
 
   functions.Navigation.KeyboardSnap = function () {
-    $(window).on('keydown', function(event) {
+    $(window).on('keydown.keyboardSnap', function(event) {
       // console.log('keydown', event.which);
 
       if (event.which === 40) {
@@ -94,7 +94,7 @@ $(document).ready(function () {
   };
 
   functions.Navigation.ScrollSnap = function () {
-    $(window).on('scroll touchmove', function() {
+    $(window).on('scroll.scrollSnap touchmove.scrollSnap', function() {
       // console.log('scroll touchmove');
       if (functions.Navigation.scrollTimeout) {
         // console.log('clearTimeout');
@@ -133,7 +133,7 @@ $(document).ready(function () {
       functions.Navigation.$pills.append('<a href="#' + $(this).attr('id') + '"><span>Jump to #' + $(this).attr('id') + '</span></a>');
     });
 
-    $('body').on('click', functions.Navigation.pills + ' a', function(event) {
+    $('body').on('click.moveToSection', functions.Navigation.pills + ' a', function(event) {
       event.preventDefault();
 
       $(this).siblings().removeClass('active');
@@ -148,8 +148,10 @@ $(document).ready(function () {
     });
   };
 
-  functions.Navigation.KeyboardSnap();
-  functions.Navigation.ScrollSnap();
-  functions.Navigation.Pills();
+  if($('body').hasClass('full-viewport-sections')) {
+    functions.Navigation.KeyboardSnap();
+    functions.Navigation.ScrollSnap();
+    functions.Navigation.Pills();
+  }
 
 });

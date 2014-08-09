@@ -1,10 +1,12 @@
 $(document).ready(function () {
   'use strict';
 
-  var functions = {};
+  var functions = window.functions = window.functions || {};
 
-  functions.initialiseImagesLoaded = function (selector) {
-		// console.log('initialiseImageLoader', selector);
+  functions.Loader = window.functions.Loader = window.functions.Loader || {};
+
+  functions.Loader.InitialiseImagesLoaded = function (selector) {
+		// console.log('InitialiseImageLoader', selector);
 
 		if(!selector) {
 			selector = 'main';
@@ -37,7 +39,7 @@ $(document).ready(function () {
 
 	};
 
-  functions.initialiseImageLoader = function () {
+  functions.Loader.InitialiseImageLoader = function () {
     $('img, figure div.img').addClass('transparent');
 
     $('img').on('scrollin', function() {
@@ -46,7 +48,7 @@ $(document).ready(function () {
 
       $img.off('scrollin'); // clean up binding
 
-      functions.initialiseImagesLoaded(img);
+      functions.Loader.InitialiseImagesLoaded(img);
 
       img.src = $img.attr('data-src');
     });
@@ -70,7 +72,7 @@ $(document).ready(function () {
 
   };
 
-  // functions.initialiseImagesLoaded('main');
-  functions.initialiseImageLoader();
+  // functions.Loader.InitialiseImagesLoaded('main');
+  functions.Loader.InitialiseImageLoader();
 
 });
