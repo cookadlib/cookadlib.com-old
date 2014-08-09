@@ -47,6 +47,7 @@ module.exports = {
     'newer:scsslint',
     'compass', // does not work with grunt-newer
     // 'newer:csslint', // sooooooo many errors
+    'newer:autoprefixer',
     'newer:rename:styles'
     // 'uncss'
   ],
