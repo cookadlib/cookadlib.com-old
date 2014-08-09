@@ -1,0 +1,7 @@
+<figure <% if(figure.classes) { %>class="<%= figure.classes %>" <% } %>>
+  <img src="/images/ui/placeholder.gif" data-src="<%= figure.img.src %>" class="img-responsive <%= figure.img.classes %>" alt="<%= figure.img.alt %>" />
+  <noscript>
+    <img src="<%= figure.img.src %>" class="img-responsive <% if(figure.img.classes) { %>class="<%= figure.img.classes %>" <% } %> alt="<%= figure.img.alt %>" />
+  </noscript>
+  <figcaption <% if(figure.caption.classes) { %>class="<%= figure.caption.classes %>" <% } %>><%- figure.caption.html %></figcaption>
+</figure>

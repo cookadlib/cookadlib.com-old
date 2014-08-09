@@ -1,0 +1,85 @@
+.module {
+
+  > div,
+  > section,
+  > fieldset {
+    @include border-radius(10px);
+    // background-color: #000;
+    // background-color: rgba(0,0,0,.5);
+    // background-color: rgb(255, 255, 255);
+    // background-color: rgba(255, 255, 255, .65);
+    // box-shadow: inset 0 0 65px 35px rgba(200, 200, 200, .25);
+    overflow: hidden;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+
+    &:before {
+
+      background-attachment: fixed;
+      // background-image: url('/images/backgrounds/chicago-food-photography-fiesta-blurred.jpg');
+      background-image: url('/images/backgrounds/4783162153_11f74d0693_o-blurred.jpg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: 0;
+      content: '';
+      // filter: blur(40px) brightness(200%) saturate(35%);
+      // filter: blur(40px) opacity(50%) brightness(200%) saturate(50%);
+      // filter: blur(8px) contrast(0.4) brightness(1.4);
+      // filter: blur(15px) brightness(1.4) contrast(0.4) opacity(.5);
+      // filter: blur(35px) contrast(0.35) brightness(1.6);
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    > div {
+      position: relative;
+      z-index: 2;
+    }
+
+    legend {
+      display: none;
+    }
+
+    h2,
+    label {
+      color: #666;
+      color: rgba(102, 102, 102, .85);
+    }
+
+    .form-control {
+      // -webkit-appearance: none;
+      // background: none;
+      // border-bottom: 1px solid #fff;
+      // border-bottom: 1px solid rgba(255, 255, 255, .75);
+      // border-radius: 0;
+      // background-color: rgba(0, 0, 0, .2);
+      background-color: rgba(0, 0, 0, 0.15);
+      border: none;
+      border-radius: 5px;
+      color: rgb(230,230,230);
+      color: rgba(255, 255, 255, .75);
+    }
+
+    .form-group,
+    .checkbox {
+      label,
+      input {
+        font-weight: 200;
+      }
+    }
+
+    .form-control {
+      @include placeholder {
+        color: #e6e6e6;
+        color: rgba(255, 255, 255, 0.75);
+      }
+    }
+
+  }
+
+}

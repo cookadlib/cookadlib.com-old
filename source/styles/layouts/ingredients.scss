@@ -16,10 +16,14 @@ html {
           @include make-row();
 
           > main {
-            @include make-xs-column(12);
-            // @include make-sm-column(8);
-            // @include make-md-column(9);
-            // @include make-lg-column(10);
+
+            @media (max-width: $screen-xs-max) {
+              @include make-xs-column(12);
+            }
+
+            @media (min-width: $screen-sm-min) {
+              @include make-sm-column(9);
+            }
 
             > section {
               @include make-row();
@@ -29,11 +33,23 @@ html {
               }
 
               > figure {
-                @include make-xs-column(12);
-                @include make-sm-column(4);
-                @include make-md-column(3);
-                @include make-lg-column(2);
                 margin-bottom: 1rem;
+
+                @media (max-width: $screen-xs-max) {
+                  @include make-xs-column(12);
+                }
+
+                @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+                  @include make-sm-column(4);
+                }
+
+                @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+                  @include make-md-column(3);
+                }
+
+                @media (min-width: $screen-lg-min) {
+                  @include make-lg-column(2);
+                }
 
                 img {
                   @include img-responsive;
@@ -56,17 +72,54 @@ html {
 
           }
 
-          // > aside {
-          //   @include make-xs-column(12);
-          //   @include make-sm-column(4);
-          //   @include make-md-column(3);
-          // }
+          > aside {
+
+            @media (max-width: $screen-xs-max) {
+              @include make-xs-column(12);
+            }
+
+            @media (min-width: $screen-sm-min) {
+              @include make-sm-column(3);
+            }
+
+          }
 
         }
 
       }
 
     }
+
+    &.ingredients.add,
+    &.ingredients.edit {
+
+      #content {
+
+        > div {
+          @include make-row();
+
+          > main {
+
+            @media (max-width: $screen-xs-max) {
+              @include make-xs-column(12);
+            }
+
+            @media (min-width: $screen-sm-min) {
+              @include make-sm-column(6);
+              @include make-sm-column-offset(3);
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    // &.ingredients.edit {
+    //
+    // }
 
   }
 

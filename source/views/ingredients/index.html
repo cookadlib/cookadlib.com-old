@@ -1,11 +1,152 @@
-<% include ../_includes/major-header.html %>
+<% include ../_includes/header.html %>
 
-<div>
+<div data-ng-view>
 
-  <main data-ui-view="main">
+  <!-- CACHE FILE: ingredients/index.html -->
+  <script type="text/ng-template" id="ingredients/index.html">
 
+    <div class="page-header col-xs-12">
+      <h1>Ingredients</h1>
+    </div>
+
+    <aside>
+
+      <h1 class="sr-only">Sorting &amp; Filtering</h1>
+
+      <div class="btn-group btn-group-justified">
+        <div class="btn-group">
+          <button data-ng-click="tableParams.sorting({})" class="btn btn-default">Clear sorting</button>
+        </div>
+        <div class="btn-group">
+          <button data-ng-click="tableParams.filter({})" class="btn btn-default">Clear filter</button>
+        </div>
+      </div>
+
+      <br />
+
+      <a href="/ingredients/add" class="btn btn-default btn-lg btn-block"><span class="glyphicon glyphicon-plus"> Add new ingredient</span></a>
+
+      <br />
+
+      <button data-ng-click="tableParams.reload()" class="btn btn-default btn-lg btn-block"><span class="glyphicon glyphicon-refresh"> Refresh ingredients list</button>
+
+      <!--
+      <dl class="dl-horizontal">
+        <dt>Sorting</dt>
+        <dd>{{tableParams.sorting() | json}}</dd>
+        <dt>Filter</dt>
+        <dd>{{tableParams.filter() | json}}</dd>
+      </dl>
+      -->
+
+    </aside>
+
+    <main>
+
+      <table data-ng-table="tableParams" show-filter="true" class="table">
+        <tr data-ng-repeat="ingredient in $data">
+          <td data-title="'image'">
+            <img src="{{ingredient.images.thumbnail}}" alt="ingredient.name" />
+          </td>
+          <td data-title="'name'" sortable="'name'" filter="{ 'name': 'text' }">
+            {{ingredient.name}}
+          </td>
+          <td data-title="'description'" sortable="'description'" filter="{ 'description': 'text' }">
+            {{ingredient.output['description:wikipedia']['/common/topic/description'][0]}}
+          </td>
+          <td>
+            <a href="ingredients/edit/{{ingredient._id}}"><span class="icon-pencil">Edit</span></a>
+          </td>
+        </tr>
+      </table>
+
+    </main>
+  </script>
+
+  <!-- CACHE FILE: ingredients/edit.html -->
+  <script type="text/ng-template" id="ingredients/edit.html">
+
+    <main>
+
+      <form role="form" name="myForm">
+
+        <div class="form-group">
+          <label for="id" class="control-label">_id</label>
+          <input type="text" class="form-control" name="id" data-ng-model="ingredient._id" disabled>
+          <span data-ng-show="myForm._id.$error.required" class="help-inline">Not editable</span>
+        </div>
+
+        <div class="form-group" data-ng-class="{error: myForm.name.$invalid}">
+          <label for="name" class="control-label">Name</label>
+          <input type="text" class="form-control" name="name" data-ng-model="ingredient.name" required>
+          <span data-ng-show="myForm.name.$error.required" class="help-inline">Required</span>
+        </div>
+
+        <!--
+        <div class="form-group" data-ng-class="{error: myForm.mid.$invalid}">
+          <label for="mid" class="control-label">mid</label>
+          <input type="mid" class="form-control" name="mid" data-ng-model="ingredient.mid">
+          <span data-ng-show="myForm.mid.$error.required" class="help-inline">Required</span>
+          <span data-ng-show="myForm.mid.$error.url" class="help-inline">Not a URL</span>
+        </div>
+        -->
+
+        <div class="form-group" data-ng-class="{error: myForm.name.$invalid}">
+          <label for="name" class="control-label">Description</label>
+          <textarea class="form-control" name="description" data-ng-model="ingredient.description"></textarea>
+        </div>
+
+        <br />
+
+        <a href="#/" class="btn">Cancel</a>
+        <button data-ng-click="save()" data-ng-disabled="isClean() || myForm.$invalid" class="btn btn-primary">Save</button>
+        <button data-ng-click="delete()" data-ng-show="ingredient.name" class="btn btn-danger">Delete</button>
+
+        <table data-ng-table="tableParams" show-filter="true" class="table">
+          <tr data-ng-repeat="nutrition_fact in ingredient.nutrition_facts">
+            <td data-title="'nutrient'" sortable="'nutrient'" filter="{ 'nutrient': 'text' }">
+              {{nutrition_fact.nutrient}}
+            </td>
+            <td data-title="'quantity'" sortable="'quantity'" filter="{ 'quantity': 'text' }">
+              {{nutrition_fact.quantity}}
+            </td>
+          </tr>
+        </table>
+
+      </form>
+
+    </main>
+
+  </script>
+
+  <!-- CACHE FILE: ingredients/add.html -->
+  <script type="text/ng-template" id="ingredients/add.html">
+
+    <main>
+
+      <form role="form" name="myForm">
+
+        <div class="form-group" data-ng-class="{error: myForm.name.$invalid}">
+          <label for="name" class="control-label">Name</label>
+          <input type="text" class="form-control" name="name" data-ng-model="ingredient.name" required>
+          <span data-ng-show="myForm.name.$error.required" class="help-inline">Required</span>
+        </div>
+
+        <br />
+
+        <a href="#/" class="btn">Cancel</a>
+        <button data-ng-click="save()" data-ng-disabled="isClean() || myForm.$invalid" class="btn btn-primary">Save</button>
+
+      </form>
+
+    </main>
+
+  </script>
+
+    <!--
     <section>
       <h1>Ingredients</h1>
+      <a href="/ingredients/new"><span class="icon-plus-sign">Add</span></a>
 
       <figure>
         <img src="/images/ui/placeholder.gif" data-src="/images/ingredients/lemon.jpg" alt="Lemon">
@@ -392,12 +533,8 @@
       </figure>
 
     </section>
-
-  </main>
-
-  <aside>
-  </aside>
+    -->
 
 </div>
 
-<% include ../_includes/major-footer.html %>
+<% include ../_includes/footer.html %>

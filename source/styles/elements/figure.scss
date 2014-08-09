@@ -1,90 +1,81 @@
 figure {
-  // @include background-size(cover);
-  // background-position: center center;
-  // background-repeat: no-repeat;
-  // height: 100%;
-  // left: 0;
-  // margin: 0;
-  overflow: hidden;
-  position: relative;
-  // top: 0;
-  // width: 100%;
 
-  img,
-  div.img,
-  figcaption {
-    pointer-events: none;
-  }
-
-  img,
-  div.img {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    left: 0;
-    margin: 0;
-    pointer-events: none;
+  &.overlay {
+    overflow: hidden;
     position: relative;
-    top: 0;
-    // width: 100%;
 
-    &.grayscale {
-      // @include filter(grayscale(0%) brightness(100%) contrast(100%)); // Compass documentation is out of date
-      @include filter(#{"grayscale(0%) brightness(100%) contrast(100%)"}); // Chrome 19+ & Safari 6+
-      @include transition(all 500ms ease); // Fade to color for Chrome and Safari
-      backface-visibility: hidden; // Fix for transition flickering
-      // filter: none;
+    img,
+    div.img,
+    figcaption {
+      pointer-events: none;
     }
-  }
 
-  figcaption {
-    @include transition(transform 1250ms 500ms ease, opacity 500ms 500ms ease);
-    @include translateY(6em);
-
-    bottom: 0;
-    // color: $brand-primary;
-    left: 0;
-    opacity: 0;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    position: absolute;
-    text-align: left;
-    width: 100%;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6, {
-      // .lh-drop-shadow(0 0 30px #000);
-      margin-top: 0;
-    }
-  }
-
-  &:hover {
     img,
     div.img {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      left: 0;
+      margin: 0;
+      pointer-events: none;
+      position: relative;
+      top: 0;
+
       &.grayscale {
-        // @include filter(grayscale(65%) brightness(80%) contrast(130%)); // Compass documentation is out of date
-        @include filter(#{"grayscale(65%) brightness(60%) contrast(130%)"}); // Chrome 19+ & Safari 6+
-        filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); // Firefox 3.5+, IE10
-        filter: #808080; // IE6-9
+        // @include filter(grayscale(0%) brightness(100%) contrast(100%)); // Compass documentation is out of date
+        @include filter(#{"grayscale(0%) brightness(100%) contrast(100%)"}); // Chrome 19+ & Safari 6+
+        @include transition(all 500ms ease); // Fade to color for Chrome and Safari
+        backface-visibility: hidden; // Fix for transition flickering
       }
     }
 
-    div.img {
-      height: 100%;
+    figcaption {
+      @include transition(transform 1250ms 500ms ease, opacity 500ms 500ms ease);
+      @include translateY(6em);
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      position: absolute;
+      text-align: left;
+      width: 100%;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6, {
+        margin-top: 0;
+      }
     }
 
-    figcaption {
-      @include transition(transform 0.25s 0.05s ease, opacity 0.75s 0.05s ease);
-      @include translateY(0);
-      opacity: 1;
+    &:hover {
+      img,
+      div.img {
+        &.grayscale {
+          // @include filter(grayscale(65%) brightness(80%) contrast(130%)); // Compass documentation is out of date
+          @include filter(#{"grayscale(65%) brightness(60%) contrast(130%)"}); // Chrome 19+ & Safari 6+
+          filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); // Firefox 3.5+, IE10
+          filter: #808080; // IE6-9
+        }
+      }
 
-      &.gradient {
-        @include background-image(linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .1) 100%));
+      div.img {
+        height: 100%;
+      }
+
+      figcaption {
+        @include transition(transform 250ms .50ms ease, opacity 750ms 50ms ease);
+        @include translateY(0);
+        opacity: 1;
+        // background-color: #f00;
+
+        &.gradient {
+          @include background-image(linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .1) 100%));
+        }
       }
     }
   }

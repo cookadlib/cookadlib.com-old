@@ -1,55 +1,27 @@
-<div class="container">
+      </div><!-- /.row -->
 
-  <ul class="list-inline">
-    <li>
-      <a ui-sref="/about">About</a>
-    </li>
-    <li>
-      <a ui-sref="/jobs">Jobs</a>
-    </li>
-    <li>
-      <a ui-sref="/press">Press</a>
-    </li>
-    <li>
-      <a ui-sref="/developers">Developers</a>
-    </li>
-    <li>
-      <a ui-sref="/apps">Apps</a>
-    </li>
-    <li>
-      <a ui-sref="/map">Map</a>
-    </li>
-    <li>
-      <a ui-sref="/tour">Tour</a>
-    </li>
-  </ul>
+      <footer data-ui-view="footer">
 
-  <ul class="list-inline">
-    <li>
-      <a ui-sref="/support">Support</a>
-    </li>
-    <li>
-      <a ui-sref="/terms">Terms</a>
-    </li>
-    <li>
-      <a ui-sref="/privacy">Privacy</a>
-    </li>
-    <li>
-      <a ui-sref="/creativecommons">Creative Commons</a>
-    </li>
-    <li>
-      <a class="facebook" href="//facebook.com/cookadlib">Like us on Facebook</a>
-    </li>
-    <li>
-      <a class="twitter" href="//twitter.com/cookadlib">Follow us on Twitter</a>
-    </li>
-  </ul>
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="/press">Press</a></li>
+        </ul>
 
-  <ul class="list-inline">
-    <li>&copy; 2014 Cook AdLib, Inc.</li>
-    <li>
-      <button type="button" class="btn btn-link btn-inline" data-action="enterFullScreen">Enter full screen</button>
-    </li>
-  </ul>
+        <span>&copy; 2014 Cook AdLib, Inc.</span>
 
-</div>
+      </footer>
+
+    </div><!-- /.container -->
+
+    <% include sidebar.html %>
+
+    <script src="/scripts/vendor.js"></script>
+    <script src="/scripts/main.js"></script>
+
+    <% include livereload.html %>
+
+  </body>
+
+</html>

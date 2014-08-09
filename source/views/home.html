@@ -1,4 +1,4 @@
-<% include _includes/major-header.html %>
+<% include _includes/header.html %>
 
 <main>
 
@@ -10,11 +10,11 @@
 
       <a href="#" class="btn btn-default">Create your account</a>
       <span class="overlay">or</span>
-      <a href="#" class="overlay">Discover Must See Photos</a>
+      <a href="#" class="overlay">Discover Must Try Recipes</a>
     </div>
 
     <span class="credit">
-      <a href="#" class="overlay">Doi Inthanon National park by Anek S</a>
+      <a href="#" class="overlay">Tapas Spread by John Smith</a>
     </span>
 
   </section>
@@ -24,35 +24,17 @@
     <div>
       <h1>Showcase your recipes</h1>
 
-      <p>Upload and share your best photos. Improve your craft and be engaged by the premier photography community.</p>
+      <p>Upload and share your best recipes. Improve your craft and be engaged by the premier food community.</p>
 
       <a class="btn btn-default">Join Cook AdLib</a>
 
       <div class="images">
 
-        <div class="col-xs-4 col-sm-2 col-sm-offset-1">
-          <figure>
-            <img src="/images/ui/placeholder.gif" data-src="http://lorempixel.com/240/180/food/1" class="img-responsive grayscale" alt="Food" />
-            <figcaption class="overlay">Image title</figcaption>
-          </figure>
+        <% sections.showcase.features.forEach(function(feature) { var figure = feature.figure; %>
+        <div class="col-xs-4 col-sm-2 <%= feature.classes %>">
+          <% include _includes/figure.html %>
         </div>
-
-        <div class="col-xs-4 col-sm-2 col-sm-offset-2">
-          <figure>
-            <img src="/images/ui/placeholder.gif" data-src="http://lorempixel.com/240/180/food/2" class="img-responsive grayscale" alt="Food" />
-            <figcaption class="overlay">Image title</figcaption>
-          </figure>
-        </div>
-
-        <div class="col-xs-4 col-sm-2 col-sm-offset-2">
-          <figure>
-            <img src="/images/ui/placeholder.gif" data-src="http://lorempixel.com/240/180/food/3" class="img-responsive grayscale" alt="Food" />
-            <noscript>
-              <img src="http://lorempixel.com/240/180/food/3" class="img-responsive grayscale" alt="Food" />
-            </noscript>
-            <figcaption class="overlay">Image title</figcaption>
-          </figure>
-        </div>
+        <% }) %>
 
       </div>
 
@@ -156,4 +138,4 @@
 
 </main>
 
-<% include _includes/major-footer.html %>
+<% include _includes/footer.html %>

@@ -3,15 +3,18 @@ a,
 .btn-link {
   color: $gray-darker;
 
-  &:hover,
-  &:focus {
-    background-color: transparent;
-    color: $gray-dark;
-  }
+  // &:hover,
+  // &:focus {
+  //   background-color: transparent;
+  //   color: $gray-dark;
+  // }
 
   &:active,
   &:active:focus,
-  &:focus {
+  &:focus,
+  &:hover, {
+    background-color: transparent;
+    color: $gray-dark;
     outline: none;
   }
 

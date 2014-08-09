@@ -1,0 +1,184 @@
+<% include ../_includes/header.html %>
+
+<main>
+
+  <h1>Edit recipe</h1>
+
+  <!-- Form -->
+  <form role="form">
+    <div class="row">
+      <div class="col-sm-6">
+        <fieldset class="title of the preparation">
+          <legend>Title of the preparation</legend>
+          <div class="row">
+            <div class="col-sm-10">
+              <div class="form-group">
+                <label for="title of the preparation-0">Name</label>
+                <input type="text" class="form-control" id="title of the preparation-0" name="title of the preparation[]" placeholder="Enter name">
+              </div>
+            </div><!-- /class="col-sm-10" -->
+          </div><!-- /class="row" -->
+      </div><!-- /class="col-sm-6" -->
+    </div><!-- /class="row" -->
+
+    <div class="row">
+      <div class="col-sm-6">
+        <fieldset class="ingredient">
+          <legend>Ingredient</legend>
+          <div class="row">
+            <div class="col-sm-10">
+              <div class="form-group">
+                <label for="ingredient-name-0">Ingredient</label>
+                <input type="text" class="form-control" id="ingredient-name-0" name="ingredient-name[]" placeholder="Enter ingredient name">
+                <span class="help-block"><a href="/apple">View ingredient information</a></span>
+              </div>
+            </div><!-- /class="col-sm-10" -->
+            <div class="col-sm-2">
+              <div class="form-group">
+                <label for="ingredient-quantity-0">Quantity</label>
+                <input type="number" class="form-control" id="ingredient-quantity-0" name="ingredient-quantity[]" placeholder="Enter ingredient quantity" min="0" max="100" step="1" value="1">
+              </div>
+            </div><!-- /class="col-sm-2" -->
+          </div><!-- /class="row" -->
+        </fieldset>
+        <button type="button" class="btn btn-default" id="add-new-ingredient">Add new ingredient</button>
+      </div><!-- /class="col-sm-6" -->
+    </div><!-- /class="row" -->
+
+    <div class="row">
+      <div class="col-sm-6">
+        <fieldset class="seasoning">
+          <legend>Seasoning</legend>
+          <div class="row">
+            <div class="col-sm-10">
+              <div class="form-group">
+                <label for="seasoning-name-0">Name</label>
+                <input type="text" class="form-control" id="seasoning-name-0" name="seasoning-name[]" placeholder="Enter seasoning name">
+                <span class="help-block"><a href="/apple">View seasoning information</a></span>
+              </div>
+            </div><!-- /class="col-sm-10" -->
+            <div class="col-sm-2">
+              <div class="form-group">
+                <label for="seasoning-quantity-0">Quantity</label>
+                <input type="number" class="form-control" id="seasoning-quantity-0" name="seasoning-quantity[]" placeholder="Enter seasoning quantity" min="0" max="100" step="1" value="1">
+              </div>
+            </div><!-- /class="col-sm-2" -->
+          </div><!-- /class="row" -->
+        </fieldset>
+        <button type="button" class="btn btn-default" id="add-new-seasoning">Add new seasoning</button>
+      </div><!-- /class="col-sm-6" -->
+
+      <div class="col-sm-6">
+        <fieldset class="marinade">
+          <legend>Marinade</legend>
+          <div class="row">
+            <div class="col-sm-10">
+              <div class="form-group">
+                <label for="marinade-name-0">Name</label>
+                <input type="text" class="form-control" id="marinade-name-0" name="marinade-name[]" placeholder="Enter marinade name">
+                <span class="help-block"><a href="/apple">View marinade information</a></span>
+              </div>
+            </div><!-- /class="col-sm-10" -->
+            <div class="col-sm-2">
+              <div class="form-group">
+                <label for="marinade-quantity-0">Quantity</label>
+                <input type="number" class="form-control" id="marinade-quantity-0" name="marinade-quantity[]" placeholder="Enter marinade quantity" min="0" max="100" step="1" value="1">
+              </div>
+            </div><!-- /class="col-sm-2" -->
+          </div><!-- /class="row" -->
+        </fieldset>
+        <button type="button" class="btn btn-default" id="add-new-marinade">Add new marinade</button>
+      </div><!-- /class="col-sm-6" -->
+    </div><!-- /class="row" -->
+
+    <div class="row">
+      <div class="col-sm-6">
+        <fieldset class="sauce">
+          <legend>Sauce</legend>
+          <div class="row">
+            <div class="col-sm-10">
+              <div class="form-group">
+                <label for="sauce-name-0">Name</label>
+                <input type="text" class="form-control" id="sauce-name-0" name="sauce-name[]" placeholder="Enter sauce name">
+                <span class="help-block"><a href="/apple">View sauce information</a></span>
+              </div>
+            </div><!-- /class="col-sm-10" -->
+            <div class="col-sm-2">
+              <div class="form-group">
+                <label for="sauce-quantity-0">Quantity</label>
+                <input type="number" class="form-control" id="sauce-quantity-0" name="sauce-quantity[]" placeholder="Enter sauce quantity" min="0" max="100" step="1" value="1">
+              </div>
+            </div><!-- /class="col-sm-2" -->
+          </div><!-- /class="row" -->
+        </fieldset>
+        <button type="button" class="btn btn-default" id="add-new-sauce">Add new sauce</button>
+      </div><!-- /class="col-sm-6" -->
+    </div><!-- /class="row" -->
+
+    <fieldset class="dressing">
+      <legend>Dressing</legend>
+      <div class="row">
+        <div class="col-sm-10">
+          <div class="form-group">
+            <label for="dressing-name-0">Name</label>
+            <input type="text" class="form-control" id="dressing-name-0" name="dressing-name[]" placeholder="Enter dressing name">
+            <span class="help-block"><a href="/apple">View dressing information</a></span>
+          </div>
+        </div><!-- /class="col-sm-10" -->
+        <div class="col-sm-2">
+          <div class="form-group">
+            <label for="dressing-quantity-0">Quantity</label>
+            <input type="number" class="form-control" id="dressing-quantity-0" name="dressing-quantity[]" placeholder="Enter dressing quantity" min="0" max="100" step="1" value="1">
+          </div>
+        </div><!-- /class="col-sm-2" -->
+      </div><!-- /class="row" -->
+    </fieldset>
+    <button type="button" class="btn btn-default" id="add-new-dressing">Add new dressing</button>
+    <br /><br />
+
+    <fieldset>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Check me out
+        </label>
+      </div>
+    </fieldset>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+
+</main>
+
+<aside>
+  <h1>Progress</h1>
+</aside>
+
+<script>
+  $(document).ready(function() {
+    var fieldset = [];
+    // fieldset['ingredient'] = $('fieldset.ingredient', 'form').first()[0].outerHTML;
+    fieldset['ingredient'] = $('fieldset.ingredient', 'form').first().clone().find('legend').remove().end()[0].outerHTML;
+
+    $('body').on('click', 'button#add-new-ingredient', function() {
+      // alert('Button clicked!');
+      // $(fieldset['ingredient']).insertAfter('fieldset.ingredient').last();
+      $('fieldset.ingredient').last().after(fieldset['ingredient']);
+    });
+
+    $('body').on('click', 'button#add-new-seasoning', function() {
+      // alert('Button clicked!');
+      $('fieldset.seasoning', 'form').first().clone().insertAfter('fieldset.seasoning');
+    });
+
+    $('body').on('click', 'button#add-new-sauce', function() {
+      // alert('Button clicked!');
+      $('fieldset.sauce', 'form').first().clone().insertAfter('fieldset.sauce');
+    });
+
+    $('body').on('click', 'button#add-new-dressing', function() {
+      // alert('Button clicked!');
+      $('fieldset.dressing', 'form').first().clone().insertAfter('fieldset.dressing');
+    });
+  });
+</script>
+
+<% include ../_includes/footer.html %>

@@ -2,6 +2,13 @@
 // Grid system
 // --------------------------------------------------
 
+.row {
+  // display: -webkit-box;
+  // display: -webkit-flex;
+  // display: -ms-flexbox;
+  display: flex;
+}
+
 // Set the container width, and override it for fixed navbars in media queries
 // .container {
 //   @media (min-width: $screen-xl-min) {

@@ -12,7 +12,14 @@ body {
 // }
 
 .overlay,
-.overlay * {
+.overlay h1,
+.overlay h2,
+.overlay h3,
+.overlay h4,
+.overlay h5,
+.overlay h6,
+.overlay p,
+.overlay span {
   color: $text-color-overlay;
   text-shadow: 0 0 1px rgba(0, 0, 0, .6);
 }

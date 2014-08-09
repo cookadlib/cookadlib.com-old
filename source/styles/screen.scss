@@ -1,10 +1,4 @@
 /*!
- *  Import CSS once built to avoid Lint errors
- */
-@import url(http://fonts.googleapis.com/css?family=Tangerine|Open+Sans:300italic,300,600);
-@import './library.css';
-
-/*!
  *  Compass
  */
 @import 'compass';
@@ -14,10 +8,11 @@
  *  Include SASS dependencies from vendor packages
  */
 
-@import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_variables';
-@import 'variables/vendor';
+// @import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables';
+@import './variables/bootstrap';
+@import './variables/theme';
 
-@import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/_mixins';
+@import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_mixins';
 
 @import '../bower_components/font-awesome/scss/variables';
 @import '../bower_components/font-awesome/scss/path';
@@ -29,8 +24,8 @@
  */
 
 // Compass sprites
-@import '../images/icons/*.png';
-@include all-icons-sprites;
+// @import '../images/icons/*.png';
+// @include all-icons-sprites;
 
 // Utility classes
 @import 'utilities/visibility';
@@ -40,21 +35,24 @@
 
 // Core variables and mixins
 @import './mixins/img';
+@import './mixins/placeholder';
 @import './mixins/positioning';
 
 // Structure
 @import './structure/grid';
 @import './structure/layout';
+@import './structure/module';
 
 // Elements
 @import './elements/a';
 @import './elements/button';
 @import './elements/figure';
-// @import './elements/form';
+@import './elements/form';
 @import './elements/img';
 // @import './elements/input';
 // @import './elements/main';
 // @import './elements/navigation-element';
+@import './elements/progress';
 
 // Components
 @import './components/navbar';
@@ -70,5 +68,5 @@
 // Layouts
 @import './layouts/home';
 @import './layouts/ingredients';
-@import './layouts/recipe';
+@import './layouts/recipes';
 @import './layouts/signup';

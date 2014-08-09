@@ -1,0 +1,85 @@
+html {
+
+  body {
+
+    &.recipes {
+
+      &.create {
+
+        #content {
+          background-attachment: fixed;
+          // background-color: #f00;
+          // background-image: url('/images/backgrounds/chicago-food-photography-fiesta.jpg');
+          background-image: url('/images/backgrounds/4783162153_11f74d0693_o.jpg');
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          > h1 {
+            color: #fff;
+            color: rgba(255, 255, 255, .95);
+          }
+
+          main {
+
+            form {
+
+              > .row {
+                margin-bottom: 30px;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      // main {
+      //
+      //   > section {
+      //     @media (max-width: $screen-xs-max) {
+      //       @include make-xs-column(12);
+      //     }
+      //
+      //     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      //       @include make-sm-column(8);
+      //     }
+      //
+      //     @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      //       @include make-md-column(9);
+      //     }
+      //
+      //     @media (min-width: $screen-lg-min) {
+      //       @include make-lg-column(10);
+      //     }
+      //
+      //   }
+      //
+      //   > aside {
+      //     @media (max-width: $screen-xs-max) {
+      //       @include make-xs-column(12);
+      //     }
+      //
+      //     @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      //       @include make-sm-column(4);
+      //     }
+      //
+      //     @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      //       @include make-md-column(3);
+      //     }
+      //
+      //     @media (min-width: $screen-lg-min) {
+      //       @include make-lg-column(2);
+      //     }
+      //
+      //   }
+      //
+      // }
+
+    }
+
+  }
+
+}

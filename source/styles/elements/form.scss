@@ -4,6 +4,21 @@ form {
   //   @include make-row;
   // }
 
+  .form-control {
+    border-left: none;
+    border-radius: 0;
+    border-right: none;
+    border-top: none;
+    box-shadow: none;
+
+    &:active,
+    &:focus {
+      box-shadow: none;
+      -webkit-appearance: none;
+    }
+
+  }
+
   > footer {
     border-top: .1rem solid $legend-border-color;
     padding-top: 1.5rem;
@@ -25,4 +40,81 @@ form {
   input[type=range] {
     width: 100%;
   }
+
+  .checkbox {
+
+    &.red {
+
+      input {
+        display: none;
+
+        :checked + i {
+          background-color: #f00;
+          background-color: rgba(255, 0, 0, .5);
+          // box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px rgba(255, 0, 0, 0.95);
+          // -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px #f00;
+        }
+
+      }
+
+    }
+
+    i {
+      border: 1px solid #fff;
+      border: 1px solid rgba(255 ,255 ,255 , .95);
+      border-radius: 18px;
+      // box-shadow: inset 0 0 1px rgba(0,0,0,.5);
+      cursor: pointer;
+      display: inline-block;
+      padding-right: 18px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: all ease 0.2s;
+      // -webkit-transition: all ease 0.2s;
+      vertical-align: bottom;
+
+      &:before {
+        background-color: #fff;
+        background-color: rgba(255, 255, 255, .95);
+        border-radius: 18px;
+        // box-shadow: 0 1px 2px rgba(0,0,0,.5);
+        content: '';
+        display: block;
+        height: 18px;
+        width: 18px;
+      }
+
+    }
+
+    input {
+      cursor: pointer;
+      // display: none;
+      height: 100%;
+      margin-top: 0;
+      opacity: 0;
+      right: 0;
+      top: 0;
+      width: 42px;
+      z-index: 100;
+
+      &:checked + i {
+        // background-color: #0f0;
+        // background-color: rgba(0, 255, 0, .5);
+        background-color: rgba(0, 0, 0, 0.15);
+        // box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px rgba(255, 255, 255, .5);
+        // -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,.5), inset 0 0 40px rgba(255, 255, 255, 0.5);
+        padding-left: 18px;
+        padding-right: 0;
+      }
+
+    }
+
+    label {
+      font-weight: bold;
+      padding-left: 0;
+    }
+
+  }
+
 }

@@ -1,43 +1,46 @@
-<nav data-ui-view="nav">
+<nav class="sidebar" data-ui-view="nav">
 
   <button type="button" class="close" data-action="toggle" data-target="sidebar-open" aria-hidden="true">&times;</button>
 
   <ul>
     <li>
-      <a ui-sref="#">Tour</a>
+      <a href="/tour">Tour</a>
     </li>
     <li>
-      <a ui-sref="#">Log in</a>
-    </li>
-  </ul>
-
-  <ul>
-    <li>
-      <a ui-sref="#">My Planner</a>
-    </li>
-    <li>
-      <a ui-sref="#">My Diet</a>
-    </li>
-    <li>
-      <a ui-sref="#">My Shopping List</a>
+      <a href="/log-in">Log in</a>
     </li>
   </ul>
 
   <ul>
     <li>
-      <a ui-sref="#">Editorial</a>
+      <a href="/:user/planner">My Planner</a>
     </li>
     <li>
-      <a ui-sref="#">Recipes</a>
+      <a href="/:user/diet">My Diet</a>
     </li>
     <li>
-      <a ui-sref="#">Shopping Assistant</a>
+      <a href="/:user/shopping-list">My Shopping List</a>
     </li>
   </ul>
 
   <ul>
     <li>
-      <a ui-sref="#">Help &amp; Support</a>
+      <a href="/editorial">Editorial</a>
+    </li>
+    <li>
+      <a href="/recipes">Recipes</a>
+    </li>
+    <li>
+      <a href="/ingredients">Ingredients</a>
+    </li>
+    <li>
+      <a href="/shopping-assistant">Shopping Assistant</a>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <a href="/help">Help &amp; Support</a>
     </li>
   </ul>
 
@@ -45,35 +48,38 @@
 
   <ul>
     <li>
-      <a ui-sref="#">About Cook AdLib</a>
+      <a href="/about">About Cook AdLib</a>
     </li>
     <li>
-      <a ui-sref="#">Blog</a>
+      <a href="/blog">Blog</a>
     </li>
     <li>
-      <a ui-sref="#">Developers</a>
+      <a href="/developers">Developers</a>
     </li>
     <li>
-      <a ui-sref="#">Press &amp; Media</a>
+      <a href="/press">Press &amp; Media</a>
     </li>
     <li>
-      <a ui-sref="#">Terms of Service</a>
+      <a href="/terms">Terms of Service</a>
     </li>
     <li>
-      <a ui-sref="#">Privacy Policy</a>
+      <a href="/privacy">Privacy Policy</a>
     </li>
     <li>
-      <a ui-sref="#">Contact Us</a>
+      <a href="/licensing">Licensing</a>
+    </li>
+    <li>
+      <a href="/contact">Contact Us</a>
     </li>
   </ul>
 
   <hr />
 
   <div>
-    <a href="#">
+    <a href="//twitter.com/cookadlib">
       <span>Twitter</span><i class="fa fa-twitter"></i>
     </a>
-    <a href="#">
+    <a href="//facebook.com/cookadlib">
       <span>Facebook</span><i class="fa fa-facebook"></i>
     </a>
     <a href="#">
