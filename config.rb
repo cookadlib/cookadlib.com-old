@@ -1,5 +1,6 @@
 require 'compass/import-once/activate'
 # Require any additional compass plugins here.
+require 'sass-css-importer'
 
 # define bourbon path, use a common library for preventing duplicates
 add_import_path '/opt/rubies/2.0.0-p451/lib/ruby/gems/2.0.0/gems/bourbon-4.0.2/app/assets/stylesheets'
@@ -27,6 +28,7 @@ javascripts_dir = "source/scripts"
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
+
 sass_options = {
 	:sourcemap => true
 }
