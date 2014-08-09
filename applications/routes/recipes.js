@@ -27,7 +27,9 @@ var render = views('source/views', {
 });
 
 var defaults = {
-  packageJson: packageJson
+  packageJson: packageJson,
+  ngApp: 'recipes',
+  // bodyClass: 'recipes test clear-header' //fucking doesn't get overridden
 };
 
 // use koa-router
@@ -35,7 +37,7 @@ app.use(router(app));
 
 function *index(next) {
   var settings = {
-    bodyClass: 'index'
+    bodyClass: 'recipes index clear-header'
   };
 
   _.merge(settings, defaults);
@@ -43,9 +45,9 @@ function *index(next) {
   this.body = yield render('recipes/index', settings);
 }
 
-function *list(next) {
+function *create(next) {
   var settings = {
-    bodyClass: 'recipes create'
+    bodyClass: 'recipes create clear-header'
   };
 
   _.merge(settings, defaults);
@@ -53,9 +55,34 @@ function *list(next) {
   this.body = yield render('recipes/create', settings);
 }
 
+function *read(next) {
+  var settings = {
+    bodyClass: 'recipes view clear-header'
+  };
+
+  _.merge(settings, defaults);
+
+  this.body = yield render('recipes/edit', settings);
+}
+
+function *update(next) {
+  var settings = {
+    bodyClass: 'recipes edit clear-header'
+  };
+
+  _.merge(settings, defaults);
+
+  this.body = yield render('recipes/edit', settings);
+}
+
+function *remove(next) {
+
+}
+
 app.get('/', index);
-app.get('/create', list);
-app.post('/create', list);
+app.get('/create', create);
+app.get('/edit', update);
+// app.post('/create', edit);
 // app.get(/^([^.]+)$/, index); //matches everything without an extension
 
 module.exports = app;

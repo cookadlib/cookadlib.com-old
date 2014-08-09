@@ -27,7 +27,8 @@ var render = views('source/views', {
 });
 
 var defaults = {
-  packageJson: packageJson
+  packageJson: packageJson,
+  ngApp: 'users'
 };
 
 // use koa-router

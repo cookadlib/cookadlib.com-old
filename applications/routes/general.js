@@ -27,7 +27,8 @@ var render = views('source/views', {
 });
 
 var defaults = {
-  packageJson: packageJson
+  packageJson: packageJson,
+  ngApp: 'general'
 };
 
 // use koa-router
@@ -42,7 +43,61 @@ function getAllMethods(object) {
 
 function *index(next) {
   var settings = {
-    bodyClass: 'home'
+    bodyClass: 'home full-viewport-sections',
+    sections: {
+      showcase: {
+        features: [
+          {
+            classes: 'col-sm-offset-1',
+            figure: {
+              classes: 'overlay',
+              caption: {
+                html: '<span>Image caption 1</span>',
+                classes: 'overlay'
+              },
+              img: {
+                src: 'http://lorempixel.com/240/180/food/1',
+                alt: 'Food 1',
+                title: 'Image title 1',
+                classes: 'grayscale'
+              }
+            }
+          },
+          {
+            classes: 'col-sm-offset-2',
+            figure: {
+              classes: 'overlay',
+              caption: {
+                html: '<span>Image caption 2</span>',
+                classes: 'overlay'
+              },
+              img: {
+                src: 'http://lorempixel.com/240/180/food/2',
+                alt: 'Food 2',
+                title: 'Image title 2',
+                classes: 'grayscale'
+              }
+            }
+          },
+          {
+            classes: 'col-sm-offset-2',
+            figure: {
+              classes: 'overlay',
+              caption: {
+                html: '<span>Image caption 3</span>',
+                classes: 'overlay'
+              },
+              img: {
+                src: 'http://lorempixel.com/240/180/food/3',
+                alt: 'Food 3',
+                title: 'Image title 3',
+                classes: 'grayscale'
+              }
+            }
+          }
+        ]
+      }
+    }
   };
 
   _.merge(settings, defaults);

@@ -27,7 +27,9 @@ var render = views('source/views', {
 });
 
 var defaults = {
-  packageJson: packageJson
+  packageJson: packageJson,
+  ngApp: 'ingredients',
+  bodyClass: 'ingredients clear-header'
 };
 
 // use koa-router
@@ -35,7 +37,7 @@ app.use(router(app));
 
 function *index(next) {
   var settings = {
-    bodyClass: 'ingredients index clear-header'
+
   };
 
   _.merge(settings, defaults);
@@ -43,19 +45,19 @@ function *index(next) {
   this.body = yield render('ingredients/index', settings);
 }
 
-function *list(next) {
+function *edit(next) {
   var settings = {
-    bodyClass: 'ingredients create clear-header'
+    bodyClass: 'ingredients edit clear-header'
   };
 
   _.merge(settings, defaults);
 
-  this.body = yield render('ingredients/create', settings);
+  this.body = yield render('ingredients/edit', settings);
 }
 
 app.get('/', index);
-app.get('/create', list);
-app.post('/create', list);
+app.get('/add', edit);
+app.get('/edit', edit);
 // app.get(/^([^.]+)$/, index); //matches everything without an extension
 
 module.exports = app;

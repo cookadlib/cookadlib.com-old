@@ -48,7 +48,7 @@ function* freebaseSearch (query) {
   });
 
   var url = service_url + '?' + querystring;
-
+  console.log('url', url);
   var response = yield request(url);
 
   var info = JSON.parse(response.body);
@@ -120,15 +120,130 @@ api.get('/ingredients', function *(next) {
   this.type = 'application/json';
 });
 
-api.get('/ingredients/:name', function *(next) {
-  var ingredientName = this.params.name;
+api.post('/ingredients', function *(next) {
+  // console.log(this);
+  var ingredient = yield parse(this);
+  // console.log('ingredient', ingredient);
+
+  var ingredientName = ingredient.name;
 
   var result = yield ingredients.findOne({
-  // var result = yield ingredients.find({
     name: ingredientName
   });
 
-  // console.log('result', result, result.should.have.length(1));
+  // console.log('db result', result, result.should.have.length(1));
+  // console.log('db result', result);
+
+  if(!result || result.length !== 1) {
+    var search = yield freebaseSearch (ingredientName);
+    var document = search.result[0];
+
+    document.created_on = new Date;
+    document.updated_on = new Date;
+
+    document.images = {};
+
+    var metawebQuery = yield freebaseMetawebQuery (ingredientName);
+
+    var nutrition_facts = null;
+
+    if(metawebQuery && metawebQuery.result && metawebQuery.result[0] && metawebQuery.result[0]['!/food/nutrition_fact/food']) {
+      nutrition_facts = metawebQuery.result[0]['!/food/nutrition_fact/food'];
+    }
+
+    if(nutrition_facts && nutrition_facts.length > 0) {
+      document.nutrition_facts = nutrition_facts;
+    }
+
+    var page_images_url = 'http://en.wikipedia.org/w/api.php?action=query&titles=' + ingredientName + '&prop=pageimages&format=json&pithumbsize=100';
+
+    var page_images_request = yield request(page_images_url);
+
+    var page_images = JSON.parse(page_images_request.body);
+
+    console.log('page_images', page_images);
+    if(page_images && page_images.query) {
+      console.log('page_images.query.pages', page_images.query.pages);
+
+
+      var jsonObj = page_images.query.pages;
+      var firstProp = null;
+      for(var key in jsonObj) {
+          if(jsonObj.hasOwnProperty(key)) {
+              firstProp = jsonObj[key];
+              break;
+          }
+      }
+
+      console.log('firstProp', firstProp);
+
+      // document.images.thumbnail = page_images.query.pages['379788'].thumbnail.source;
+      if(firstProp) {
+        console.log('firstProp.thumbnail', firstProp.thumbnail);
+        document.images.thumbnail = firstProp.thumbnail.source;
+      }
+
+    }
+
+    // console.log('document', document);
+    var result = yield ingredients.insert(document);
+  }
+
+  // console.log('freebase result', result);
+
+  this.body = result;
+  this.type = 'application/json';
+});
+
+api.get('/ingredients/:id', function *(next) {
+  var ingredientId = this.params.id;
+
+  var result = yield ingredients.findOne({
+    _id: ingredientId
+  });
+
+  this.body = result;
+  this.type = 'application/json';
+});
+
+api.put('/ingredients/:id', function *(next) {
+  var ingredientId = this.params.id;
+
+  var body = yield parse(this);
+  console.log('body', body);
+
+  var result = yield ingredients.updateById(ingredientId, body);
+
+  this.body = result;
+  this.type = 'application/json';
+});
+
+api.del('/ingredients/:id', function *(next) {
+  var ingredientId = this.params.id;
+
+  var lookup = yield ingredients.findOne({
+    _id: ingredientId
+  });
+
+  var result = yield ingredients.remove({
+    _id: ingredientId
+  });
+
+  console.log('ingredientId', ingredientId, 'lookup', lookup, 'result', result);
+
+  this.body = result;
+  this.type = 'application/json';
+});
+
+api.get('/ingredients/create/:name', function *(next) {
+  var ingredientName = this.params.name;
+
+  var result = yield ingredients.findOne({
+    name: ingredientName
+  });
+
+  // console.log('db result', result, result.should.have.length(1));
+  console.log('db result', result);
 
   if(!result || result.length !== 1) {
     var search = yield freebaseSearch (ingredientName);
@@ -137,11 +252,10 @@ api.get('/ingredients/:name', function *(next) {
     var result = yield ingredients.insert(document);
   }
 
+  console.log('freebase result', result);
+
   this.body = result;
   this.type = 'application/json';
-
-  // console.log('result', result);
-
 });
 
 api.get('/ingredients/:name/nutrition', function *(next) {
@@ -160,26 +274,13 @@ api.get('/ingredients/:name/activity', function *(next) {
   this.type = 'application/json';
 });
 
-api.post('/ingredients/create', function *(next) {
-  // console.log(this);
-  var ingredient = yield parse(this);
-  console.log('ingredient', ingredient);
+api.del('/ingredients', function *(next) {
+  var res = yield ingredients.remove();
 
-  ingredient.created_on = new Date;
-  ingredient.updated_on = new Date;
-
-  console.log('ingredient', ingredient);
-
-});
-
-api.put('/ingredients/:name/update', function *(next) {
-  console.log(this.params);
-  var res = yield ingredients.update({
-    name: this.params.username
-  });
   this.body = res;
   this.type = 'application/json';
 });
+
 
 // Routes: Users
 
