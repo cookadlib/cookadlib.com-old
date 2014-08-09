@@ -21,7 +21,7 @@
   "dependencies": {
     "angular": "~1.2.0",
     "angular-ui-router": "~0.2.0",
-    "bootstrap-sass-official": "~3.1.0",
+    "bootstrap-sass-official": "~3.2.0",
     "core-ajax": "Polymer/core-ajax#~0.3.1",
     "core-elements": "Polymer/core-elements#~0.3.1",
     "detectizr": "~2.0.0",
