@@ -10,7 +10,7 @@ module.exports = {
     'vulcanize',
     'useminPrepare',
     // 'newer:copy:html', // use htmlmin instead
-    'htmlmin', // does not work with grunt-newer
+    // 'htmlmin', // does not work with grunt-newer
     'usemin'
   ],
 
@@ -46,8 +46,8 @@ module.exports = {
     'mkdir:styles',
     'newer:scsslint',
     'compass', // does not work with grunt-newer
-    // 'newer:csslint', // sooooooo many errors
     'newer:autoprefixer',
+    'newer:csslint', // sooooooo many errors
     'newer:rename:styles'
     // 'uncss'
   ],

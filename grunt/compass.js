@@ -7,7 +7,8 @@ module.exports = {
     config: 'config.rb',
     debugInfo: false,
     outputStyle: 'nested',
-    sourcemap: true,
+    sourcemap: true
+    // sourceMapIn: '<%= package.config.path.source %>/styles/*.scss'
   },
 
   default: {

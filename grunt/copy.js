@@ -31,6 +31,16 @@ module.exports = {
 				],
 				dest: '<%= package.config.path.build %>/fonts',
 				filter: 'isFile'
+			},
+			{
+				expand: true,
+				flatten: false,
+				cwd: '<%= package.config.path.source %>/bower_components/bootstrap-sass-official/assets/fonts',
+				src: [
+					'**/*'
+				],
+				dest: '<%= package.config.path.build %>/bower_components/bootstrap-sass-official/assets/fonts',
+				filter: 'isFile'
 			}
 		]
 	},

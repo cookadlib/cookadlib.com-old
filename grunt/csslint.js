@@ -9,9 +9,9 @@ module.exports = {
 
 	default: {
 		src:  [
-			'<%= package.config.path.build %>/styles/*.css',
-			'!<%= package.config.path.build %>/styles/library.css',
-			'!<%= package.config.path.build %>/styles/*.tidy.css'
+			'<%= package.config.path.source %>/styles/*.css',
+			'!<%= package.config.path.source %>/styles/library.css',
+			'!<%= package.config.path.source %>/styles/*.tidy.css'
 		]
 	}
 

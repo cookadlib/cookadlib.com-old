@@ -14,6 +14,7 @@ module.exports = {
       mangle: false,
       sourceMap: true,
       sourceMappingURL: '<%= package.config.path.source %>/scripts/main.js.map'
+      // sourceMapIncludeSources: true
     },
 
     files: {
@@ -44,6 +45,7 @@ module.exports = {
         // '<%= package.config.path.source %>/bower_components/angular-ui-router/release/angular-ui-router.js',
         '<%= package.config.path.source %>/bower_components/restangular/dist/restangular.js',
         // '<%= package.config.path.source %>/bower_components/angular-dreamfactory/angular-dreamfactory.js',
+        '<%= package.config.path.source %>/bower_components/ng-table/ng-table.js',
         '<%= package.config.path.source %>/bower_components/socket.io-client/socket.io.js',
         '<%= package.config.path.source %>/bower_components/jquery/dist/jquery.js',
         '<%= package.config.path.source %>/bower_components/jQuery-Sonar/jquery.sonar.js',
