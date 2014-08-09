@@ -43,7 +43,8 @@
     "restangular": "~1.4.0",
     "angular-dreamfactory": "*",
     "angular-route": "~1.2.19",
-    "jQuery-Sonar": "artzstudio/jQuery-Sonar"
+    "jQuery-Sonar": "artzstudio/jQuery-Sonar",
+    "ng-table": "~0.3.3"
   },
   "devDependencies": {},
   "resolutions": {
