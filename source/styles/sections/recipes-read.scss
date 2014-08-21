@@ -1,0 +1,190 @@
+body.recipes.read {
+
+  #content {
+
+    main {
+
+      article {
+
+        figure.hero {
+          background-color: $body-bg-inverse;
+          // height: 565px;
+          height: calc(100vh - #{$subnav-height});
+          margin-bottom: 170px;
+          margin-left: -15px;
+          margin-right: -15px;
+          max-width: calc(100% + 30px);
+          overflow: hidden;
+          position: relative;
+          z-index: 3;
+
+          &:before {
+            background-image: url('/images/ui/pointer-inverse.svg');
+            background-position: 50% 0;
+            background-repeat: no-repeat;
+            background-size: auto 15px;
+            border-bottom: 1px solid $body-bg;
+            bottom: 0;
+            content: '';
+            height: 15px;
+            left: -50vw;
+            position: absolute;
+            transform: translateX(-70px);
+            width: 200%;
+            z-index: 30;
+          }
+
+          figcaption {
+            bottom: 30px;
+            color: $body-bg;
+            left: 30px;
+            position: absolute;
+            text-shadow: 1px 1px 2px rgba(150, 150, 150, .5);
+            z-index: 30;
+
+            a {
+              color: $body-bg;
+            }
+
+          }
+
+          img {
+            height: 100%;
+            width: 100%;
+          }
+
+        }
+
+        nav {
+          background: rgba(255, 255, 255, .985);
+          // border-bottom: 1px solid $gray-lighter;
+          box-shadow: 0 1px 5px 0 rgba(100, 100, 100, 0);
+          left: 0;
+          padding-bottom: 20px;
+          padding-top: 20px;
+          position: absolute;
+          text-align: center;
+          // top: 565px;
+          top: calc(100vh - #{$subnav-height});
+          width: 100%;
+
+          // &:after {
+          //   // box-shadow: 0px 0px 8px 2px #000000;
+          //   content: '';
+          //   display: block;
+          //   height: 1px;
+          //   left: 0;
+          //   margin-left: -75px;
+          //   margin-top: 88px;
+          //   position: absolute;
+          //   width: 100%;
+          //   z-index: -1;
+          // }
+
+          a {
+            display: inline-block;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            vertical-align: top;
+            width: 100px;
+
+            &:active,
+            &:focus,
+            &:hover,
+            &.active {
+              text-decoration: none;
+
+              i,
+              span {
+                color: $navigation-color;
+              }
+
+            }
+
+            i,
+            span {
+              color: $hero-icon;
+            }
+
+            i {
+              font-size: 5rem;
+              margin-bottom: 2rem;
+            }
+
+            span {
+              display: block;
+              text-transform: uppercase;
+            }
+
+          }
+
+        }
+
+        section {
+          // background-color: #eee;
+          min-height: 100vh;
+
+          &:not(.active) {
+            display: none;
+          }
+
+          h2 {
+            margin-top: 0;
+          }
+
+          // i {
+
+            // &.flag-icon {
+            //   margin-right: 1rem;
+            // }
+
+          // }
+
+          .statistics {
+
+            .fa {
+              margin-right: .5rem;
+
+              &.fa-star,
+              &.fa-star-half-o {
+                margin-right: .25rem;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  &.fixed-sub-nav {
+
+    #content {
+
+      main {
+
+        article {
+
+          nav {
+            box-shadow: 0 1px 5px 0 rgba(100, 100, 100, .15);
+            left: 0;
+            position: fixed;
+            top: -70px;
+            width: 100%;
+            z-index: 100;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

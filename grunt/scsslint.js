@@ -13,6 +13,7 @@ module.exports = {
   default: {
     src:  [
       '<%= package.config.path.source %>/styles/**/*.scss',
+      '!<%= package.config.path.source %>/styles/variables/*.scss',
       '!<%= package.config.path.source %>/styles/vendor/*.scss'
     ]
   }

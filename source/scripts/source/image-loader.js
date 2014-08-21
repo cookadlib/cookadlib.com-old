@@ -40,17 +40,20 @@ $(document).ready(function () {
 	};
 
   functions.Loader.InitialiseImageLoader = function () {
-    $('img, figure div.img').addClass('transparent');
+    $('img[data-src], figure div.img[data-src]').addClass('transparent');
 
-    $('img').on('scrollin', function() {
+    $('img[data-src]').on('scrollin', function() {
       var img = this;
       var $img = $(img);
 
-      $img.off('scrollin'); // clean up binding
+      if($img.attr('data-src')) {
+        $img.off('scrollin'); // clean up binding
 
-      functions.Loader.InitialiseImagesLoaded(img);
+        functions.Loader.InitialiseImagesLoaded(img);
 
-      img.src = $img.attr('data-src');
+        img.src = $img.attr('data-src');
+      }
+
     });
 
     $('[data-src]:not(img)').on('scrollin', function() {

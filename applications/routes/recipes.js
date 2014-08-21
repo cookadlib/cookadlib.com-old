@@ -27,8 +27,10 @@ var render = views('source/views', {
 });
 
 var defaults = {
+  lang: 'en',
   packageJson: packageJson,
-  ngApp: 'recipes',
+  ngApp: 'recipes'
+
   // bodyClass: 'recipes test clear-header' //fucking doesn't get overridden
 };
 
@@ -42,37 +44,42 @@ function *index(next) {
 
   _.merge(settings, defaults);
 
-  this.body = yield render('recipes/index', settings);
+  this.body = yield render('recipes-index', settings);
 }
 
 function *create(next) {
   var settings = {
-    bodyClass: 'recipes create clear-header'
+    bodyClass: 'recipes edit create clear-header'
   };
 
   _.merge(settings, defaults);
 
-  this.body = yield render('recipes/create', settings);
+  this.body = yield render('recipes-edit', settings);
 }
 
 function *read(next) {
   var settings = {
-    bodyClass: 'recipes view clear-header'
+    bodyClass: 'recipes read',
+    originalUrl: this.originalUrl
   };
 
-  _.merge(settings, defaults);
+  var title = this.params.title;
 
-  this.body = yield render('recipes/edit', settings);
+  _.merge(settings, defaults);
+  // console.log('settings', settings);
+  // console.log('defaults', defaults);
+
+  this.body = yield render('recipes-read', settings);
 }
 
 function *update(next) {
   var settings = {
-    bodyClass: 'recipes edit clear-header'
+    bodyClass: 'recipes edit update clear-header'
   };
 
   _.merge(settings, defaults);
 
-  this.body = yield render('recipes/edit', settings);
+  this.body = yield render('recipes-edit', settings);
 }
 
 function *remove(next) {
@@ -80,6 +87,7 @@ function *remove(next) {
 }
 
 app.get('/', index);
+app.get('/:title', read);
 app.get('/create', create);
 app.get('/edit', update);
 // app.post('/create', edit);

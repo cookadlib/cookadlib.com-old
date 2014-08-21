@@ -16,6 +16,7 @@ module.exports = {
 
   'images': [
     'mkdir:root',
+    'newer:copy:flags',
     'newer:copy:icons',
     'newer:imagemin',
     'newer:svgmin'
@@ -44,6 +45,7 @@ module.exports = {
   'styles': [
     'mkdir:root',
     'mkdir:styles',
+    'replace:flags',
     'newer:scsslint',
     'compass', // does not work with grunt-newer
     'newer:autoprefixer',

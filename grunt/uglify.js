@@ -51,7 +51,8 @@ module.exports = {
         '<%= package.config.path.source %>/bower_components/jQuery-Sonar/jquery.sonar.js',
         '<%= package.config.path.source %>/bower_components/eventEmitter/EventEmitter.js',
         '<%= package.config.path.source %>/bower_components/eventie/eventie.js',
-        '<%= package.config.path.source %>/bower_components/imagesloaded/imagesloaded.js'
+        '<%= package.config.path.source %>/bower_components/imagesloaded/imagesloaded.js',
+        '<%= package.config.path.source %>/bower_components/croppic/croppic.js'
       ]
     }
 

@@ -48,7 +48,7 @@ function* freebaseSearch (query) {
   });
 
   var url = service_url + '?' + querystring;
-  console.log('url', url);
+  // console.log('url', url);
   var response = yield request(url);
 
   var info = JSON.parse(response.body);
@@ -161,10 +161,9 @@ api.post('/ingredients', function *(next) {
 
     var page_images = JSON.parse(page_images_request.body);
 
-    console.log('page_images', page_images);
+    // console.log('page_images', page_images);
     if(page_images && page_images.query) {
-      console.log('page_images.query.pages', page_images.query.pages);
-
+      // console.log('page_images.query.pages', page_images.query.pages);
 
       var jsonObj = page_images.query.pages;
       var firstProp = null;
@@ -175,11 +174,11 @@ api.post('/ingredients', function *(next) {
           }
       }
 
-      console.log('firstProp', firstProp);
+      // console.log('firstProp', firstProp);
 
       // document.images.thumbnail = page_images.query.pages['379788'].thumbnail.source;
       if(firstProp) {
-        console.log('firstProp.thumbnail', firstProp.thumbnail);
+        // console.log('firstProp.thumbnail', firstProp.thumbnail);
         document.images.thumbnail = firstProp.thumbnail.source;
       }
 
@@ -210,7 +209,7 @@ api.put('/ingredients/:id', function *(next) {
   var ingredientId = this.params.id;
 
   var body = yield parse(this);
-  console.log('body', body);
+  // console.log('body', body);
 
   var result = yield ingredients.updateById(ingredientId, body);
 
@@ -229,7 +228,7 @@ api.del('/ingredients/:id', function *(next) {
     _id: ingredientId
   });
 
-  console.log('ingredientId', ingredientId, 'lookup', lookup, 'result', result);
+  // console.log('ingredientId', ingredientId, 'lookup', lookup, 'result', result);
 
   this.body = result;
   this.type = 'application/json';
@@ -243,7 +242,7 @@ api.get('/ingredients/create/:name', function *(next) {
   });
 
   // console.log('db result', result, result.should.have.length(1));
-  console.log('db result', result);
+  // console.log('db result', result);
 
   if(!result || result.length !== 1) {
     var search = yield freebaseSearch (ingredientName);
@@ -252,7 +251,7 @@ api.get('/ingredients/create/:name', function *(next) {
     var result = yield ingredients.insert(document);
   }
 
-  console.log('freebase result', result);
+  // console.log('freebase result', result);
 
   this.body = result;
   this.type = 'application/json';
@@ -307,7 +306,7 @@ api.get('/users/:username/activity', function *(next) {
 api.post('/users/create', function *(next) {
   // console.log(this);
   var body = yield parse(this);
-  console.log('body', body);
+  // console.log('body', body);
 
   // var data = {
   //   username: this.params.username,
@@ -319,7 +318,7 @@ api.post('/users/create', function *(next) {
   // };
 
   var res = yield users.insert(body, function (err, doc) {
-    console.log('err', err, 'doc', doc);
+    // console.log('err', err, 'doc', doc);
     if (err) {
       this.body = 'Unable to process request';
       this.status = 400;
@@ -333,7 +332,7 @@ api.post('/users/create', function *(next) {
 });
 
 api.put('/users/:username/update', function *(next) {
-  console.log(this.params);
+  // console.log(this.params);
   var res = yield users.update({
     username: this.params.username
   });

@@ -16,7 +16,9 @@ html {
 
 
     > .navbar-default {
-      @include transition-delay(500ms);
+      // @include transition-delay(500ms);
+      transition-delay: 500ms;
+      transition-timing-function: cubic-bezier(.694, .0482, .335, 1);
       // height: $navbar-height;
       // left: 0;
       // padding-top: 1.25rem;
@@ -32,7 +34,11 @@ html {
       .navbar-brand,
       .nav a,
       .nav button {
-        @include transition(all 500ms ease);
+        // @include transition(all 500ms ease);
+        transition-duration: 500ms;
+        transition-property: all;
+        // transition-timing-function: ease;
+        transition-timing-function: cubic-bezier(.694, .0482, .335, 1);
       }
 
       // > .navbar-brand {
@@ -77,14 +83,19 @@ html {
 
     > div,
     > nav {
-      @include transition-duration(750ms);
-      @include transition-property(all);
-      @include transition-timing-function(ease-in-out);
+      // @include transition-duration(750ms);
+      // @include transition-property(all);
+      // @include transition-timing-function(ease-in-out);
+      transition-duration: 750ms;
+      transition-property: all;
+      // transition-timing-function: ease-in-out;
+      transition-timing-function: cubic-bezier(.694, .0482, .335, 1);
     }
 
     > div,
     > nav.sidebar {
-      @include transition-delay(0ms);
+      // @include transition-delay(0ms);
+      transition-delay: 0ms;
     }
 
     > div {
@@ -110,15 +121,12 @@ html {
         // margin: 0 auto -155px;
         margin-bottom: -$footer-height;
         margin-top: 0;
-        // min-height: 100%;
+        min-height: 100%;
         /* Pad bottom by footer height */
-        // padding-top: $navbar-height;
         padding-bottom: $footer-height;
         // padding-top: $navbar-height;
         position: relative;
         z-index: 2;
-
-        min-height: 100%;
 
         @media print {
           margin-bottom: 0;
@@ -273,7 +281,7 @@ html {
 
         span {
           // @include border-radius(5px);
-          @include transition(all 500ms ease);
+          // @include transition(all 500ms ease);
           background-color: $navigation-color;
           // box-shadow: 0 0 1px rgba(255, 255, 255, 1);
           // color: #000;
@@ -281,8 +289,10 @@ html {
           display: block;
           height: 1px;
           text-indent: -9999px;
+          transition-duration: 500ms;
+          transition-property: all;
+          transition-timing-function: cubic-bezier(.694, .0482, .335, 1);
           width: 10px;
-
         }
 
       }
@@ -309,9 +319,10 @@ html {
     &.sidebar-open {
 
       > .navbar-default {
-        @include transition-delay(0ms);
+        // @include transition-delay(0ms);
         // left: -$sidebar-width;
         opacity: 0;
+        transition-delay: 0ms;
 
         // .navbar-brand {
         //   opacity: 0;
@@ -334,7 +345,8 @@ html {
 
       > div,
       > nav.sidebar {
-        @include transition-delay(500ms);
+        // @include transition-delay(500ms);
+        transition-delay: 500ms;
       }
 
       > div {

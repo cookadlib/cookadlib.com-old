@@ -15,7 +15,6 @@
     position: relative;
 
     &:before {
-
       background-attachment: fixed;
       // background-image: url('/images/backgrounds/chicago-food-photography-fiesta-blurred.jpg');
       background-image: url('/images/backgrounds/4783162153_11f74d0693_o-blurred.jpg');
@@ -52,16 +51,20 @@
     }
 
     .form-control {
+      @include placeholder {
+        color: #e6e6e6;
+        color: rgba(255, 255, 255, .75);
+      }
+
       // -webkit-appearance: none;
       // background: none;
       // border-bottom: 1px solid #fff;
       // border-bottom: 1px solid rgba(255, 255, 255, .75);
       // border-radius: 0;
       // background-color: rgba(0, 0, 0, .2);
-      background-color: rgba(0, 0, 0, 0.15);
-      border: none;
+      background-color: rgba(0, 0, 0, .15);
+      border: 0;
       border-radius: 5px;
-      color: rgb(230,230,230);
       color: rgba(255, 255, 255, .75);
     }
 
@@ -70,13 +73,6 @@
       label,
       input {
         font-weight: 200;
-      }
-    }
-
-    .form-control {
-      @include placeholder {
-        color: #e6e6e6;
-        color: rgba(255, 255, 255, 0.75);
       }
     }
 

@@ -98,6 +98,7 @@ module.exports = {
   styles: {
     files: [
       '<%= package.config.path.source %>/styles/**/*.scss',
+      '!<%= package.config.path.source %>/styles/vendor/*.scss',
       '!<%= package.config.path.source %>/bower_components/**/*'
     ],
     tasks: [

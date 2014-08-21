@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" data-ng-app="<%= ngApp %>">
+<html class="no-js" data-ng-app="<%= ngApp %>" lang="<%= lang %>">
 
   <head>
 
@@ -11,7 +11,7 @@
     <meta name="description" content="Sample app" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <base href="/">
+    <!-- <base href="/"> -->
 
     <!-- <link href="http://fonts.googleapis.com/css?family=Tangerine|Open+Sans:300italic,300,600" media="all" rel="stylesheet" type="text/css" /> -->
 
@@ -74,7 +74,7 @@
 
   <body class="<%= bodyClass %>">
 
-    <% include google.analytics.html %>
+    <% include ../scripts/google.analytics.html %>
 
     <a class="sr-only" href="#content">Skip to main content</a>
 

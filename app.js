@@ -18,18 +18,18 @@ applications.database = require(__dirname + '/applications/database');
 applications.socket = require(__dirname + '/applications/socket');
 
 // wrap subsequent middleware in a logger
-app.use(logger());
+app.use(logger()); // very verbose
 
 // use logger
 app.use(function *(next) {
   'use strict';
-  // var start = new Date();
+  var start = new Date();
   yield next;
-  // var ms = new Date() - start;
-  // console.log('%s %s - %s', this.method, this.url, ms);
+  var ms = new Date() - start;
+  console.log('%s %s - %s', this.method, this.url, ms);
 
-  // console.log(this, this.request, this.response);
-  // console.log(this.request.header);
+  console.log(this, this.request, this.response);
+  console.log(this.request.header);
 });
 
 // use koa-router

@@ -76,6 +76,21 @@ module.exports = {
 		]
 	},
 
+	flags: {
+		files: [
+			{
+				expand: true,
+				flatten: false,
+				cwd: '<%= package.config.path.source %>/bower_components/flag-icon-css/flags',
+				src: [
+					'**/*.svg'
+				],
+				dest: '<%= package.config.path.build %>/bower_components/flag-icon-css/flags',
+				filter: 'isFile'
+			}
+		]
+	},
+
 	scripts: {
 		files: [
 			{

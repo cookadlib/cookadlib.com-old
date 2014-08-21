@@ -35,31 +35,16 @@ $container-xl:                 $container-extra-large-desktop;
 $container-extra-extra-large-desktop:      ((1860px + $grid-gutter-width));
 $container-xxl:                 $container-extra-extra-large-desktop;
 
-//== Colors
-//
-//## Gray and brand colors for use across Bootstrap.
-
-// $gray-darker:            lighten(#000, 13.5%) !default; // #222
-// $gray-dark:              lighten(#000, 20%) !default;   // #333
-// $gray:                   lighten(#000, 33.5%) !default; // #555
-// $gray-light:             lighten(#000, 60%) !default;   // #999
-// $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
-//
-// $brand-primary:         #111;
-// $brand-success:         #333;
-// $brand-info:            #5bc0de;
-// $brand-warning:         #f0ad4e;
-// $brand-danger:          #d9534f;
-
 // Scaffolding
 // -------------------------
-// $body-bg:               #fff;
+$body-bg-inverse:       #000 !default;
 $module-bg:             #eee;
 // $text-color:            #000;
 $text-color-overlay:    $body-bg;
+$hero-icon:             #ccc;
 
 // Sidebar Navigation
-$nav-bg:               		#000;
+$nav-bg:               		$body-bg-inverse;
 
 // Main Navigation
 // -------------------------
@@ -108,3 +93,5 @@ $footer-height:				150px;
 
 // $hero-height-xs:				200px;
 // $hero-height-sm:				400px;
+
+$subnav-height:        150px;

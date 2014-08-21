@@ -27,6 +27,7 @@ var render = views('source/views', {
 });
 
 var defaults = {
+  lang: 'en',
   packageJson: packageJson,
   ngApp: 'general'
 };
@@ -35,7 +36,7 @@ var defaults = {
 app.use(router(app));
 
 function getAllMethods(object) {
-  console.log('in getAllMethods');
+  // console.log('in getAllMethods');
   return Object.getOwnPropertyNames(object).filter(function(property) {
     return typeof object[property] == 'function';
   });
@@ -112,15 +113,15 @@ function *error404(next) {
 
   _.merge(settings, defaults);
 
-  console.log('app', app, getAllMethods(app));
-  console.log('this.method', this.method, 'this.path', this.path);
+  // console.log('app', app, getAllMethods(app));
+  // console.log('this.method', this.method, 'this.path', this.path);
 
   // if (app.match(this.method, this.path)) {
   if ('app.route', app.route) {
-    console.log('app.match true');
+    // console.log('app.match true');
     yield next
   } else {
-    console.log('app.match false');
+    // console.log('app.match false');
     // this.throw('404 / Not Found', 404)
     this.body = yield render('error404', settings);
     this.status = 404;

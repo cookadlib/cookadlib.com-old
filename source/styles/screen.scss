@@ -8,7 +8,6 @@
  *  Include SASS dependencies from vendor packages
  */
 
-// @import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables';
 @import './variables/bootstrap';
 @import './variables/theme';
 
@@ -28,7 +27,7 @@
 // @include all-icons-sprites;
 
 // Utility classes
-@import 'utilities/visibility';
+// @import 'utilities/visibility';
 
 // Typography
 @import './type/type';
@@ -49,24 +48,16 @@
 @import './elements/figure';
 @import './elements/form';
 @import './elements/img';
-// @import './elements/input';
-// @import './elements/main';
-// @import './elements/navigation-element';
 @import './elements/progress';
 
 // Components
 @import './components/navbar';
+@import './components/profile-image';
+@import './components/slideshow';
 
 // Sections
-// @import './sections/album';
-// @import './sections/hero';
-// @import './sections/icons';
-// @import './sections/isotope';
-// @import './sections/matrix';
-// @import './sections/overview';
-
-// Layouts
-@import './layouts/home';
-@import './layouts/ingredients';
-@import './layouts/recipes';
-@import './layouts/signup';
+@import './sections/home';
+@import './sections/ingredients';
+@import './sections/recipes-index';
+@import './sections/recipes-read';
+@import './sections/signup';

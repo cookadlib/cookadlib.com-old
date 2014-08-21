@@ -1,0 +1,197 @@
+<% include _includes/general/header.html %>
+
+<main>
+
+	<h2 class="sr-only">Recipe</h2>
+
+	<article itemscope itemtype="http://data-vocabulary.org/Recipe" class="recipe">
+
+		<figure class="hero slideshow" id="hero-image">
+			<img itemprop="photo" class="img-responsive grayscale" src="/images/recipes/Tuaca-hot-apple-pie-3 2-preview.jpg" style="background-image(/images/recipes/Tuaca-hot-apple-pie-3 2-preview.jpg);" />
+			<img itemprop="photo" class="img-responsive grayscale" src="/images/recipes/4783162153_11f74d0693_o-preview.jpg" style="background-image(/images/recipes/4783162153_11f74d0693_o-preview.jpg);" />
+			<figcaption class="gradient" contenteditable>
+				<h2 itemprop="name">Grandma's Holiday Apple Pie</h2>
+				<span>By <span itemprop="author">Carol Smith</span></span>
+				<span>Serving suggestion: This delicious <a href="http://wikipedia.org/wiki/Apple">apple</a> <a href="http://wikipedia.org/wiki/Pie">pie</a> is best served hot and with lashings of home-mode creamy vanilla custard.</span>
+			</figcaption>
+		</figure>
+
+		<nav>
+			<!-- <a href="<%= originalUrl %>#section-overview"> -->
+			<a href="#section-overview">
+				<i class="fa fa-info-circle"></i>
+				<span>Overview</span>
+			</a>
+			<a href="#section-instructions">
+				<i class="fa fa-list"></i>
+				<span>Instructions</span>
+			</a>
+			<a href="#section-ingredients">
+				<i class="fa fa-shopping-cart"></i>
+				<span>Ingredients</span>
+			</a>
+			<a href="#section-nutrition-information">
+				<i class="fa fa-flask"></i>
+				<span>Nutrition Information</span>
+			</a>
+			<a href="#section-dietary-information">
+				<i class="fa fa-check-square-o"></i>
+				<span>Dietary Information</span>
+			</a>
+			<a href="#section-allergy-information">
+				<i class="fa fa-warning"></i>
+				<span>Allergy Information</span>
+			</a>
+		</nav>
+
+		<section id="section-overview">
+			<h2>Overview</h2>
+
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+
+					<div class="row" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+						<div class="col-xs-12 col-sm-3">
+							<img src="https://s3.amazonaws.com/uifaces/faces/twitter/idiot/128.jpg" alt="Profile image" class="profile-image" />
+						</div>
+						<div class="col-xs-12 col-sm-9">
+							<span itemprop="givenName">Slothie</span> <span itemprop="familyName">McLovin</span>
+							<button class="btn btn-default btn-sm"><i class="fa fa-plus"></i>Follow</button>
+							<div class="nationality-and-flag">
+								<i class="flag-icon flag-icon-gr"></i><span itemprop="nationality">Costa Rica</span>
+							</div>
+						</div>
+					</div>
+
+					<span itemprop="summary">This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.</span>
+				</div>
+
+				<div class="col-xs-12 col-sm-6">
+					<button class="btn btn-default btn-sm"><i class="fa fa-share-alt"></i>Share</button>
+					<div class="statistics">
+						<span class="views">
+							<i class="fa fa-eye"></i><span>810</span> views
+						</span>
+						<span class="ratings" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+							<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><span class="sr-only"><span itemprop="ratingValue">4.5</span> stars</span> - based on <span itemprop="reviewCount">250</span> reviews
+						</span>
+						<span class="favourites">
+							<i class="fa fa-heart-o"></i><span>44</span> <a href="#favourites">favourites</a>
+						</span>
+						<span class="comments">
+							<i class="fa fa-comment-o"></i><span>17</span> <a href="#comments">comments</a>
+						</span>
+						<span class="forks">
+							<i class="fa fa-code-fork"></i><span>2</span> <a href="#comments">forks</a>
+						</span>
+					</div>
+					<img itemprop="photo" class="img-responsive grayscale" src="/images/recipes/Tuaca-hot-apple-pie-3 2-preview.jpg" />
+					<div>Published: <time datetime="2009-11-05" itemprop="published">November 5, 2009</time></div>
+					<ul>
+						<li><i class="fa fa-tags"></i></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row">
+
+				<div class="col-xs-12 col-sm-6">
+MAP
+PIE CHART
+				</div>
+			</div>
+
+		</section>
+
+		<section id="section-instructions">
+			<div class="row">
+
+				<div class="col-xs-12 col-sm-6">
+					<i class="fa fa-users"></i><span itemprop="yield">8 servings</span>
+				</div>
+
+				<div class="col-xs-12 col-sm-6">
+					<i class="fa fa-clock-o"></i>
+					<span>Total time: <time datetime="PT1H30M" itemprop="totalTime">1 hour 30 min</time></span>
+					<span>Preparation time: <time datetime="PT30M" itemprop="prepTime">30 min</time></span>
+					<span>Cook time: <time datetime="PT1H" itemprop="cookTime">1 hour</time></span>
+				</div>
+
+			</div>
+		</section>
+
+		<section>
+			<h2>Nutrition</h2>
+			<div itemprop="nutrition" itemscope itemtype="http://data-vocabulary.org/Nutrition">
+				<ul>
+					<li>Serving size: <span itemprop="servingSize">1 medium slice</span></li>
+					<li>Calories per serving: <span itemprop="calories">250</span></li>
+					<li>Fat per serving: <span itemprop="fat">12g</span></li>
+				</ul>
+			</div>
+		</section>
+
+		<section>
+			<h2>Ingredients</h2>
+			<ul>
+				<li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+					Thinly-sliced <span itemprop="name">apples</span>: <span itemprop="amount">6 cups</span>
+				</li>
+				<li itemprop="ingredient" itemscope itemtype="http://data-vocabulary.org/RecipeIngredient">
+					<span itemprop="name">White sugar</span>: <span itemprop="amount">3/4 cup</span>
+				</li>
+			<ul>
+		</section>
+
+		<section id="preparation-instructions">
+			<h2>Preparation Instructions</h2>
+			<div itemprop="instructions">
+				<dl>
+					<dt>Cut and peel the apples</dt>
+					<dd>Try not to cut too deep into the apple as you don't want to unneccesarily waste any of it!</dd>
+					<dt>Mix the sugar with the cinnamon</dt>
+					<dd>Use a regular metal spoon in order to easily cut through the mix.</dd>
+					<dd>Use additional sugar for tart apples.</dd>
+					<dt>Chop the apples</dt>
+					<dd>Ensure the apples are evenly-sliced cubes no larger than one centimer across so that the various cubes cook evenly.</dd>
+				</dl>
+			</div>
+		</section>
+
+		<section>
+			<h2>Cooking Directions</h2>
+			<div itemprop="instructions">
+				<ol>
+					<li>Firstly, ensure that you are thoroughly prepared by following the <a href="#preparation-instructions">Preparation Instructions</a>.</li>
+					<li>Preheat your over to 200 degrees celsius.</li>
+					<li>Place the pot into the over on the top shelf, ensuring that there is a gap of around 6 centimeters above the pot to allow the pie to rise.</li>
+				</ol>
+			</div>
+		</section>
+
+		<aside>
+			<div itemprop="review" itemscope itemtype="http://data-vocabulary.org/Review-aggregate">
+				<span itemprop="rating">4.0</span> stars based on <span itemprop="count">35</span> reviews
+			</div>
+		</aside>
+
+	</article>
+
+	<aside>
+		<h1>More like this</h1>
+		<ul>
+			<li>
+				<a href="#">Apple crumble</a>
+			</li>
+			<li>
+				<a href="#">Apple strudle</a>
+			</li>
+			<li>
+				<a href="#">Cherry pie</a>
+			</li>
+		</ul>
+	</aside>
+
+</main>
+
+<% include _includes/general/footer.html %>

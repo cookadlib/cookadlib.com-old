@@ -24,6 +24,7 @@
     "bootstrap-sass-official": "~3.2.0",
     "core-ajax": "Polymer/core-ajax#~0.3.1",
     "core-elements": "Polymer/core-elements#~0.3.1",
+    "croppic": "styoe/croppic#master",
     "detectizr": "~2.0.0",
     "element-navigation": "cookadlib/element-navigation#master",
     "flatiron-director": "PolymerLabs/flatiron-director#~0.3.0",
