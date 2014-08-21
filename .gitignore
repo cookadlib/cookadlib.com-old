@@ -1,3 +1,4 @@
+_untracked
 .sass-cache
 .tmp
 build/
@@ -6,6 +7,7 @@ dist/
 icons-*.png
 logs/
 node_modules/
+npm-debug.log
 scss-lint-report.xml
 source/bower_components/
 source/images/sample/
@@ -13,5 +15,3 @@ source/scripts/*.js
 source/scripts/*.map
 test/bower_components/
 test/temp
-
-npm-debug.log
