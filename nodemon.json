@@ -1,0 +1,16 @@
+{
+  "ignore": [
+    "build/*",
+    "data/*",
+    "grunt/*",
+    "logs/*",
+    "node_modules/*",
+    "source/bower_components/*"
+  ],
+  "verbose": true,
+  "execMap": {
+    "js": "n use 0.11.13 --harmony  --debug",
+    "py": "python",
+    "rb": "ruby"
+  }
+}
