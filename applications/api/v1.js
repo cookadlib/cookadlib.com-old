@@ -349,6 +349,8 @@ api.get('/users/:username/recipes', function *(next) {
 api.get(/^([^.]+)$/, function *(next) {
   yield next;
   this.body = 'API v1 - 404 not found';
+  this.status = 404;
+  this.type = 'application/json';
 }); //matches everything without an extension
 
 module.exports = api;
