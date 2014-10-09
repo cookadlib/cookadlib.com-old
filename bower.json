@@ -45,7 +45,8 @@
     "angular-dreamfactory": "*",
     "angular-route": "~1.2.19",
     "jQuery-Sonar": "artzstudio/jQuery-Sonar",
-    "ng-table": "~0.3.3"
+    "ng-table": "~0.3.3",
+    "flag-icon-css": "~0.6.3"
   },
   "devDependencies": {},
   "resolutions": {
